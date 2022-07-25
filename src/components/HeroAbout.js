@@ -2,6 +2,7 @@
 // and short 2-4 word blurbs about me
 // in large font. Cycling through
 // the descriptors.
+import React from "react";
 
 const name = { first: "Nic", last: "Mortelliti" };
 
