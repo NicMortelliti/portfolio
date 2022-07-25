@@ -3,6 +3,8 @@
 // in large font. Cycling through
 // the descriptors.
 
+const name = { first: "Nic", last: "Mortelliti" };
+
 const blurbs = [
   "a pilot",
   "a developer",
