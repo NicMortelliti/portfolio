@@ -7,11 +7,11 @@ import React, { useEffect, useState } from "react";
 const name = { first: "Nic", last: "Mortelliti" };
 
 const blurbs = [
-  "a pilot",
-  "a developer",
-  "an engineer",
-  "a photographer",
-  "a human",
+  "a pilot 🛩️",
+  "a developer 💻",
+  "an engineer 📐",
+  "a photographer 📷",
+  "a human 🙋‍♂️",
 ];
 
 function HeroAbout() {
