@@ -3,7 +3,13 @@
 // in large font. Cycling through
 // the descriptors.
 
-import React from 'react'
+const blurbs = [
+  "a pilot",
+  "a developer",
+  "an engineer",
+  "a photographer",
+  "a human",
+];
 
 function HeroAbout() {
   return (
