@@ -15,8 +15,12 @@ const blurbs = [
 
 function HeroAbout() {
   return (
-    <div>HeroAbout</div>
-  )
+    <div>
+      <h1>{`My name is ${name.first} ${name.last}`}</h1>
+      <h3>I am</h3>
+      <h2>{blurbs[0]}</h2>
+    </div>
+  );
 }
 
 export default HeroAbout
