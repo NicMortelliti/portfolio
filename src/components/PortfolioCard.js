@@ -4,7 +4,7 @@ import Button from "./Button";
 
 function PortfolioCard({ cardData }) {
   return (
-    <div>
+    <div className="p-card">
       <p>{cardData.title}</p>
       <Button url={cardData.demoURL} value="Demo" />
       <Button url={cardData.ghURL} value="Github" />
