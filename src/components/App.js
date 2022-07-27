@@ -16,14 +16,24 @@ const resumeURL =
 const linkedInURL = "https://www.linkedin.com/in/nicolas-mortelliti/";
 const githubURL = "https://github.com/NicMortelliti";
 
-const demo = {
-  demoURL: "https://scrumban.netlify.app/",
-  ghURL: "https://github.com/stars/NicMortelliti/lists/scrumban",
-  title: "Scrumban",
-  blurb:
-    "A React application that interfaces with a Ruby backend that allows teams to manage their projects using a scrum/kanban approach.",
-  img: imageScrum,
-};
+const demo = [
+  {
+    demoURL: "https://scrumban.netlify.app/",
+    ghURL: "https://github.com/stars/NicMortelliti/lists/scrumban",
+    title: "Scrumban",
+    blurb:
+      "A React application that interfaces with a Ruby backend that allows teams to manage their projects using a scrum/kanban approach.",
+    img: imageScrum,
+  },
+  {
+    demoURL: "https://pilotchecklist.netlify.app/",
+    ghURL: "https://github.com/stars/NicMortelliti/lists/checklist",
+    title: "Flying Checklist",
+    blurb:
+      "A mobile React application using Material UI that replaces paper checklists used by pilots.",
+    img: imageChecklist,
+  },
+];
 
 function App() {
   return (
@@ -33,7 +43,9 @@ function App() {
       <Button url={resumeURL} value="Resume" />
       <Button url={linkedInURL} value="LinkedIn" />
       <Button url={githubURL} value="Github" />
-      <PortfolioCard cardData={demo} />
+      {demo.map((each) => (
+        <PortfolioCard key={each.title} cardData={each} />
+      ))}
     </div>
   );
 }
