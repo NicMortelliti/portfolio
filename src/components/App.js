@@ -8,6 +8,7 @@ import PortfolioCard from "./PortfolioCard";
 
 // Import images
 import imageScrum from "../assets/screencasts/ScrumUsageDemo.gif";
+import imageChecklist from "../assets/screencasts/ChecklistUsageDemo.gif";
 
 // External Links
 const resumeURL =
