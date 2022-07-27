@@ -6,6 +6,9 @@ import HeroAbout from "./HeroAbout";
 import Navbar from "./Navbar";
 import PortfolioCard from "./PortfolioCard";
 
+// Import images
+import imageScrum from "../assets/screencasts/UsageDemo.gif";
+
 // External Links
 const resumeURL =
   "https://drive.google.com/file/d/14YPdAxf0GCHst7gSb9p4TZAn32ud2GfI/view?usp=sharing";
@@ -18,7 +21,7 @@ const demo = {
   title: "Scrumban",
   blurb:
     "A React application that interfaces with a Ruby backend that allows teams to manage their projects using a scrum/kanban approach.",
-  img: "../assets/screencasts/UsageDemo.gif",
+  img: imageScrum,
 };
 
 function App() {
@@ -30,7 +33,6 @@ function App() {
       <Button url={linkedInURL} value="LinkedIn" />
       <Button url={githubURL} value="Github" />
       <PortfolioCard cardData={demo} />
-      <img src={demo.img} alt={demo.title} />
     </div>
   );
 }
