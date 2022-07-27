@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import PortfolioCard from "./PortfolioCard";
 
 // Import images
-import imageScrum from "../assets/screencasts/UsageDemo.gif";
+import imageScrum from "../assets/screencasts/ScrumUsageDemo.gif";
 
 // External Links
 const resumeURL =
