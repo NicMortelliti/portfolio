@@ -4,12 +4,22 @@ import "../style/App.css";
 import Button from "./Button";
 import HeroAbout from "./HeroAbout";
 import Navbar from "./Navbar";
+import PortfolioCard from "./PortfolioCard";
 
 // External Links
 const resumeURL =
   "https://drive.google.com/file/d/14YPdAxf0GCHst7gSb9p4TZAn32ud2GfI/view?usp=sharing";
 const linkedInURL = "https://www.linkedin.com/in/nicolas-mortelliti/";
 const githubURL = "https://github.com/NicMortelliti";
+
+const demo = {
+  demoURL: "https://scrumban.netlify.app/",
+  ghURL: "https://github.com/stars/NicMortelliti/lists/scrumban",
+  title: "Scrumban",
+  blurb:
+    "A React application that interfaces with a Ruby backend that allows teams to manage their projects using a scrum/kanban approach.",
+  img: "../../assets/screencasts/UsageDemo.gif",
+};
 
 function App() {
   return (
@@ -19,6 +29,8 @@ function App() {
       <Button url={resumeURL} value="Resume" />
       <Button url={linkedInURL} value="LinkedIn" />
       <Button url={githubURL} value="Github" />
+      <PortfolioCard cardData={demo} />
+      <img src={demo.img} alt={demo.title} />
     </div>
   );
 }
