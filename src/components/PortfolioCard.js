@@ -1,12 +1,13 @@
 import React from "react";
 
-function PortfolioCard({ cardData }) {
+import Button from "./Button";
 
+function PortfolioCard({ cardData }) {
   return (
     <div>
-      <p>{cardData.demoURL}</p>
-      <p>{cardData.ghURL}</p>
       <p>{cardData.title}</p>
+      <Button url={cardData.demoURL} value="Demo" />
+      <Button url={cardData.ghURL} value="Github" />
       <p>{cardData.blurb}</p>
       <img src={cardData.img} alt={cardData.title} />
     </div>
