@@ -18,7 +18,7 @@ const demo = {
   title: "Scrumban",
   blurb:
     "A React application that interfaces with a Ruby backend that allows teams to manage their projects using a scrum/kanban approach.",
-  img: "../../assets/screencasts/UsageDemo.gif",
+  img: "../assets/screencasts/UsageDemo.gif",
 };
 
 function App() {
