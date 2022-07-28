@@ -9,6 +9,7 @@ import PortfolioCard from "./PortfolioCard";
 // Import images
 import imageScrum from "../assets/screencasts/ScrumUsageDemo.gif";
 import imageChecklist from "../assets/screencasts/ChecklistUsageDemo.gif";
+import imageBored from "../assets/screencasts/BoredUsageDemo.gif";
 
 // External Links
 const resumeURL =
@@ -32,6 +33,14 @@ const demo = [
     blurb:
       "A mobile React application using Material UI that replaces paper checklists used by pilots.",
     img: imageChecklist,
+  },
+  {
+    demoURL: "https://nicmortelliti.github.io/Bored/",
+    ghURL: "https://github.com/NicMortelliti/Bored",
+    title: "Bored?",
+    blurb:
+      "An application built with JavaScript and HTML that returns activity ideas from an API based on the users form selections.",
+    img: imageBored,
   },
 ];
 
