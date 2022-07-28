@@ -36,7 +36,7 @@ const demo = [
 
 function Portfolio() {
   return (
-    <div>
+    <div className="portfolio">
       {demo.map((each) => (
         <PortfolioCard key={each.title} cardData={each} />
       ))}

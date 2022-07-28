@@ -1,8 +1,6 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -12,6 +10,12 @@
   border-style: solid;
   border-color: red;
   width: 300px;
+}
+
+.portfolio {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 img {
