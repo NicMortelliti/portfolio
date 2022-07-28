@@ -14,6 +14,12 @@ body {
   align-items: center;
 }
 
+.portfolio {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .p-card {
   align-content: center;
   justify-content: center;
@@ -22,10 +28,19 @@ body {
   width: 300px;
 }
 
-.portfolio {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+button {
+  background: rgb(3, 9, 82);
+  background: linear-gradient(
+    180deg,
+    rgba(102, 63, 203, 1) 0%,
+    rgba(244, 168, 63, 1) 100%
+  );
+  border-radius: 1em;
+  border-style: none;
+  height: 4em;
+  margin: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 img {
