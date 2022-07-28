@@ -30,12 +30,7 @@ body {
 }
 
 button {
-  background: rgb(3, 9, 82);
-  background: linear-gradient(
-    180deg,
-    rgba(102, 63, 203, 1) 0%,
-    rgba(244, 168, 63, 1) 100%
-  );
+  background: rgb(43, 160, 98);
   border-radius: 0.5em;
   border-style: none;
   height: 3em;
