@@ -6,12 +6,12 @@
   --ten-color: rgba(215, 204, 177, 1);
 }
 
-body {
+/* body {
   background: var(--sixty-color);
-}
+} */
 
 * {
-  color: var(--ten-color);
+  /* color: var(--ten-color); */
   font-family: "Play";
   font-weight: 400;
 }
@@ -52,9 +52,9 @@ body {
 }
 
 button {
-  background: var(--thirty-color);
+  /* background: var(--thirty-color); */
   border-style: none;
-  color: var(--sixty-color);
+  /* color: var(--sixty-color); */
   cursor: pointer;
   height: 3em;
   margin: 0.5em;
@@ -64,13 +64,15 @@ button {
 
 .social {
   background: none;
-  border-bottom: 0.5vw solid var(--sixty-color); /* Prevents page content dipping when button hovered*/
-  color: var(--ten-color);
+  /* border-bottom: 0.5vw solid var(--sixty-color); Prevents page content dipping when button hovered */
+  border-bottom: 0.5vw solid; /* Prevents page content dipping when button hovered*/
+  /* color: var(--ten-color); */
   font-size: 2vw;
 }
 
 .social:hover {
-  border-bottom: 0.5vw solid var(--ten-color);
+  /* border-bottom: 0.5vw solid var(--ten-color); */
+  border-bottom: 0.5vw solid;
 }
 
 img {
