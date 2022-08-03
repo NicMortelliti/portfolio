@@ -2,6 +2,7 @@ import "../style/App.css";
 
 // Import components
 import Button from "./Button";
+import CallToAction from "./CallToAction";
 import HeroAbout from "./HeroAbout";
 import Navbar from "./Navbar";
 import Portfolio from "./Portfolio";
@@ -21,6 +22,7 @@ function App() {
       <Button url={linkedInURL} value="LinkedIn" />
       <Button url={githubURL} value="Github" />
       <Portfolio />
+      <CallToAction />
     </div>
   );
 }
