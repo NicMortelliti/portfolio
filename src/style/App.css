@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
 :root {
-  --sixty-color: rgba(43, 160, 98, 1);
-  --thirty-color: rgba(3, 9, 82, 1);
-  --ten-color: rgba(255, 255, 255, 1);
+  --sixty-color: rgba(27, 34, 50, 1);
+  --thirty-color: rgba(196, 155, 187, 1);
+  --ten-color: rgba(215, 204, 177, 1);
 }
 
 body {
@@ -54,6 +54,7 @@ body {
 button {
   background: var(--thirty-color);
   border-style: none;
+  color: var(--sixty-color);
   cursor: pointer;
   height: 3em;
   margin: 0.5em;
