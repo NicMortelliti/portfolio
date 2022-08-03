@@ -12,6 +12,11 @@ body {
   align-items: center;
 }
 
+.hero {
+  text-align: left;
+  padding-left: 2rem;
+}
+
 .portfolio {
   justify-content: center;
   display: flex;

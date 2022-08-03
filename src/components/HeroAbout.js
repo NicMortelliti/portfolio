@@ -32,9 +32,9 @@ function HeroAbout() {
   }, []);
 
   return (
-    <div>
-      <h1>{`I'm ${name.first} ${name.last}`},</h1>
-      <h2>{currentBlurb}</h2>
+    <div className="hero">
+      <h1>{`Hey, I'm ${name.first}`}</h1>
+      <h2>I'm a maker</h2>
     </div>
   );
 }
