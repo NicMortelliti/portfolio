@@ -27,6 +27,15 @@ body {
   padding-left: 2rem;
 }
 
+.hero h1 {
+  font-size: 10vw;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 6vw;
+}
+
 .portfolio {
   justify-content: center;
   display: flex;
