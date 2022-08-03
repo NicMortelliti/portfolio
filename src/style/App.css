@@ -62,7 +62,11 @@ button {
 }
 
 .social {
+  background: none;
+  border-bottom: 0.5vw solid var(--sixty-color); /* Prevents page content dipping when button hovered*/
   color: var(--ten-color);
+  font-size: 2vw;
+}
 }
 
 img {
