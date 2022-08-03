@@ -22,16 +22,13 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   align-content: center;
   justify-content: center;
-  border-radius: 0.5em;
   margin: 0.5em;
   padding: 0.5em;
   width: 300px;
-  box-shadow: 0 4px 8px 0 blue, 0 5px 20px 0 blue;
 }
 
 button {
   background: rgb(3, 9, 82);
-  border-radius: 0.5em;
   border-style: none;
   height: 3em;
   margin: 0.5em;
