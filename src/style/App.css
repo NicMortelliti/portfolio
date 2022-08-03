@@ -1,9 +1,15 @@
+:root {
+  --sixty-color: rgba(43, 160, 98, 1);
+  --thirty-color: rgba(3, 9, 82, 1);
+  --ten-color: rgba(255, 255, 255, 1);
+}
+
 body {
-  background: rgb(43, 160, 98);
+  background: var(--sixty-color);
 }
 
 * {
-  color: rgb(255, 255, 255);
+  color: var(--ten-color);
 }
 
 .App {
@@ -20,7 +26,7 @@ body {
 .portfolio {
   justify-content: center;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .p-card {
@@ -33,12 +39,16 @@ body {
 }
 
 button {
-  background: rgb(3, 9, 82);
+  background: var(--thirty-color);
   border-style: none;
   height: 3em;
   margin: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
+}
+
+.social {
+  color: var(--ten-color);
 }
 
 img {

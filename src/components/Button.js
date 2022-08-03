@@ -1,11 +1,15 @@
 import React from "react";
 
-function Button({ url, value }) {
+function Button({ url, value, ui }) {
   const handleClick = () => {
     window.open(url);
   };
 
-  return <button onClick={handleClick}>{value}</button>;
+  return (
+    <button className={ui} onClick={handleClick}>
+      {value}
+    </button>
+  );
 }
 
 export default Button;
