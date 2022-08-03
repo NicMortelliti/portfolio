@@ -67,6 +67,9 @@ button {
   color: var(--ten-color);
   font-size: 2vw;
 }
+
+.social:hover {
+  border-bottom: 0.5vw solid var(--ten-color);
 }
 
 img {
