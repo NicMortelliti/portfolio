@@ -33,8 +33,7 @@ function HeroAbout() {
 
   return (
     <div>
-      <h1>{`My name is ${name.first} ${name.last}`}</h1>
-      <h3>I am</h3>
+      <h1>{`I'm ${name.first} ${name.last}`},</h1>
       <h2>{currentBlurb}</h2>
     </div>
   );
