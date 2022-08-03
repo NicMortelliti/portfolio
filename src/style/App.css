@@ -54,6 +54,7 @@ body {
 button {
   background: var(--thirty-color);
   border-style: none;
+  cursor: pointer;
   height: 3em;
   margin: 0.5em;
   padding-left: 2em;
