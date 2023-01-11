@@ -1,10 +1,10 @@
 import "../style/App.css";
 
 // Styled Components
-import GlobalStyles from "./components/styles/Global.styled";
+import GlobalStyles from "./styles/Global";
 import { ThemeProvider } from "styled-components";
-import { theme } from "/styles/Theme.styled";
-import { Wrapper } from "/styles/Layout.styled";
+import { theme } from "./styles/Theme";
+// import { Wrapper } from "./styles/Layout.styled";
 
 // Import components
 import CallToAction from "./CallToAction";
@@ -16,12 +16,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Wrapper>
-        <Navbar />
-        <HeroAbout />
-        <CallToAction />
-        <Portfolio />
-      </Wrapper>
+      {/* <Wrapper> */}
+      <Navbar />
+      <HeroAbout />
+      <CallToAction />
+      <Portfolio />
+      {/* </Wrapper> */}
     </ThemeProvider>
   );
 }
