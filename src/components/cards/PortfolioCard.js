@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "./Button";
+import Button from "../buttons/Button";
 
 function PortfolioCard({ cardData }) {
   return (
@@ -9,7 +9,6 @@ function PortfolioCard({ cardData }) {
       <Button url={cardData.demoURL} value="Demo" />
       <Button url={cardData.ghURL} value="Github" />
       <p>{cardData.blurb}</p>
-      {/* <img src={cardData.img} alt={cardData.title} /> */}
     </div>
   );
 }

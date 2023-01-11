@@ -1,19 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
-
 :root {
   --sixty-color: rgba(27, 34, 50, 1);
   --thirty-color: rgba(196, 155, 187, 1);
   --ten-color: rgba(215, 204, 177, 1);
-}
-
-body {
-  background: var(--sixty-color);
-}
-
-* {
-  color: var(--ten-color);
-  font-family: "Play";
-  font-weight: 400;
 }
 
 .App {
@@ -49,28 +37,6 @@ body {
   margin: 0.5em;
   padding: 0.5em;
   width: 300px;
-}
-
-button {
-  background: var(--thirty-color);
-  border-style: none;
-  color: var(--sixty-color);
-  cursor: pointer;
-  height: 3em;
-  margin: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.social {
-  background: none;
-  border-bottom: 0.5vw solid var(--sixty-color); /* Prevents page content dipping when button hovered*/
-  color: var(--ten-color);
-  font-size: 2vw;
-}
-
-.social:hover {
-  border-bottom: 0.5vw solid var(--ten-color);
 }
 
 img {

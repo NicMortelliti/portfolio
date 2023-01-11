@@ -1,6 +1,6 @@
 import React from "react";
 
-import PortfolioCard from "./PortfolioCard";
+import PortfolioCard from "./cards/PortfolioCard";
 
 // Import images
 import imageScrum from "../assets/screencasts/ScrumUsageDemo.gif";

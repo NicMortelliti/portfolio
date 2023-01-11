@@ -1,14 +1,16 @@
 import React from "react";
 
+import { Button as Btn } from "../styles/Buttons.styled";
+
 function Button({ url, value, ui }) {
   const handleClick = () => {
     window.open(url);
   };
 
   return (
-    <button className={ui} onClick={handleClick}>
+    <Btn className={ui} onClick={handleClick}>
       {value}
-    </button>
+    </Btn>
   );
 }
 

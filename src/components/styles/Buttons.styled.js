@@ -1,0 +1,30 @@
+import styled from "styled-components";
+
+export const Button = styled.button`
+  cursor: pointer;
+  background: ${({ theme }) => theme.accent};
+  border: none;
+  color: ${({ theme }) => theme.inverse};
+  height: 3em;
+  margin: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+`;
+
+export const NavButton = styled.button`
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-bottom: 0.5vw solid transparent; /* Prevents page content dipping when button hovered*/
+  color: ${({ theme }) => theme.color};
+  height: 3em;
+  margin: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 2vw;
+
+  &:hover,
+  &:active {
+    border-bottom-color: ${({ theme }) => theme.color};
+  }
+`;

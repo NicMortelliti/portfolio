@@ -4,7 +4,7 @@ import "../style/App.css";
 import GlobalStyles from "./styles/Global";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/Theme";
-// import { Wrapper } from "./styles/Layout.styled";
+import { Wrapper } from "./styles/Layout.styled";
 
 // Import components
 import CallToAction from "./CallToAction";
@@ -16,12 +16,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {/* <Wrapper> */}
-      <Navbar />
-      <HeroAbout />
-      <CallToAction />
-      <Portfolio />
-      {/* </Wrapper> */}
+      <Wrapper>
+        <Navbar className="header" />
+        <div className="content">
+          <HeroAbout />
+          <CallToAction />
+          <Portfolio />
+        </div>
+      </Wrapper>
     </ThemeProvider>
   );
 }
