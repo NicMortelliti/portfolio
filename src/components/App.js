@@ -1,5 +1,4 @@
 import React from "react";
-import "../style/App.css";
 
 // Styled Components
 import GlobalStyles from "./styles/Global";
