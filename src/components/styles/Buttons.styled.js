@@ -21,10 +21,11 @@ export const NavButton = styled.button`
   margin: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
-  font-size: 2vw;
+  font-size: 3vw;
 
   &:hover,
   &:active {
-    border-bottom-color: ${({ theme }) => theme.color};
+    border-bottom-color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.accent};
   }
 `;

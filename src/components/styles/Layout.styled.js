@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
 
   .content {
     grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer {

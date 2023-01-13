@@ -1,10 +1,11 @@
-const sixtyColor = "rgba(27, 34, 50, 1)";
-const thirtyColor = "rgba(196, 155, 187, 1)";
-const tenColor = "rgba(215, 204, 177, 1)";
+const sixtyColor = "#d2f5ff";
+const thirtyColor = "#F26D68";
+const tenColor = "#587b98";
+const accent = "#00C9B7";
 
 export const theme = {
   bgColor: sixtyColor,
   color: tenColor,
-  inverse: sixtyColor,
-  accent: thirtyColor,
+  inverse: thirtyColor,
+  accent: accent,
 };
