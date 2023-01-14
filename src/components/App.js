@@ -7,21 +7,19 @@ import { theme } from "./styles/Theme";
 import { Wrapper } from "./styles/Layout.styled";
 
 // Import components
-import CallToAction from "./CallToAction";
-import HeroAbout from "./HeroAbout";
 import Navbar from "./Navbar";
-import Portfolio from "./Portfolio";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
-        <Navbar className="header" />
         <div className="content">
-          <HeroAbout />
-          <CallToAction />
-          <Portfolio />
+          <h1 style={{ fontSize: "5em" }}>🏗️</h1>
+          <h1 style={{ fontSize: "9vw", textAlign: "center" }}>
+            Under Construction
+          </h1>
+          <Navbar />
         </div>
       </Wrapper>
     </ThemeProvider>
