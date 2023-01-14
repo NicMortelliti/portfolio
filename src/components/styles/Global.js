@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
 
 body {
   background-image: radial-gradient(circle, ${({ theme }) =>
-    theme.gradient.purple});
+    theme.gradient.green});
 }
 `;
 
