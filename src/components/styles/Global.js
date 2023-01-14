@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  background-image: radial-gradient(circle, #f26d68, #c14d70, #87396c, #4b2a5a, #13193c);
- background-image: linear-gradient(to left top, #f26d68, #fa9187, #ffb3a9, #ffd4cd, #fff5f3);
+  background-image: radial-gradient(circle, ${({ theme }) =>
+    theme.gradient.purple});
 }
 `;
 

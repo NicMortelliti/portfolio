@@ -1,6 +1,8 @@
+import styled from "styled-components";
+
 const sixtyColor = "#d2f5ff";
 const thirtyColor = "#F26D68";
-const tenColor = "#587b98";
+const tenColor = "black";
 const accent = "#00C9B7";
 
 // Black Panter colors
@@ -20,4 +22,12 @@ export const theme = {
   color: tenColor,
   inverse: thirtyColor,
   accent: accent,
+
+  gradient: {
+    green: `${greenLight}, #00B68B, #00886F, #005D50, ${greenDark}`,
+    blue: `${blueLight}, #259395, #197d82, #0f676f, ${blueDark}`,
+    red: `${redLight}, #790009, #670008, #560005, ${redDark}`,
+    yellow: `${yellowLight}, #B68D45, #9E732E, #875919, ${yellowDark}`,
+    purple: `${purpleLight}, #8E53B2, #853FA2, #7D2892, ${purpleDark}`,
+  },
 };
