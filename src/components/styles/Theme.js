@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 const sixtyColor = "#d2f5ff";
 const thirtyColor = "#F26D68";
 const tenColor = "black";
