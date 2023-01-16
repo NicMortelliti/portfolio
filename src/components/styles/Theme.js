@@ -5,7 +5,7 @@ const thirtyColor = "#F26D68";
 const tenColor = "black";
 const accent = "#00C9B7";
 
-// Black Panter colors
+// Black Panther colors
 const purpleLight = "#9666C1";
 const purpleDark = "#750E81";
 const yellowLight = "#CDA95C";
