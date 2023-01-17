@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FiExternalLink } from "react-icons/fi";
 
 // Styled components
 import { NavBar as Nav } from "./styles/NavBar.styled";
@@ -17,7 +18,9 @@ const externalLinks = [
 const RenderExternalLinks = () =>
   externalLinks.map(({ to, text }) => (
     <a href={to}>
-      <h2>{text}</h2>
+      <h2>
+        {text} <FiExternalLink />
+      </h2>
     </a>
   ));
 
