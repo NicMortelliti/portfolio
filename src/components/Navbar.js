@@ -15,7 +15,11 @@ const externalLinks = [
 ];
 
 const RenderExternalLinks = () =>
-  externalLinks.map(({ to, text }) => <a href={to}>{text}</a>);
+  externalLinks.map(({ to, text }) => (
+    <a href={to}>
+      <h2>{text}</h2>
+    </a>
+  ));
 
 // Internal Links
 // Create an array of links with a "to" that points to the react-router path,
@@ -33,7 +37,7 @@ const RenderLinks = () =>
     <NavLink
       to={to}
       className={({ isActive }) => (isActive ? "active" : undefined)}>
-      {text}
+      <h2>{text}</h2>
     </NavLink>
   ));
 

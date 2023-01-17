@@ -21,6 +21,12 @@ export const theme = {
   inverse: thirtyColor,
   accent: accent,
 
+  green: greenLight,
+  blue: blueLight,
+  red: redLight,
+  yellow: yellowLight,
+  purple: purpleLight,
+
   gradient: {
     green: `${greenLight}, #00B68B, #00886F, #005D50, ${greenDark}`,
     blue: `${blueLight}, #259395, #197d82, #0f676f, ${blueDark}`,
