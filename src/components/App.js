@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Styled Components
 import GlobalStyles from "./styles/Global";
@@ -8,20 +9,28 @@ import { Wrapper } from "./styles/Layout.styled";
 
 // Import components
 import Navbar from "./Navbar";
+import About from "../pages/About";
+import Landing from "../pages/Landing";
+import Portfolio from "../pages/Portfolio";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Wrapper>
-        <div className="content">
-          <h1 style={{ fontSize: "5em" }}>🏗️</h1>
-          <h1 style={{ fontSize: "9vw", textAlign: "center" }}>
-            Under Construction
-          </h1>
-          <Navbar />
-        </div>
-      </Wrapper>
+      <Router>
+        <Wrapper>
+          <div className="nav">
+            <Navbar />
+          </div>
+          <div className="content">
+            <Routes>
+              <Route path="/" exact element={<Landing />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+            </Routes>
+          </div>
+        </Wrapper>
+      </Router>
     </ThemeProvider>
   );
 }

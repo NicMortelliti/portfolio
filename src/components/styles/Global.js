@@ -14,10 +14,10 @@ const GlobalStyles = createGlobalStyle`
   color: ${({ theme }) => theme.color || "black"};;
 }
 
-body {
+/* body {
   background-image: radial-gradient(circle, ${({ theme }) =>
     theme.gradient.green});
-}
+} */
 `;
 
 export default GlobalStyles;
