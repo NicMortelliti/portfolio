@@ -7,12 +7,23 @@ const Contact = () => {
 
   const email = "nic@nicweb.dev";
 
+  // When clicked, we will attempt to copy the email
+  // address to the clipboard. This only works on secure
+  // connections such as https or localhost. This site
+  // will be hosted via https, so it should work fine for
+  // most browsers. I tested this behavior on a non-secure
+  // connection (192.xxx...) and I did not see the "Copied!"
+  // feedback. So it seems to work as intended.
   const handleClick = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(email);
     setFeedbackIsDisplayed(true);
   };
 
+  // Watch for changes in the feedbackIsDisplayed state.
+  // If the state changes to "true", we start a timer.
+  // At the end of the timer, we set the state
+  // back to "false".
   useEffect(() => {
     if (feedbackIsDisplayed === true) {
       const timer = setTimeout(() => {
