@@ -13,7 +13,6 @@ export const Wrapper = styled.div`
     grid-area: nav;
     display: flex;
     align-items: center;
-    min-height: 100vh;
 
     border: 1px solid yellow;
   }
@@ -22,7 +21,7 @@ export const Wrapper = styled.div`
     grid-area: content;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 
     border: 1px solid blue;
