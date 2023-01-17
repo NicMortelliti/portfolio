@@ -15,6 +15,7 @@ const links = [
   { to: "/", text: "Home" },
   { to: "/about", text: "About" },
   { to: "/portfolio", text: "Portfolio" },
+  { to: "/contact", text: "Contact Me" },
 ];
 
 const RenderLinks = () =>
