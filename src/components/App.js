@@ -12,6 +12,7 @@ import Navbar from "./Navbar";
 import About from "../pages/About";
 import Landing from "../pages/Landing";
 import Portfolio from "../pages/Portfolio";
+import Contact from "../pages/Contact";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/" exact element={<Landing />} />
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
         </Wrapper>
