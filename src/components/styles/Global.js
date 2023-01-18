@@ -9,14 +9,17 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
  
-  /* background: ${({ theme }) => theme.bgColor || "black"}; */
-
   color: ${({ theme }) => theme.color || "black"};;
 }
 
 body {
   background-image: radial-gradient(circle, ${({ theme }) => theme.gradient});
-  transition: all 0.50s linear;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 `;
 
