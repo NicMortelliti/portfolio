@@ -35,19 +35,23 @@ export const theme = {
 export const green = {
   ...theme,
   gradient: `${greenLight}, #00B68B, #00886F, #005D50, ${greenDark}`,
+  bgColor: greenLight,
 };
 
 export const red = {
   ...theme,
   gradient: `${redLight}, #790009, #670008, #560005, ${redDark}`,
+  bgColor: redLight,
 };
 
 export const yellow = {
   ...theme,
   gradient: `${yellowLight}, #B68D45, #9E732E, #875919, ${yellowDark}`,
+  bgColor: yellowLight,
 };
 
 export const purple = {
   ...theme,
   gradient: `${purpleLight}, #8E53B2, #853FA2, #7D2892, ${purpleDark}`,
+  bgColor: purpleLight,
 };

@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
+const color = ({ theme }) => theme.color;
+const bgColor = ({ theme }) => theme.bgColor;
+
 export const NavBar = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
   height: 100%;
 
-  background-color: lightcoral;
+  background-color: ${bgColor};
 
   a {
     display: flex;
-    color: ${({ theme }) => theme.color};
+    color: ${color};
 
     text-decoration: none;
     justify-content: end;
@@ -18,7 +21,7 @@ export const NavBar = styled.div`
 
     padding: 0 1rem 0 2rem;
 
-    border: 2px solid white;
+    border: 1px solid ${color};
     border-right: none;
     flex: 1;
   }

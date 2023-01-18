@@ -13,8 +13,6 @@ export const Wrapper = styled.div`
     grid-area: nav;
     display: flex;
     align-items: center;
-
-    border: 1px solid yellow;
   }
 
   .content {
@@ -23,7 +21,5 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-
-    border: 1px solid blue;
   }
 `;
