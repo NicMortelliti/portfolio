@@ -28,10 +28,26 @@ export const theme = {
   purple: purpleLight,
 
   gradient: {
-    green: `${greenLight}, #00B68B, #00886F, #005D50, ${greenDark}`,
     blue: `${blueLight}, #259395, #197d82, #0f676f, ${blueDark}`,
-    red: `${redLight}, #790009, #670008, #560005, ${redDark}`,
-    yellow: `${yellowLight}, #B68D45, #9E732E, #875919, ${yellowDark}`,
-    purple: `${purpleLight}, #8E53B2, #853FA2, #7D2892, ${purpleDark}`,
   },
+};
+
+export const green = {
+  ...theme,
+  gradient: `${greenLight}, #00B68B, #00886F, #005D50, ${greenDark}`,
+};
+
+export const red = {
+  ...theme,
+  gradient: `${redLight}, #790009, #670008, #560005, ${redDark}`,
+};
+
+export const yellow = {
+  ...theme,
+  gradient: `${yellowLight}, #B68D45, #9E732E, #875919, ${yellowDark}`,
+};
+
+export const purple = {
+  ...theme,
+  gradient: `${purpleLight}, #8E53B2, #853FA2, #7D2892, ${purpleDark}`,
 };
