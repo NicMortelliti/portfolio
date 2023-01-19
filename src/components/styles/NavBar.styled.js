@@ -10,6 +10,12 @@ export const NavBar = styled.div`
   height: 100%;
 
   background-color: ${bgColor};
+  box-shadow: -2px 0 5px black;
+
+  .active {
+    background-color: #33333366;
+    pointer-events: none;
+  }
 
   a {
     display: flex;
