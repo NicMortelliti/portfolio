@@ -21,8 +21,12 @@ export const NavBar = styled.div`
 
     padding: 0 1rem 0 2rem;
 
-    border: 1px solid ${color};
+    border: 1px solid #33333311;
     border-right: none;
     flex: 1;
+
+    :hover {
+      background-color: #33333311;
+    }
   }
 `;
