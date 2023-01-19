@@ -1,27 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FiExternalLink } from "react-icons/fi";
 
 // Data
-import { internalLinks, externalLinks } from "../data/linkData";
+import { internalLinks } from "../data/linkData";
 
 // Styled components
 import { NavBar as Nav } from "./styles/NavBar.styled";
 
 function Navbar({ setTheme }) {
-  // External Links
-  // Create an array of links with a "to" that points to the external url,
-  // as well as the "text" to display.
-  // Then map through the links, creating a link for each one.
-  const RenderExternalLinks = () =>
-    externalLinks.map(({ to, text }, index) => (
-      <a key={index} href={to}>
-        <h2>
-          {text} <FiExternalLink />
-        </h2>
-      </a>
-    ));
-
   // Internal Links
   // Create an array of links with a "to" that points to the react-router path,
   // as well as the "text" to display as the NavLink.
@@ -40,7 +26,6 @@ function Navbar({ setTheme }) {
   return (
     <Nav>
       <RenderLinks />
-      <RenderExternalLinks />
     </Nav>
   );
 }

@@ -1,11 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { MdContentCopy } from "react-icons/md";
+import { externalLinks } from "../data/linkData";
+
+// Styled components
 import { Wrapper } from "../components/styles/Page.styled";
+import { LinkCont, Link } from "../components/styles/Link.styled";
 
 const Contact = () => {
   const [feedbackIsDisplayed, setFeedbackIsDisplayed] = useState(false);
 
   const email = "nic@nicweb.dev";
+
+  // External Links
+  // Create an array of links with a "to" that points to the external url,
+  // as well as the "text" to display.
+  // Then map through the links, creating a link for each one.
+  const RenderExternalLinks = () => (
+    <LinkCont columns>
+      {externalLinks.map(({ to, text, icon }, index) => (
+        <Link key={index} href={to}>
+          <h1 className="icon">{icon}</h1>
+          <p className="desc">{text}</p>
+        </Link>
+      ))}
+    </LinkCont>
+  );
 
   // When clicked, we will attempt to copy the email
   // address to the clipboard. This only works on secure
@@ -46,6 +65,7 @@ const Contact = () => {
           </h2>
         )}
       </button>
+      <RenderExternalLinks />
     </Wrapper>
   );
 };
