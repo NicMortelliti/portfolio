@@ -1,8 +1,8 @@
-import { green, red, yellow, purple } from "../components/styles/Theme";
+import { green, blue, yellow, purple } from "../components/styles/Theme";
 
 export const internalLinks = [
   { to: "/", text: "Home", theme: green },
-  { to: "/about", text: "About", theme: red },
+  { to: "/about", text: "About", theme: blue },
   { to: "/portfolio", text: "Portfolio", theme: yellow },
   { to: "/contact", text: "Contact Me", theme: purple },
 ];

@@ -38,6 +38,12 @@ export const green = {
   bgColor: greenLight,
 };
 
+export const blue = {
+  ...theme,
+  gradient: `${blueLight}, #259395, #197d82, #0f676f, ${blueDark}`,
+  bgColor: blueLight,
+};
+
 export const red = {
   ...theme,
   gradient: `${redLight}, #790009, #670008, #560005, ${redDark}`,
