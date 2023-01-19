@@ -1,9 +1,9 @@
 import {
-  HiSparkles,
-  HiTrendingUp,
-  HiClock,
-  HiBadgeCheck,
-  HiLightBulb,
+  HiOutlineSparkles as HiSparkles,
+  HiOutlineTrendingUp as HiTrendingUp,
+  HiOutlineClock as HiClock,
+  HiOutlineBadgeCheck as HiBadgeCheck,
+  HiOutlineLightBulb as HiLightBulb,
 } from "react-icons/hi";
 
 export const data = [

@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     grid-area: content;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
   }
 `;
