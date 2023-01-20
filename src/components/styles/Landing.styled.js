@@ -11,4 +11,17 @@ export const Wrapper = styled.div`
   gap: 1rem;
 
   max-width: 500px;
+
+  img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 20rem;
+  }
+
+  @media (max-width: 650px) or (max-height: 650px) {
+    img {
+      display: none;
+    }
+  }
 `;

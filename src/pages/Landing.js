@@ -1,5 +1,7 @@
 import React from "react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+
+import memoji from "../assets/images/memoji-wave.png";
 
 // Styled components
 import { Wrapper } from "../components/styles/Landing.styled";
@@ -10,15 +12,10 @@ const Landing = () => {
 
   return (
     <Wrapper>
-      <h1>Welcome!</h1>
-      <p>
-        This is kind of embarrasing, you've caught me in the midst of creating
-        my portfolio.
-      </p>
-      <p>
-        There isn't very much here yet, but feel free to take a look around!
-      </p>
-      <Button onClick={() => navigate('/contact')}>Contact Me</Button>
+      <h1>Hey! I'm Nic Mortelliti</h1>
+      <p>Web Developer / Systems Engineer / pilot.</p>
+      <Button onClick={() => navigate("/contact")}>Contact Me</Button>
+      <img src={memoji} alt="memoji" />
     </Wrapper>
   );
 };
