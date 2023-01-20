@@ -11,6 +11,10 @@ export const Button = styled.button`
   margin: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
+
+  &:hover {
+    background-color: #33333355;
+  }
 `;
 
 export const NavButton = styled.button`
