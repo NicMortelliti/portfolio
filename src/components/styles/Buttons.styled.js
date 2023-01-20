@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
+const color = ({ theme }) => theme.color;
+
 export const Button = styled.button`
   cursor: pointer;
   background: ${({ theme }) => theme.accent};
-  border: none;
-  color: ${({ theme }) => theme.inverse};
+  border: 1px solid ${color};
+  color: ${color};
   height: 3em;
   margin: 0.5em;
   padding-left: 2em;
