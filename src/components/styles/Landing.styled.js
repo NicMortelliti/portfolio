@@ -19,9 +19,14 @@ export const Wrapper = styled.div`
     max-width: 20rem;
   }
 
+  .title {
+    font-size: xx-large;
+  }
+
   @media (max-width: 650px) or (max-height: 650px) {
     img {
       display: none;
     }
   }
 `;
+

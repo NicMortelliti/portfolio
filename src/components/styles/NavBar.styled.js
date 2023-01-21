@@ -4,10 +4,12 @@ const color = ({ theme }) => theme.color;
 const bgColor = ({ theme }) => theme.bgColor;
 
 export const NavBar = styled.div`
+  position: fixed;
+  right: 0;
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100%;
+  height: 100vh;
 
   background-color: ${bgColor};
   box-shadow: -2px 0 5px black;
