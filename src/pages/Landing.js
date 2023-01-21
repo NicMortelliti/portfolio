@@ -12,8 +12,8 @@ const Landing = () => {
 
   return (
     <Wrapper>
-      <h1>Hey! I'm Nic Mortelliti</h1>
-      <p>Web Developer / Systems Engineer / pilot.</p>
+      <h1 className="title">Hey! I'm Nic Mortelliti</h1>
+      <p>Web Developer / Systems Engineer / Pilot</p>
       <Button onClick={() => navigate("/contact")}>Contact Me</Button>
       <img src={memoji} alt="memoji" />
     </Wrapper>

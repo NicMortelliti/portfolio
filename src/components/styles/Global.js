@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
   color: ${({ theme }) => theme.color || "black"};;
 }
 
+html {
+  scroll-behavior: smooth; 
+}
+
 body {
   background-image: radial-gradient(circle, ${({ theme }) => theme.gradient});
   animation: fadein 2s;
