@@ -6,35 +6,65 @@ import {
   HiOutlineLightBulb as HiLightBulb,
 } from "react-icons/hi";
 
+import {
+  DiReact as React,
+  DiRuby as Ruby,
+  DiPostgresql as Postgres,
+  DiJavascript as Javascript,
+  DiHtml5 as Html,
+  DiCss3 as Css,
+} from "react-icons/di"
+
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
     text: "Moonshot",
     description: "A fictional space flight booking site.",
     icon: <HiSparkles />,
+    techIcons: [
+      <React />,
+      <Ruby />,
+      <Postgres />,
+      <Css />
+    ]
   },
   {
     to: "https://scheduler.nicweb.dev",
     text: "Appointment Scheduler",
     description: "An application for booking appointments.",
     icon: <HiClock />,
+    techIcons: [
+      <React />,
+      <Ruby />,
+      <Postgres />
+    ]
   },
   {
     to: "https://kanban.nicweb.dev",
     text: "Kanban",
     description: "A project tracking tool for agile teams.",
     icon: <HiTrendingUp />,
+    techIcons: [
+      <React />
+    ]
   },
   {
     to: "https://checklist.nicweb.dev",
     text: "Piloting Checklist",
     description: "Finally, a simple checklist app for flying.",
     icon: <HiBadgeCheck />,
+    techIcons: [
+      <React />
+    ]
   },
   {
     to: "https://bored.nicweb.dev",
     text: "Bored?",
     description: "Looking for hobby or activity ideas? Try this app.",
     icon: <HiLightBulb />,
+    techIcons: [
+      <Html />,
+      <Javascript />
+    ]
   },
 ];

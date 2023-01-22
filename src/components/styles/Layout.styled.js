@@ -7,12 +7,13 @@ export const Wrapper = styled.div`
   min-height: 100vh;
   grid-template-areas:
     "content nav"
-    "content nav";
+    "content .";
 
   .nav {
     grid-area: nav;
     display: flex;
     align-items: center;
+    height: 100vh;
   }
 
   .content {

@@ -9,7 +9,7 @@ export const NavBar = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100vh;
+  height: 100%;
 
   background-color: ${bgColor};
   box-shadow: -2px 0 5px black;
