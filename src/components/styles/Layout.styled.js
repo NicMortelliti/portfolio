@@ -2,18 +2,17 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: 1fr auto;
   grid-template-columns: 1fr auto;
   min-height: 100vh;
   grid-template-areas:
-    "content nav"
-    "content .";
+    "content nav";
 
   .nav {
     grid-area: nav;
     display: flex;
     align-items: center;
     height: 100vh;
+    min-width: 0;
   }
 
   .content {
@@ -22,5 +21,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 2rem auto;
   }
 `;

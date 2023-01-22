@@ -13,8 +13,9 @@ export const Link = styled.a`
   grid-template-areas:
     "icon"
     "title"
-    "desc";
-  grid-template-rows: 1fr auto auto;
+    "desc"
+    "tech";
+  grid-template-rows: 1fr auto auto auto;
 
   /* margin: 1rem; */
   padding: 1rem;
@@ -43,5 +44,15 @@ export const Link = styled.a`
 
   .desc {
     grid-area: desc;
+  }
+
+  .techIcons {
+    grid-area: tech;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid black;
   }
 `;

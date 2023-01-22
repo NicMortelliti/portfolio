@@ -10,7 +10,7 @@ const Portfolio = () => {
 
   // Render each icon for the tech used to build project
   const RenderIcons = ({icons}) => (
-    <div>
+    <div className="techIcons">
       {icons.map((icon, index) => {
         return <h2 key={index}>{icon}</h2>
       })}
