@@ -15,6 +15,11 @@ import {
   DiCss3 as Css,
 } from "react-icons/di"
 
+import {
+  SiSqlite as Sqlite,
+  SiJson as Json,
+  SiMaterialui as Material
+} from "react-icons/si"
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
@@ -45,7 +50,9 @@ export const data = [
     description: "A project tracking tool for agile teams.",
     icon: <HiTrendingUp />,
     techIcons: [
-      <React />
+      <React />,
+      <Ruby />,
+      <Sqlite />
     ]
   },
   {
@@ -54,7 +61,9 @@ export const data = [
     description: "Finally, a simple checklist app for flying.",
     icon: <HiBadgeCheck />,
     techIcons: [
-      <React />
+      <React />,
+      <Json />,
+      <Material />
     ]
   },
   {
@@ -64,7 +73,8 @@ export const data = [
     icon: <HiLightBulb />,
     techIcons: [
       <Html />,
-      <Javascript />
+      <Javascript />,
+      <Material />
     ]
   },
 ];

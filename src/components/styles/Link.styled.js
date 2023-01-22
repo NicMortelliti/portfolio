@@ -5,7 +5,7 @@ export const LinkCont = styled.div`
   grid-auto-flow: ${({ columns }) => (columns ? "column" : undefined)};
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: 1rem; ;
+  gap: 1.5rem 1rem;
 `;
 
 export const Link = styled.a`
@@ -19,6 +19,7 @@ export const Link = styled.a`
 
   /* margin: 1rem; */
   padding: 1rem;
+  gap: 1rem;
 
   max-width: 500px;
 
