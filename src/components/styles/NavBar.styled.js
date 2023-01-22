@@ -1,40 +1,32 @@
 import styled from "styled-components";
 
-const color = ({ theme }) => theme.color;
-const bgColor = ({ theme }) => theme.bgColor;
+const primary = ({ theme }) => theme.primary;
 
 export const NavBar = styled.div`
   position: fixed;
-  right: 0;
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  height: 100%;
 
-  background-color: ${bgColor};
-  box-shadow: -2px 0 5px black;
+  padding: 0 1rem 0 3rem;
+  gap: 0.5rem;
+
+  background-color: #33333366;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top: 4px solid transparent;
 
   .active {
-    background-color: #33333366;
     pointer-events: none;
+    border-bottom: 4px solid ${primary};
   }
 
   a {
-    display: flex;
-    color: ${color};
+    display: block;
+    color: ${primary};
+
+    font-size: medium;
 
     text-decoration: none;
-    justify-content: end;
     align-items: center;
-
-    padding: 0 1rem 0 2rem;
-
-    border: 1px solid #33333311;
-    border-right: none;
-    flex: 1;
-
-    :hover {
-      background-color: #33333311;
-    }
+    padding: 1rem;
   }
 `;
