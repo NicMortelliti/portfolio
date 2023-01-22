@@ -5,7 +5,7 @@ export const LinkCont = styled.div`
   grid-auto-flow: ${({ columns }) => (columns ? "column" : undefined)};
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: 1rem; ;
+  gap: 1.5rem 1rem;
 `;
 
 export const Link = styled.a`
@@ -13,11 +13,13 @@ export const Link = styled.a`
   grid-template-areas:
     "icon"
     "title"
-    "desc";
-  grid-template-rows: 1fr auto auto;
+    "desc"
+    "tech";
+  grid-template-rows: 1fr auto auto auto;
 
   /* margin: 1rem; */
   padding: 1rem;
+  gap: 1rem;
 
   max-width: 500px;
 
@@ -43,5 +45,15 @@ export const Link = styled.a`
 
   .desc {
     grid-area: desc;
+  }
+
+  .techIcons {
+    grid-area: tech;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid black;
   }
 `;

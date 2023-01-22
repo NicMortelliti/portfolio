@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 
   .contact {
     cursor: pointer;
-    border: 0.13rem solid ${color};
+    border: 1px solid ${color};
     border-top: none;
     background-color: transparent;
     padding-bottom: 0.5rem;
