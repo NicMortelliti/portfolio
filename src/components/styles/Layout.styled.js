@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
   min-height: 100vh;
   grid-template-areas:
-    "content nav";
+    "nav"
+    "content";
 
   .nav {
     grid-area: nav;
     display: flex;
-    align-items: center;
-    height: 100vh;
-    min-width: 0;
+    justify-content: end;
+    position: sticky;
+    top: 20px;
+    z-index: 999;
   }
 
   .content {
@@ -21,6 +23,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto;
+    margin: auto;
   }
 `;

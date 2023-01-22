@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Styled Components
 import GlobalStyles from "./styles/Global";
 import { ThemeProvider } from "styled-components";
-import { green } from "./styles/Theme";
+import { blue } from "./styles/Theme";
 import { Wrapper } from "./styles/Layout.styled";
 
 // Import components
@@ -15,7 +15,7 @@ import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
 
 function App() {
-  const [theme, setTheme] = useState(green);
+  const [theme, setTheme] = useState(blue);
 
   return (
     <ThemeProvider theme={theme}>

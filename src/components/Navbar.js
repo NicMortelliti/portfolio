@@ -18,7 +18,7 @@ function Navbar() {
         key={index}
         to={to}
         className={({ isActive }) => (isActive ? "active" : undefined)}>
-        <h2>{text}</h2>
+        {text}
       </NavLink>
     ));
 

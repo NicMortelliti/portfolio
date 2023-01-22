@@ -16,6 +16,7 @@ const blueLight = "#32AAA8";
 const blueDark = "#07525B";
 
 export const theme = {
+  primary: sixtyColor,
   bgColor: sixtyColor,
   color: tenColor,
   inverse: thirtyColor,
@@ -26,10 +27,6 @@ export const theme = {
   red: redLight,
   yellow: yellowLight,
   purple: purpleLight,
-
-  gradient: {
-    blue: `${blueLight}, #259395, #197d82, #0f676f, ${blueDark}`,
-  },
 };
 
 export const green = {
@@ -61,3 +58,4 @@ export const purple = {
   gradient: `${purpleLight}, #8E53B2, #853FA2, #7D2892, ${purpleDark}`,
   bgColor: purpleLight,
 };
+
