@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.e328360b.js",
+    "main.js": "/static/js/main.b001beda.js",
     "static/media/memoji-wave.png": "/static/media/memoji-wave.ad8e922ff6e4dbfaa674.png",
     "index.html": "/index.html",
-    "main.e328360b.js.map": "/static/js/main.e328360b.js.map"
+    "main.b001beda.js.map": "/static/js/main.b001beda.js.map"
   },
   "entrypoints": [
-    "static/js/main.e328360b.js"
+    "static/js/main.b001beda.js"
   ]
 }
