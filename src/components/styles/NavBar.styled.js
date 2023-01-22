@@ -8,7 +8,6 @@ export const NavBar = styled.div`
   right: 0;
   display: flex;
   flex-direction: column;
-  flex: 1;
   height: 100%;
 
   background-color: ${bgColor};
