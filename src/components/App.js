@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Styled Components
 import GlobalStyles from "./styles/Global";
 import { ThemeProvider } from "styled-components";
-import { blue } from "./styles/Theme";
+import { theme } from "./styles/Theme";
 import { Wrapper } from "./styles/Layout.styled";
 
 // Import components
@@ -15,15 +15,13 @@ import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
 
 function App() {
-  const [theme, setTheme] = useState(blue);
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
         <Wrapper>
           <div className="nav">
-            <Navbar setTheme={setTheme} />
+            <Navbar />
           </div>
           <div className="content">
             <Routes>

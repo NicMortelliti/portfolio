@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   .nav {
     grid-area: nav;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     position: sticky;
     top: 20px;
     z-index: 999;

@@ -6,22 +6,21 @@ export const NavBar = styled.div`
   position: fixed;
   display: flex;
 
-  padding: 0 1rem 0 3rem;
+  padding: 0 3rem;
   gap: 0.5rem;
 
   background-color: #33333366;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0.25rem;
   border-top: 4px solid transparent;
 
   .active {
     pointer-events: none;
-    border-bottom: 4px solid ${primary};
+    border-bottom: 4px solid white;
   }
 
   a {
     display: block;
-    color: ${primary};
+    color: white;
 
     font-size: medium;
 
