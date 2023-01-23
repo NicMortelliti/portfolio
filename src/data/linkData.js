@@ -1,12 +1,10 @@
-import { green, blue, yellow, purple } from "../components/styles/Theme";
-
 import { RiArticleLine, RiGithubLine, RiLinkedinLine } from "react-icons/ri";
 
 export const internalLinks = [
-  { to: "/", text: "Home", theme: green },
-  { to: "/about", text: "About", theme: blue },
-  { to: "/portfolio", text: "Portfolio", theme: yellow },
-  { to: "/contact", text: "Contact Me", theme: purple },
+  { to: "/", text: "Home" },
+  { to: "/about", text: "About" },
+  { to: "/portfolio", text: "Portfolio" },
+  { to: "/contact", text: "Contact Me" },
 ];
 
 export const externalLinks = [

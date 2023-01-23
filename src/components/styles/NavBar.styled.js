@@ -15,12 +15,12 @@ export const NavBar = styled.div`
 
   .active {
     pointer-events: none;
-    border-bottom: 4px solid ${primary};
+    border-bottom: 4px solid white;
   }
 
   a {
     display: block;
-    color: ${primary};
+    color: white;
 
     font-size: medium;
 
