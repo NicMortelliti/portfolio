@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const primary = ({ theme }) => theme.primary;
-
 export const NavBar = styled.div`
   position: fixed;
   display: flex;
