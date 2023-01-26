@@ -10,8 +10,6 @@ export const Wrapper = styled.div`
   padding: 1rem;
   gap: 1rem;
 
-  max-width: 500px;
-
   img {
     position: fixed;
     bottom: 0;
@@ -19,8 +17,12 @@ export const Wrapper = styled.div`
     max-width: 20rem;
   }
 
-  .title {
-    font-size: xx-large;
+  h1 {
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 3vw;
   }
 
   @media (max-width: 650px) or (max-height: 650px) {
@@ -29,4 +31,3 @@ export const Wrapper = styled.div`
     }
   }
 `;
-
