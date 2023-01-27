@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
 
-import memoji from "../assets/images/memoji-wave.png";
+import memojiWaveDark from "../assets/images/memoji-wave.png";
+import memojiWaveLight from "../assets/images/memoji-wave-glasses.png";
 
-const Memoji = () => {
-  return (
-    <div>
-      <img src={memoji} alt="memoji" />
-    </div>
-  );
-}
+const Memoji = ({ darkThemeIsSet }) => {
+  // Conditionally display the type of emoji depending on theme dark or light
+  const RenderMemoji = () => {
+    switch (darkThemeIsSet) {
+      case true:
+        return <img src={memojiWaveDark} alt="memoji" />;
 
-export default Memoji
+      default:
+        return <img src={memojiWaveLight} alt="memoji" />;
+    }
+  };
+
+  return <RenderMemoji />;
+};
+
+export default Memoji;

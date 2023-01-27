@@ -46,7 +46,7 @@ function App() {
           <Contact />
         </Section>
         <MemojiSection>
-          <Memoji />
+          <Memoji darkThemeIsSet={darkThemeIsSet} />
         </MemojiSection>
       </Wrapper>
     </ThemeProvider>
