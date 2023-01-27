@@ -6,24 +6,14 @@ export const Wrapper = styled.div`
   min-height: 100dvh;
   min-height: 100vh; /* In case dvh isn't supported by browser */
   grid-template-areas:
-    "nav"
-    "content";
+    "landing"
+    "about"
+    "portfolio"
+    "contact";
+`;
 
-  .nav {
-    grid-area: nav;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 20px;
-    z-index: 999;
-  }
-
-  .content {
-    grid-area: content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-  }
+export const Section = styled.div`
+  grid-area: ${({ section }) => section};
+  min-height: 100dvh;
+  min-height: 100vh; /* Make each section at least the height of the viewport*/
 `;
