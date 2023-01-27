@@ -5,7 +5,12 @@ import { HashLink as Link } from "react-router-hash-link";
 import GlobalStyles from "./styles/Global";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styles/Theme";
-import { Wrapper, Section, HeaderSection } from "./styles/Layout.styled";
+import {
+  Wrapper,
+  Section,
+  HeaderSection,
+  MemojiSection,
+} from "./styles/Layout.styled";
 
 // Import components
 import About from "../pages/About";
@@ -40,7 +45,9 @@ function App() {
         <Section section="contact">
           <Contact />
         </Section>
-        <Memoji />
+        <MemojiSection>
+          <Memoji />
+        </MemojiSection>
       </Wrapper>
     </ThemeProvider>
   );

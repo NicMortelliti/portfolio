@@ -29,3 +29,11 @@ export const HeaderSection = styled.div`
   display: grid;
   place-items: end;
 `;
+
+export const MemojiSection = styled.div`
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+  display: grid;
+  place-items: start;
+`;
