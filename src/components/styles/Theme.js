@@ -13,3 +13,15 @@ export const theme = {
   black: black,
   white: white,
 };
+
+export const lightTheme = {
+  body: primary,
+  text: secondary,
+  accent: accent,
+};
+
+export const darkTheme = {
+  body: accent,
+  text: white,
+  accent: primary,
+};

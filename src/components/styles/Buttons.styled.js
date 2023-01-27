@@ -25,3 +25,16 @@ export const Button = styled.button`
     transform: translate(2px, 2px);
   }
 `;
+
+export const ThemeButton = styled.button`
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin: 1rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+
+  &:active {
+    transform: translate(2px, 2px);
+  }
+`;

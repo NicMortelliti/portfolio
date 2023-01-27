@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   min-height: 100dvh;
   min-height: 100vh; /* In case dvh isn't supported by browser */
   grid-template-areas:
+    "header"
     "landing"
     "about"
     "portfolio"
@@ -16,4 +17,7 @@ export const Section = styled.div`
   grid-area: ${({ section }) => section};
   min-height: 100dvh;
   min-height: 100vh; /* Make each section at least the height of the viewport*/
+  display: grid;
+  place-items: center;
+  align-content: center;
 `;

@@ -17,7 +17,11 @@ html {
 }
 
 body {
-  background: ${({ theme }) => theme.bgColor};
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+
+  transition: all 0.25s linear;
+
   animation: fadein 2s;
   @keyframes fadein {
     from { opacity: 0; }
