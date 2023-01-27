@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
-  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100vh; /* In case dvh isn't supported by browser */
   grid-template-areas:
     "nav"
     "content";
