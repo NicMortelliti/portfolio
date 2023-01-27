@@ -21,3 +21,11 @@ export const Section = styled.div`
   place-items: center;
   align-content: center;
 `;
+
+export const HeaderSection = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: grid;
+  place-items: end;
+`;
