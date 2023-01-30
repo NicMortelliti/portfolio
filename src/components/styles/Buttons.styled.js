@@ -30,9 +30,10 @@ export const ThemeButton = styled.button`
   cursor: pointer;
   border: none;
   background: none;
-  margin: 1rem;
-  padding: 1.5rem;
-  font-size: 2rem;
+  padding: 0.35rem;
+  width: 80px;
+  height: 80px;
+  font-size: xx-large;
 
   &:active {
     transform: translate(2px, 2px);

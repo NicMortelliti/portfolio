@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
 
 // Styled Components
 import GlobalStyles from "./styles/Global";
@@ -45,10 +44,10 @@ function App() {
         <Section section="contact">
           <Contact />
         </Section>
-        <MemojiSection>
-          <Memoji darkThemeIsSet={darkThemeIsSet} />
-        </MemojiSection>
       </Wrapper>
+      <MemojiSection>
+        <Memoji darkThemeIsSet={darkThemeIsSet} />
+      </MemojiSection>
     </ThemeProvider>
   );
 }
