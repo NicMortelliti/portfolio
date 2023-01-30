@@ -6,7 +6,6 @@ import { Wrapper } from "../components/styles/Landing.styled";
 const About = () => {
   return (
     <Wrapper>
-      <h1>Hi, I'm Nic</h1>
       <p>
         I'm a newly minted software developer with a history as an avionics
         systems engineer.

@@ -1,12 +1,27 @@
-const sixtyColor = "#9fc6d1";
-const thirtyColor = "#F26D68";
-const tenColor = "black";
-const accent = "#00C9B7";
+const primary = "#ffed85";
+const secondary = "#605856";
+const accent = "#1c6e8c";
+const black = secondary;
+const white = primary;
 
 export const theme = {
-  primary: sixtyColor,
-  bgColor: sixtyColor,
-  color: tenColor,
-  inverse: thirtyColor,
+  primary: primary,
+  secondary: secondary,
+  bgColor: primary,
+  color: black,
   accent: accent,
+  black: black,
+  white: white,
+};
+
+export const lightTheme = {
+  body: primary,
+  text: secondary,
+  accent: accent,
+};
+
+export const darkTheme = {
+  body: accent,
+  text: white,
+  accent: primary,
 };

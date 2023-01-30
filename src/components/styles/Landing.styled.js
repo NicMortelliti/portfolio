@@ -4,13 +4,15 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  align-items: center;
+  align-items: left;
+
+  & > p {
+    align-items: right;
+  }
 
   margin: 2rem;
   padding: 1rem;
   gap: 1rem;
-
-  max-width: 500px;
 
   img {
     position: fixed;
@@ -19,8 +21,12 @@ export const Wrapper = styled.div`
     max-width: 20rem;
   }
 
-  .title {
-    font-size: xx-large;
+  h1 {
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 3vw;
   }
 
   @media (max-width: 650px) or (max-height: 650px) {
@@ -29,4 +35,3 @@ export const Wrapper = styled.div`
     }
   }
 `;
-

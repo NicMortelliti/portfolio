@@ -2,27 +2,46 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: auto 1fr;
-  min-height: 100vh;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr auto;
+  min-height: 100vh; /* In case dvh isn't supported by browser */
+  min-height: 100dvh;
+  margin: 0 80px;
   grid-template-areas:
-    "nav"
-    "content";
+    "landing"
+    "about"
+    "portfolio"
+    "contact";
+`;
 
-  .nav {
-    grid-area: nav;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 20px;
-    z-index: 999;
-  }
+export const Section = styled.div`
+  grid-area: ${({ section }) => section};
+  min-height: 100vh; /* Make each section at least the height of the viewport*/
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  align-content: center;
+`;
 
-  .content {
-    grid-area: content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+export const HeaderSection = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+`;
+
+export const MemojiSection = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: grid;
+  place-items: start;
+
+  img {
+    max-width: 20vh;
+    height: auto;
   }
 `;
