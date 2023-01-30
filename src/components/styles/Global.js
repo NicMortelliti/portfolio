@@ -9,14 +9,13 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
  
-  /* background: ${({ theme }) => theme.bgColor || "black"}; */
+  background: ${({ theme }) => theme.bgColor || "black"};
 
   color: ${({ theme }) => theme.color || "black"};;
 }
 
 body {
-  background-image: radial-gradient(circle, ${({ theme }) =>
-    theme.gradient.green});
+  background: ${({ theme }) => theme.bgColor};
 }
 `;
 
