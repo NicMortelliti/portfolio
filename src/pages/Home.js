@@ -3,7 +3,7 @@ import React from "react";
 // Styled components
 import { Wrapper } from "../components/styles/Landing.styled";
 
-const Landing = () => {
+const Home = () => {
   return (
     <Wrapper>
       <h1>Hey,</h1>
@@ -13,4 +13,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Home;

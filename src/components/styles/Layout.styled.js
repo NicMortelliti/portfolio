@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   min-height: 100dvh;
   margin: 0 80px;
   grid-template-areas:
-    "landing"
+    "home"
     "about"
     "portfolio"
     "contact";

@@ -13,7 +13,7 @@ import {
 
 // Import components
 import About from "../pages/About";
-import Landing from "../pages/Landing";
+import Home from "../pages/Home";
 import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
 import Memoji from "./Memoji";
@@ -32,8 +32,8 @@ function App() {
             setDarkThemeIsSet={setDarkThemeIsSet}
           />
         </HeaderSection>
-        <Section section="landing">
-          <Landing />
+        <Section section="home">
+          <Home />
         </Section>
         <Section section="about">
           <About />
