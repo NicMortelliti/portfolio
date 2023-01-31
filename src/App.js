@@ -16,7 +16,7 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
-import Memoji from "./components/Memoji";
+import Memoji from "../src/components/Memoji";
 import ThemeButton from "./components/buttons/ThemeButton";
 
 function App() {
