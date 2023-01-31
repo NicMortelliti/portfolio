@@ -35,6 +35,10 @@ export const ThemeButton = styled.button`
   height: 80px;
   font-size: xx-large;
 
+  p {
+    color: ${color};
+  }
+
   &:active {
     transform: translate(2px, 2px);
   }
