@@ -14,8 +14,11 @@ html {
 }
 
 body {
-  background-color: ${({ theme }) => theme.bgColor || "white"};
-  color: ${({ theme }) => theme.color || "black"};;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+
+  transition: all 0.25s linear;
+
   animation: fadein 2s;
   @keyframes fadein {
     from { opacity: 0; }
