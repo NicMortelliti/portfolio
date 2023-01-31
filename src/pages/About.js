@@ -1,23 +1,23 @@
 import React from "react";
+import { data } from "../data/bioData";
 
 // Styled components
 import { Wrapper } from "../components/styles/Landing.styled";
 
 const About = () => {
+  const RenderBio = () => {
+    return (
+      <>
+        {data.map((line, index) => {
+          return <p key={index}>{line}</p>;
+        })}
+      </>
+    );
+  };
+
   return (
     <Wrapper>
-      <p>
-        I'm a newly minted software developer with a history as an avionics
-        systems engineer.
-      </p>
-      <p>
-        I'm also a father of 2, a husband, a hydroponic gardener, photographer
-        and pilot.
-      </p>
-      <p>
-        Take a look at my portfolio, if you like what you see and want to work
-        together, let's get in touch.
-      </p>
+      <RenderBio />
     </Wrapper>
   );
 };
