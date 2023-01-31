@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
-const bgColor = ({ theme }) => theme.accent;
-const light = ({ theme }) => theme.white;
-const dark = ({ theme }) => theme.black;
+const bgColor = ({ theme }) => theme.bgColor;
+const color = ({ theme }) => theme.color;
+const accent = ({ theme }) => theme.accent;
 
 export const Button = styled.button`
   cursor: pointer;
-  background-color: ${light};
-  border: 2px solid ${bgColor};
+  background-color: ${bgColor};
+  border: 2px solid ${color};
   border-radius: 5px;
-  color: ${bgColor};
-  box-shadow: 2px 2px 2px ${dark};
+  color: ${color};
+  box-shadow: 2px 2px 2px black;
   margin: 1rem;
   padding: 1.5rem;
   font-size: 1.5rem;
 
   &:hover {
-    background-color: ${({ theme }) => theme.accent};
-    color: ${({ theme }) => theme.white};
+    background-color: ${accent};
+    color: ${color};
   }
 
   &:active {

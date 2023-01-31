@@ -5,11 +5,8 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
- 
-  color: ${({ theme }) => theme.color || "black"};;
 }
 
 html {
@@ -17,9 +14,8 @@ html {
 }
 
 body {
-  background: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
-
+  background-color: ${({ theme }) => theme.bgColor || "white"};
+  color: ${({ theme }) => theme.color || "black"};;
   animation: fadein 2s;
   @keyframes fadein {
     from { opacity: 0; }

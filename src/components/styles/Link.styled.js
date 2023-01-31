@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
+const bgColor = ({ theme }) => theme.bgColor;
+const color = ({ theme }) => theme.color;
+const accent = ({ theme }) => theme.accent;
+
 export const LinkCont = styled.div`
-  display: grid;
-  grid-auto-flow: ${({ columns }) => (columns ? "column" : undefined)};
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
+  display: flex;
   gap: 1.5rem 1rem;
+  overflow: wrap;
 `;
 
 export const Link = styled.a`
+  flex-basis: 100%;
   display: grid;
   grid-template-areas:
     "icon"
@@ -16,21 +19,27 @@ export const Link = styled.a`
     "desc"
     "tech";
   grid-template-rows: 1fr auto auto auto;
-
-  /* margin: 1rem; */
   padding: 1rem;
   gap: 1rem;
-
   max-width: 500px;
-
   text-align: center;
   text-decoration: none;
-
-  border: 1px solid ${({ theme }) => theme.color};
+  background-color: ${color};
 
   :hover {
-    background-color: #3333330d;
     box-shadow: 2px 2px 2px black;
+    background-color: ${accent};
+    color: ${bgColor};
+
+    * {
+      background-color: ${accent};
+      color: ${color};
+    }
+  }
+
+  & > * {
+    background-color: ${color};
+    color: ${bgColor};
   }
 
   .icon {

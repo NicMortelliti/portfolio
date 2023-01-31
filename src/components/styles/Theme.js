@@ -1,27 +1,15 @@
-const primary = "#ffed85";
-const secondary = "#605856";
-const accent = "#1c6e8c";
-const black = secondary;
-const white = primary;
-
-export const theme = {
-  primary: primary,
-  secondary: secondary,
-  bgColor: primary,
-  color: black,
-  accent: accent,
-  black: black,
-  white: white,
-};
+const dark = "#483D3F";
+const light = "#F4EBD9";
+const accent = "#EF767A";
 
 export const lightTheme = {
-  body: primary,
-  text: secondary,
+  bgColor: light,
+  color: dark,
   accent: accent,
 };
 
 export const darkTheme = {
-  body: accent,
-  text: white,
-  accent: primary,
+  bgColor: dark,
+  color: light,
+  accent: accent,
 };

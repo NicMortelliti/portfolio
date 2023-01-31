@@ -7,15 +7,14 @@ import { Link, LinkCont } from "../components/styles/Link.styled";
 import { data } from "../data/portfolioData";
 
 const Portfolio = () => {
-
   // Render each icon for the tech used to build project
-  const RenderIcons = ({icons}) => (
+  const RenderIcons = ({ icons }) => (
     <div className="techIcons">
       {icons.map((icon, index) => {
-        return <h2 key={index}>{icon}</h2>
+        return <h2 key={index}>{icon}</h2>;
       })}
     </div>
-  )
+  );
 
   const RenderItems = () => (
     <LinkCont>
@@ -31,9 +30,9 @@ const Portfolio = () => {
   );
 
   return (
-    <nav>
+    <div>
       <RenderItems />
-    </nav>
+    </div>
   );
 };
 
