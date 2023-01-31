@@ -5,6 +5,7 @@ import { data } from "../data/bioData";
 import { Wrapper } from "../components/styles/Landing.styled";
 
 const About = () => {
+  // For each item in the bio data array, render a paragraph element.
   const RenderBio = () => {
     return (
       <>
