@@ -14,8 +14,8 @@ html {
 }
 
 body {
-  background: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
+  background: ${({ theme }) => theme.bgColor};
+  color: ${({ theme }) => theme.color};
 
   transition: all 0.25s linear;
 
