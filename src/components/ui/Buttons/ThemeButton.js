@@ -13,7 +13,9 @@ const ThemeButton = ({ darkThemeIsSet, setDarkThemeIsSet }) => {
 
   return (
     <Button onClick={(e) => handleClick(e)}>
-      <Icon />
+      <p>
+        <Icon />
+      </p>
     </Button>
   );
 };
