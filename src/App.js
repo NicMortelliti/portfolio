@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
 // Styled Components
-import GlobalStyles from "./styles/Global";
+import GlobalStyles from "./components/styles/Global";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./styles/Theme";
+import { lightTheme, darkTheme } from "./components/styles/Theme";
 import {
   Wrapper,
   Section,
   HeaderSection,
   MemojiSection,
-} from "./styles/Layout.styled";
+} from "./components/styles/Layout.styled";
 
 // Import components
-import About from "../pages/About";
-import Home from "../pages/Home";
-import Portfolio from "../pages/Portfolio";
-import Contact from "../pages/Contact";
-import Memoji from "./Memoji";
-import ThemeButton from "./buttons/ThemeButton";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Contact from "./pages/Contact/Contact";
+import Memoji from "./components/Memoji";
+import ThemeButton from "./components/buttons/ThemeButton";
 
 function App() {
   const [darkThemeIsSet, setDarkThemeIsSet] = useState(true);

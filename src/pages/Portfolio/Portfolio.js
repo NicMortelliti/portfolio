@@ -1,10 +1,10 @@
 import React from "react";
 
 // Styled components
-import { Link, LinkCont } from "../components/styles/Link.styled";
+import { Link, LinkCont } from "../../components/styles/Link.styled";
 
 // Data
-import { data } from "../data/portfolioData";
+import { data } from "../../data/portfolioData";
 
 const Portfolio = () => {
   // Render each icon for the tech used to build project

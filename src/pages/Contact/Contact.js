@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { MdContentCopy } from "react-icons/md";
-import { externalLinks } from "../data/linkData";
+import { externalLinks } from "../../data/linkData";
 
 // Styled components
-import { Wrapper } from "../components/styles/Page.styled";
-import { LinkCont, Link } from "../components/styles/Link.styled";
+import { Wrapper } from "../../components/styles/Page.styled";
+import { LinkCont, Link } from "../../components/styles/Link.styled";
 
 const Contact = () => {
   const [feedbackIsDisplayed, setFeedbackIsDisplayed] = useState(false);
