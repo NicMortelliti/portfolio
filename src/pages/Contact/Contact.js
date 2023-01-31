@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { externalLinks } from "../../data/linkData";
+import { email } from "../../data/bioData";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Page.styled";
@@ -8,8 +9,6 @@ import { LinkCont, Link } from "../../components/styles/Link.styled";
 
 const Contact = () => {
   const [feedbackIsDisplayed, setFeedbackIsDisplayed] = useState(false);
-
-  const email = "nic@nicweb.dev";
 
   // External Links
   // Create an array of links with a "to" that points to the external url,
