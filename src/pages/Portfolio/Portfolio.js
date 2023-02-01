@@ -18,8 +18,8 @@ const Portfolio = () => {
 
   const RenderItems = () => (
     <LinkCont>
-      {data.map(({ to, icon, text, description, techIcons }) => (
-        <Link href={to}>
+      {data.map(({ to, icon, text, description, techIcons }, index) => (
+        <Link key={index} href={to}>
           <h1 className="icon">{icon}</h1>
           <h3 className="title">{text}</h3>
           <h4 className="desc">{description}</h4>
