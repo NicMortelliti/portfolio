@@ -1,4 +1,8 @@
-import { RiArticleLine, RiGithubLine, RiLinkedinLine } from "react-icons/ri";
+import {
+  FaBlog as Blog,
+  FaGithub as Github,
+  FaLinkedin as Linkedin,
+} from "react-icons/fa";
 
 export const internalLinks = [
   { to: "/", text: "Home" },
@@ -11,12 +15,12 @@ export const externalLinks = [
   {
     to: "https://www.linkedin.com/in/nicolas-mortelliti/",
     text: "LinkedIn",
-    icon: <RiLinkedinLine />,
+    icon: <Linkedin />,
   },
   {
     to: "https://github.com/NicMortelliti",
     text: "Github",
-    icon: <RiGithubLine />,
+    icon: <Github />,
   },
-  { to: "https://dev.to/nicm", text: "Blog", icon: <RiArticleLine /> },
+  { to: "https://dev.to/nicm", text: "Blog", icon: <Blog /> },
 ];
