@@ -43,3 +43,7 @@ export const ThemeButton = styled.button`
     transform: translate(2px, 2px);
   }
 `;
+
+export const SocialButton = styled.a`
+  cursor: pointer;
+`;
