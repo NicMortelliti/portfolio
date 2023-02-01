@@ -46,4 +46,15 @@ export const ThemeButton = styled.button`
 
 export const SocialButton = styled.a`
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: ${color};
+
+  * {
+    font-size: 2.5rem;
+  }
+
+  :hover {
+    color: ${accent};
+  }
 `;
