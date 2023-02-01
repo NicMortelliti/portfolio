@@ -49,12 +49,27 @@ export const SocialButton = styled.a`
   text-decoration: none;
   text-align: center;
   color: ${color};
+  border-bottom: 4px solid transparent;
 
   * {
     font-size: 2.5rem;
   }
 
   :hover {
+    transition: color 0.3s;
     color: ${accent};
+  }
+
+  ::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background: ${accent};
+    transition: width 0.3s;
+  }
+
+  :hover::after {
+    width: 100%;
   }
 `;
