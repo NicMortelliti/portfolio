@@ -3,6 +3,7 @@ import styled from "styled-components";
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
+const transTime = "0.3s";
 
 export const LinkCont = styled.div`
   gap: 1.5rem 1rem;
@@ -27,18 +28,19 @@ export const Link = styled.a`
   background-color: ${color};
 
   :hover {
+    transition: all ${transTime};
     box-shadow: 2px 2px 2px black;
     background-color: ${accent};
     color: ${bgColor};
 
     * {
-      background-color: ${accent};
+      transition: color ${transTime};
       color: ${color};
     }
   }
 
   & > * {
-    background-color: ${color};
+    background-color: transparent;
     color: ${bgColor};
   }
 
@@ -75,5 +77,3 @@ export const SocialWrapper = styled.div`
     background-color: red;
   }
 `;
-
-
