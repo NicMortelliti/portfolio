@@ -3,6 +3,7 @@ import styled from "styled-components";
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
+const transTime = "0.3s";
 
 export const Button = styled.button`
   cursor: pointer;
@@ -42,6 +43,11 @@ export const ThemeButton = styled.button`
   &:active {
     transform: translate(2px, 2px);
   }
+
+  p:hover {
+    transition: color ${transTime};
+    color: ${accent};
+  }
 `;
 
 export const SocialButton = styled.a`
@@ -56,7 +62,7 @@ export const SocialButton = styled.a`
   }
 
   :hover {
-    transition: color 0.3s;
+    transition: color ${transTime};
     color: ${accent};
   }
 
@@ -66,7 +72,7 @@ export const SocialButton = styled.a`
     width: 0;
     height: 4px;
     background: ${accent};
-    transition: width 0.3s;
+    transition: width ${transTime};
   }
 
   :hover::after {
