@@ -5,9 +5,9 @@ const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 
 export const LinkCont = styled.div`
-  display: flex;
   gap: 1.5rem 1rem;
-  overflow: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export const Link = styled.a`
@@ -66,3 +66,14 @@ export const Link = styled.a`
     border-top: 1px solid black;
   }
 `;
+
+export const SocialWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  a {
+    background-color: red;
+  }
+`;
+
+
