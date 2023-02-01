@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   margin: 2rem;
   padding: 1rem;
   gap: 1rem;
-  border: 1px solid red;
   img {
     position: fixed;
     bottom: 0;
