@@ -5,21 +5,32 @@ const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 const transTime = "0.3s";
 
-export const Button = styled.button`
+const ButtonTemplate = styled.button`
   cursor: pointer;
-  background-color: ${bgColor};
+  background: transparent;
+  color: ${color};
+
+  &:hover {
+    background: ${accent};
+  }
+  p:hover {
+    transition: color ${transTime};
+    color: ${accent};
+  }
+
+  :active {
+    transform: translateY(4px);
+  }
+`;
+
+export const Button = styled(ButtonTemplate)`
+  background: ${bgColor};
   border: 2px solid ${color};
   border-radius: 5px;
-  color: ${color};
   box-shadow: 2px 2px 2px black;
   margin: 1rem;
   padding: 1.5rem;
   font-size: 1.5rem;
-
-  &:hover {
-    background-color: ${accent};
-    color: ${color};
-  }
 
   &:active {
     box-shadow: none;
@@ -27,26 +38,28 @@ export const Button = styled.button`
   }
 `;
 
-export const ThemeButton = styled.button`
-  cursor: pointer;
+export const ThemeButton = styled(ButtonTemplate)`
   border: none;
-  background: none;
   padding: 0.35rem;
   width: 80px;
   height: 80px;
   font-size: xx-large;
 
-  p {
-    color: ${color};
-  }
-
-  &:active {
-    transform: translate(2px, 2px);
+  :hover {
+    background: transparent;
   }
 
   p:hover {
     transition: color ${transTime};
     color: ${accent};
+  }
+
+  :active {
+    transform: none;
+  }
+
+  p:active {
+    transform: translateY(4px);
   }
 `;
 
@@ -78,21 +91,20 @@ export const SocialButton = styled.a`
   :hover::after {
     width: 100%;
   }
+
+  :active {
+    transform: translateY(4px);
+  }
 `;
 
-export const CopyField = styled.button`
-  cursor: pointer;
+export const CopyField = styled(ButtonTemplate)`
   border: 1px solid ${color};
-  color: ${color};
   border-top: transparent;
-  background-color: transparent;
   padding: 0.5rem 0;
   width: 26ch;
   line-height: 1.5;
 
   :hover {
-    background: ${accent};
-    background-size: 30%;
     border-color: ${accent};
     transition: all ${transTime};
   }

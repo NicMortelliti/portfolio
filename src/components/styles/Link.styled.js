@@ -67,6 +67,11 @@ export const Link = styled.a`
     padding-top: 1rem;
     border-top: 1px solid black;
   }
+
+  :active {
+    transform: translateY(4px);
+    box-shadow: none;
+  }
 `;
 
 export const SocialWrapper = styled.div`
