@@ -40,8 +40,8 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <h2>Want to work with me?</h2>
-      <h3>Email or reach out on social media</h3>
+      <h1>Want to work with me?</h1>
+      <h2>Email or reach out on social media</h2>
       <CopyField onClick={(e) => handleClick(e)}>
         <RenderString />
       </CopyField>
