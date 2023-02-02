@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
+// Colors
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
+
 const transTime = "0.3s";
+
+const borderThickness = "4px";
 
 const ButtonTemplate = styled.button`
   cursor: pointer;
@@ -68,7 +72,7 @@ export const SocialButton = styled.a`
   text-decoration: none;
   text-align: center;
   color: ${color};
-  border-bottom: 4px solid transparent;
+  border-bottom: ${borderThickness} solid transparent;
 
   * {
     font-size: 2.5rem;
@@ -83,7 +87,7 @@ export const SocialButton = styled.a`
     content: "";
     display: block;
     width: 0;
-    height: 4px;
+    height: ${borderThickness};
     background: ${accent};
     transition: width ${transTime};
   }
@@ -93,19 +97,32 @@ export const SocialButton = styled.a`
   }
 
   :active {
-    transform: translateY(4px);
+    transform: translateY(${borderThickness});
   }
 `;
 
 export const CopyField = styled(ButtonTemplate)`
-  border: 1px solid ${color};
-  border-top: transparent;
-  padding: 0.5rem 0;
+  border: none;
+  border-bottom: ${borderThickness} solid transparent;
   width: 26ch;
-  line-height: 1.5;
+  line-height: 2;
 
   :hover {
-    border-color: ${accent};
-    transition: all ${transTime};
+    transition: color ${transTime};
+    color: ${accent};
+    background: transparent;
+  }
+
+  ::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: ${borderThickness};
+    background-color: ${accent};
+    transition: width ${transTime};
+  }
+
+  :hover::after {
+    width: 100%;
   }
 `;
