@@ -6,6 +6,7 @@ import { copyToClipBoard, runTimer } from "../../components/helpers";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Page.styled";
+import { CopyField } from "../../components/styles/Buttons.styled";
 
 const Contact = () => {
   const [feedbackIsDisplayed, setFeedbackIsDisplayed] = useState(false);
@@ -41,9 +42,9 @@ const Contact = () => {
     <Wrapper>
       <h2>Want to work with me?</h2>
       <h3>Email or reach out on social media</h3>
-      <button className="contact" onClick={(e) => handleClick(e)}>
+      <CopyField onClick={(e) => handleClick(e)}>
         <RenderString />
-      </button>
+      </CopyField>
       <Socials />
     </Wrapper>
   );

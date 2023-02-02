@@ -79,3 +79,13 @@ export const SocialButton = styled.a`
     width: 100%;
   }
 `;
+
+export const CopyField = styled.button`
+  cursor: pointer;
+  border: 1px solid ${color};
+  border-top: none;
+  background-color: transparent;
+  padding-bottom: 0.5rem;
+  width: 26ch;
+  line-height: 1.5;
+`;
