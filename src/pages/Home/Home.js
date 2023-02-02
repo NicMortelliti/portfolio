@@ -1,6 +1,6 @@
 import React from "react";
 
-import Socials from "./Socials";
+import { Socials } from "../../components/ui/Buttons/index";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Landing.styled";
