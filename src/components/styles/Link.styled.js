@@ -27,19 +27,7 @@ export const Link = styled.a`
   text-decoration: none;
   background-color: ${color};
 
-  :hover {
-    transition: all ${transTime};
-    box-shadow: 2px 2px 2px black;
-    background-color: ${accent};
-    color: ${bgColor};
-
-    * {
-      transition: color ${transTime};
-      color: ${color};
-    }
-  }
-
-  & > * {
+  * {
     background-color: transparent;
     color: ${bgColor};
   }
@@ -65,7 +53,23 @@ export const Link = styled.a`
     justify-content: space-around;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid black;
+    border-top: 1px solid ${bgColor};
+  }
+
+  :hover {
+    transition: all ${transTime};
+    box-shadow: 2px 2px 2px black;
+    background-color: ${accent};
+    color: ${bgColor};
+
+    * {
+      transition: all ${transTime};
+      color: ${color};
+    }
+
+    .techIcons {
+      border-top-color: ${color};
+    }
   }
 
   :active {
