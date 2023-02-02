@@ -73,12 +73,3 @@ export const Link = styled.a`
     box-shadow: none;
   }
 `;
-
-export const SocialWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  a {
-    background-color: red;
-  }
-`;
