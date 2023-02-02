@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { email } from "../../data/bioData";
+import { Socials } from "../../components/ui/Buttons/index";
 import { copyToClipBoard, runTimer } from "../../components/helpers";
 
 // Styled components
@@ -39,10 +40,11 @@ const Contact = () => {
   return (
     <Wrapper>
       <h2>Want to work with me?</h2>
-      <h3>Email me</h3>
+      <h3>Email or reach out on social media</h3>
       <button className="contact" onClick={(e) => handleClick(e)}>
         <RenderString />
       </button>
+      <Socials />
     </Wrapper>
   );
 };
