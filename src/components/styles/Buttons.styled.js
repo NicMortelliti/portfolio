@@ -83,9 +83,17 @@ export const SocialButton = styled.a`
 export const CopyField = styled.button`
   cursor: pointer;
   border: 1px solid ${color};
-  border-top: none;
+  color: ${color};
+  border-top: transparent;
   background-color: transparent;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   width: 26ch;
   line-height: 1.5;
+
+  :hover {
+    background: ${accent};
+    background-size: 30%;
+    border-color: ${accent};
+    transition: all ${transTime};
+  }
 `;
