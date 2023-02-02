@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   }
 
   p {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   @media (max-width: 650px) or (max-height: 650px) {
