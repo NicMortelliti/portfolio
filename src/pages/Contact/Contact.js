@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { email } from "../../data/bioData";
-import { copyToClipBoard } from "../../components/helpers";
+import { copyToClipBoard, runTimer } from "../../components/helpers";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Page.styled";
@@ -9,33 +9,39 @@ import { Wrapper } from "../../components/styles/Page.styled";
 const Contact = () => {
   const [feedbackIsDisplayed, setFeedbackIsDisplayed] = useState(false);
 
-  // Watch for changes in the feedbackIsDisplayed state.
-  // If the state changes to "true", we start a timer.
-  // At the end of the timer, we set the state
-  // back to "false".
-  useEffect(() => {
-    if (feedbackIsDisplayed === true) {
-      const timer = setTimeout(() => {
-        setFeedbackIsDisplayed(false);
-      }, 1000);
-      return () => clearTimeout(timer);
+  // When clicked, copy email address to system
+  // clipboard and display the feedback message.
+  const handleClick = (e) => {
+    copyToClipBoard(e, email, setFeedbackIsDisplayed);
+    runTimer(setFeedbackIsDisplayed);
+
+    return null;
+  };
+
+  // Determine what string to display in
+  // the email field.
+  // If [feedbackIsDisplayed] is true, display "Copied!".
+  // Otherwise, display the email and the copy symbol.
+  const RenderString = () => {
+    switch (feedbackIsDisplayed) {
+      case true:
+        return <h2>Copied!</h2>;
+
+      default:
+        return (
+          <h2>
+            {email} <MdContentCopy />
+          </h2>
+        );
     }
-  }, [feedbackIsDisplayed, setFeedbackIsDisplayed]);
+  };
 
   return (
     <Wrapper>
       <h2>Want to work with me?</h2>
-      <h3>Feel free to contact me at the address below.</h3>
-      <button
-        className="contact"
-        onClick={(e) => copyToClipBoard(e, email, setFeedbackIsDisplayed)}>
-        {feedbackIsDisplayed ? (
-          <h2>Copied!</h2>
-        ) : (
-          <h2>
-            {email} <MdContentCopy />
-          </h2>
-        )}
+      <h3>Email me</h3>
+      <button className="contact" onClick={(e) => handleClick(e)}>
+        <RenderString />
       </button>
     </Wrapper>
   );
