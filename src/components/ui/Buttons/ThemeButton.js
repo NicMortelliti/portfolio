@@ -2,7 +2,7 @@ import React from "react";
 import { WiMoonAltFirstQuarter as Icon } from "react-icons/wi";
 
 // Styled components
-import { ThemeButton as Button } from "../styles/Buttons.styled";
+import { ThemeButton as Button } from "../../styles/Buttons.styled";
 
 const ThemeButton = ({ darkThemeIsSet, setDarkThemeIsSet }) => {
   // Handle theme change when button clicked
@@ -13,7 +13,9 @@ const ThemeButton = ({ darkThemeIsSet, setDarkThemeIsSet }) => {
 
   return (
     <Button onClick={(e) => handleClick(e)}>
-      <Icon />
+      <p>
+        <Icon />
+      </p>
     </Button>
   );
 };

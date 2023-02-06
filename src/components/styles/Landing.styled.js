@@ -3,17 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  align-items: left;
-
-  & > p {
-    align-items: right;
-  }
-
+  align-items: center;
   margin: 2rem;
   padding: 1rem;
   gap: 1rem;
-
   img {
     position: fixed;
     bottom: 0;
@@ -26,7 +19,7 @@ export const Wrapper = styled.div`
   }
 
   p {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   @media (max-width: 650px) or (max-height: 650px) {

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const color = ({ theme }) => theme.color;
-
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,14 +12,4 @@ export const Wrapper = styled.div`
   padding: 10%;
 
   gap: 2rem;
-
-  .contact {
-    cursor: pointer;
-    border: 1px solid ${color};
-    border-top: none;
-    background-color: transparent;
-    padding-bottom: 0.5rem;
-    width: 26ch;
-    line-height: 1.5;
-  }
 `;

@@ -1,26 +1,25 @@
 import React from "react";
 
 // Styled components
-import { Link, LinkCont } from "../components/styles/Link.styled";
+import { Link, LinkCont } from "../../components/styles/Link.styled";
 
 // Data
-import { data } from "../data/portfolioData";
+import { data } from "../../data/portfolioData";
 
 const Portfolio = () => {
-
   // Render each icon for the tech used to build project
-  const RenderIcons = ({icons}) => (
+  const RenderIcons = ({ icons }) => (
     <div className="techIcons">
       {icons.map((icon, index) => {
-        return <h2 key={index}>{icon}</h2>
+        return <h2 key={index}>{icon}</h2>;
       })}
     </div>
-  )
+  );
 
   const RenderItems = () => (
     <LinkCont>
-      {data.map(({ to, icon, text, description, techIcons }) => (
-        <Link href={to}>
+      {data.map(({ to, icon, text, description, techIcons }, index) => (
+        <Link key={index} href={to}>
           <h1 className="icon">{icon}</h1>
           <h3 className="title">{text}</h3>
           <h4 className="desc">{description}</h4>
@@ -31,9 +30,9 @@ const Portfolio = () => {
   );
 
   return (
-    <nav>
+    <div>
       <RenderItems />
-    </nav>
+    </div>
   );
 };
 

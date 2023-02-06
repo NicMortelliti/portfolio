@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
+const bgColor = ({ theme }) => theme.bgColor;
+const color = ({ theme }) => theme.color;
+const accent = ({ theme }) => theme.accent;
+const transTime = "0.3s";
+
 export const LinkCont = styled.div`
-  display: grid;
-  grid-auto-flow: ${({ columns }) => (columns ? "column" : undefined)};
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
   gap: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export const Link = styled.a`
+  flex-basis: 100%;
   display: grid;
   grid-template-areas:
     "icon"
@@ -16,21 +20,16 @@ export const Link = styled.a`
     "desc"
     "tech";
   grid-template-rows: 1fr auto auto auto;
-
-  /* margin: 1rem; */
   padding: 1rem;
   gap: 1rem;
-
   max-width: 500px;
-
   text-align: center;
   text-decoration: none;
+  background-color: ${color};
 
-  border: 1px solid ${({ theme }) => theme.color};
-
-  :hover {
-    background-color: #3333330d;
-    box-shadow: 2px 2px 2px black;
+  * {
+    background-color: transparent;
+    color: ${bgColor};
   }
 
   .icon {
@@ -54,6 +53,27 @@ export const Link = styled.a`
     justify-content: space-around;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid black;
+    border-top: 1px solid ${bgColor};
+  }
+
+  :hover {
+    transition: all ${transTime};
+    box-shadow: 2px 2px 2px black;
+    background-color: ${accent};
+    color: ${bgColor};
+
+    * {
+      transition: all ${transTime};
+      color: ${color};
+    }
+
+    .techIcons {
+      border-top-color: ${color};
+    }
+  }
+
+  :active {
+    transform: translateY(4px);
+    box-shadow: none;
   }
 `;
