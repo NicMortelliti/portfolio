@@ -23,7 +23,7 @@ const ButtonTemplate = styled.button`
   }
 
   :active {
-    transform: translateY(4px);
+    transform: translateY(${borderThickness});
   }
 `;
 
@@ -63,7 +63,7 @@ export const ThemeButton = styled(ButtonTemplate)`
   }
 
   p:active {
-    transform: translateY(4px);
+    transform: translateY(${borderThickness});
   }
 `;
 

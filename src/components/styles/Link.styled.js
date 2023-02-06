@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
+const dark = ({ theme }) => theme.dark;
+const light = ({ theme }) => theme.light;
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
+
 const transTime = "0.3s";
+
+const borderThickness = "4px";
 
 export const LinkCont = styled.div`
   gap: 1.5rem 1rem;
@@ -25,11 +30,12 @@ export const Link = styled.a`
   max-width: 500px;
   text-align: center;
   text-decoration: none;
-  background-color: ${color};
+  background-color: ${light};
+  border: 1px solid ${dark};
 
   * {
     background-color: transparent;
-    color: ${bgColor};
+    color: ${dark};
   }
 
   .icon {
@@ -53,27 +59,10 @@ export const Link = styled.a`
     justify-content: space-around;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid ${bgColor};
-  }
-
-  :hover {
-    transition: all ${transTime};
-    box-shadow: 2px 2px 2px black;
-    background-color: ${accent};
-    color: ${bgColor};
-
-    * {
-      transition: all ${transTime};
-      color: ${color};
-    }
-
-    .techIcons {
-      border-top-color: ${color};
-    }
+    border-top: 1px solid ${dark};
   }
 
   :active {
-    transform: translateY(4px);
-    box-shadow: none;
+    transform: translateY(${borderThickness});
   }
 `;
