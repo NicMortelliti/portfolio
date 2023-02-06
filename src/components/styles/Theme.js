@@ -1,6 +1,6 @@
-const dark = "#483D3F";
-const light = "#F4EBD9";
-const accent = "#EF767A";
+const dark = "#000022";
+const light = "#FBF5F3";
+const accent = "#F87060";
 
 export const lightTheme = {
   bgColor: light,
