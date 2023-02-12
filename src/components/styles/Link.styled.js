@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 const dark = ({ theme }) => theme.dark;
 const light = ({ theme }) => theme.light;
-const bgColor = ({ theme }) => theme.bgColor;
-const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 
 const transTime = "0.3s";
