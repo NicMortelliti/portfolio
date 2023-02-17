@@ -11,7 +11,7 @@ const Socials = () => {
     links.map(({ to, icon }, index) => {
       return (
         <Button key={index} href={to}>
-          <p>{icon}</p>
+          {icon}
         </Button>
       );
     });

@@ -8,8 +8,10 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 1rem;
 
-  padding: 10%;
-
-  gap: 2rem;
+  h1 {
+    border-bottom: 4px solid;
+    padding-bottom: 4px;
+  }
 `;

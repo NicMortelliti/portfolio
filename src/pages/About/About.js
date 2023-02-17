@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "../../data/bioData";
 
 // Styled components
-import { Wrapper } from "../../components/styles/Landing.styled";
+import { Wrapper } from "../../components/styles/Page.styled";
 
 const About = () => {
   // For each item in the bio data array, render a paragraph element.
