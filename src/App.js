@@ -10,6 +10,8 @@ import {
   HeaderSection,
   MainSection,
   MemojiSection,
+  ThemeSwitcherSection,
+  FooterSection,
 } from "./components/styles/Layout.styled";
 
 // Import components
@@ -29,14 +31,10 @@ function App() {
   return (
     <ThemeProvider theme={darkThemeIsSet ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Wrapper>
-        <Router>
+      <Router>
+        <Wrapper>
           <HeaderSection>
             <Nav />
-            <ThemeButton
-              darkThemeIsSet={darkThemeIsSet}
-              setDarkThemeIsSet={setDarkThemeIsSet}
-            />
           </HeaderSection>
           <MainSection>
             <Routes>
@@ -50,11 +48,18 @@ function App() {
               />
             </Routes>
           </MainSection>
-        </Router>
-      </Wrapper>
+          <FooterSection />
+        </Wrapper>
+      </Router>
       <MemojiSection>
         <Memoji darkThemeIsSet={darkThemeIsSet} notFound={notFoundIsSet} />
       </MemojiSection>
+      <ThemeSwitcherSection>
+        <ThemeButton
+          darkThemeIsSet={darkThemeIsSet}
+          setDarkThemeIsSet={setDarkThemeIsSet}
+        />
+      </ThemeSwitcherSection>
     </ThemeProvider>
   );
 }
