@@ -16,14 +16,6 @@ html {
 body {
   background: ${({ theme }) => theme.bgColor};
   color: ${({ theme }) => theme.color};
-
-  transition: all 0.25s linear;
-
-  animation: fadein 2s;
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
 }
 `;
 

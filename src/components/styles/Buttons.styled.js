@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-// Colors
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
-
 const transTime = "0.3s";
-
 const borderThickness = "4px";
 
+// Button template
 const ButtonTemplate = styled.button`
   cursor: pointer;
   background: transparent;
@@ -27,6 +25,7 @@ const ButtonTemplate = styled.button`
   }
 `;
 
+// Primary button style
 export const Button = styled(ButtonTemplate)`
   background: ${bgColor};
   border: 2px solid ${color};
@@ -67,16 +66,41 @@ export const ThemeButton = styled(ButtonTemplate)`
   }
 `;
 
-export const SocialButton = styled.a`
+// Link template
+export const Link = styled.a`
   cursor: pointer;
   text-decoration: none;
-  text-align: center;
   color: ${color};
   border-bottom: ${borderThickness} solid transparent;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.8;
 
-  * {
-    font-size: 2.5rem;
+  &.active,
+  &:hover {
+    transition: color ${transTime};
+    color: ${accent};
   }
+
+  &.active,
+  ::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: ${borderThickness};
+    background-color: ${accent};
+    transition: width ${transTime};
+  }
+
+  &.active,
+  :hover::after {
+    width: 100%;
+  }
+`;
+
+export const SocialButton = styled(Link)`
+  font-size: 2.5rem;
+  line-height: 3rem;
 
   :hover {
     transition: color ${transTime};
@@ -98,31 +122,5 @@ export const SocialButton = styled.a`
 
   :active {
     transform: translateY(${borderThickness});
-  }
-`;
-
-export const CopyField = styled(ButtonTemplate)`
-  border: none;
-  border-bottom: ${borderThickness} solid transparent;
-  width: 26ch;
-  line-height: 2;
-
-  :hover {
-    transition: color ${transTime};
-    color: ${accent};
-    background: transparent;
-  }
-
-  ::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: ${borderThickness};
-    background-color: ${accent};
-    transition: width ${transTime};
-  }
-
-  :hover::after {
-    width: 100%;
   }
 `;

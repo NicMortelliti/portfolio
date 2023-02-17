@@ -8,7 +8,7 @@ export const internalLinks = [
   { to: "/", text: "Home" },
   { to: "/about", text: "About" },
   { to: "/portfolio", text: "Portfolio" },
-  { to: "/contact", text: "Contact Me" },
+  { to: "/contact", text: "Contact" },
 ];
 
 export const externalLinks = [

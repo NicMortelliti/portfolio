@@ -2,7 +2,7 @@ import React from "react";
 
 // Styled components
 import { Link, LinkCont } from "../../components/styles/Link.styled";
-import { Wrapper } from "../../components/styles/Landing.styled";
+import { Wrapper } from "../../components/styles/Page.styled";
 
 // Data
 import { data } from "../../data/portfolioData";
