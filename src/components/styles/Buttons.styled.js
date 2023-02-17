@@ -66,16 +66,38 @@ export const ThemeButton = styled(ButtonTemplate)`
   }
 `;
 
-export const SocialButton = styled.a`
-  cursor: pointer;
+// Link template
+export const Link = styled.a`
   text-decoration: none;
-  text-align: center;
+  background: transparent;
   color: ${color};
   border-bottom: ${borderThickness} solid transparent;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.8;
 
-  * {
-    font-size: 2.5rem;
+  &:hover {
+    transition: color ${transTime};
+    color: ${accent};
   }
+
+  ::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: ${borderThickness};
+    background-color: ${accent};
+    transition: width ${transTime};
+  }
+
+  :hover::after {
+    width: 100%;
+  }
+`;
+
+export const SocialButton = styled(Link)`
+  font-size: 2.5rem;
+  line-height: 3rem;
 
   :hover {
     transition: color ${transTime};
@@ -97,31 +119,5 @@ export const SocialButton = styled.a`
 
   :active {
     transform: translateY(${borderThickness});
-  }
-`;
-
-export const CopyField = styled(ButtonTemplate)`
-  border: none;
-  border-bottom: ${borderThickness} solid transparent;
-  width: 26ch;
-  line-height: 2;
-
-  :hover {
-    transition: color ${transTime};
-    color: ${accent};
-    background: transparent;
-  }
-
-  ::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: ${borderThickness};
-    background-color: ${accent};
-    transition: width ${transTime};
-  }
-
-  :hover::after {
-    width: 100%;
   }
 `;
