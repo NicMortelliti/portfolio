@@ -10,7 +10,7 @@ const Socials = () => {
   const RenderLinks = () =>
     links.map(({ to, icon }, index) => {
       return (
-        <Button key={index} href={to}>
+        <Button key={index} href={to} target="_blank">
           {icon}
         </Button>
       );
