@@ -23,6 +23,7 @@ import ThemeButton from "./components/ui/Buttons/ThemeButton";
 
 function App() {
   const [darkThemeIsSet, setDarkThemeIsSet] = useState(true);
+  const [notFoundIsSet, setNotFoundIsSet] = useState(false);
 
   return (
     <ThemeProvider theme={darkThemeIsSet ? darkTheme : lightTheme}>
@@ -41,13 +42,16 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
+              <Route
+                path="*"
+                element={<NotFound setNotFound={setNotFoundIsSet} />}
+              />
             </Routes>
           </MainSection>
         </Router>
       </Wrapper>
       <MemojiSection>
-        <Memoji darkThemeIsSet={darkThemeIsSet} />
+        <Memoji darkThemeIsSet={darkThemeIsSet} notFound={notFoundIsSet} />
       </MemojiSection>
     </ThemeProvider>
   );
