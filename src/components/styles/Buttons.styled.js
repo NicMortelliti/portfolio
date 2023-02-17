@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-// Colors
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
-
 const transTime = "0.3s";
-
 const borderThickness = "4px";
 
+// Button template
 const ButtonTemplate = styled.button`
   cursor: pointer;
   background: transparent;
@@ -27,6 +25,7 @@ const ButtonTemplate = styled.button`
   }
 `;
 
+// Primary button style
 export const Button = styled(ButtonTemplate)`
   background: ${bgColor};
   border: 2px solid ${color};
