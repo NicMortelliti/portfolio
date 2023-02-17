@@ -20,6 +20,7 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import Memoji from "./components/ui/Memoji/Memoji";
 import ThemeButton from "./components/ui/Buttons/ThemeButton";
+import { Nav } from "./components/ui/Navigation";
 
 function App() {
   const [darkThemeIsSet, setDarkThemeIsSet] = useState(true);
@@ -31,6 +32,7 @@ function App() {
       <Wrapper>
         <Router>
           <HeaderSection>
+            <Nav />
             <ThemeButton
               darkThemeIsSet={darkThemeIsSet}
               setDarkThemeIsSet={setDarkThemeIsSet}

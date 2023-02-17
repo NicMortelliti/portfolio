@@ -68,19 +68,21 @@ export const ThemeButton = styled(ButtonTemplate)`
 
 // Link template
 export const Link = styled.a`
+  cursor: pointer;
   text-decoration: none;
-  background: transparent;
   color: ${color};
   border-bottom: ${borderThickness} solid transparent;
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.8;
 
+  &.active,
   &:hover {
     transition: color ${transTime};
     color: ${accent};
   }
 
+  &.active,
   ::after {
     content: "";
     display: block;
@@ -90,6 +92,7 @@ export const Link = styled.a`
     transition: width ${transTime};
   }
 
+  &.active,
   :hover::after {
     width: 100%;
   }

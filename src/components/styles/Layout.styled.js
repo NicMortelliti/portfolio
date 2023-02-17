@@ -2,24 +2,21 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
   min-height: 100vh; /* In case dvh isn't supported by browser */
   min-height: 100dvh;
   margin: 0 80px;
   grid-template-areas:
     "header"
-    "main"
-    "footer";
+    "main";
 `;
 
 export const HeaderSection = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 999;
+  grid-area: header;
   display: grid;
   place-items: center;
+  padding-top: 30px;
 `;
 
 export const MainSection = styled.div`
