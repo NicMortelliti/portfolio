@@ -8,19 +8,9 @@ export const Wrapper = styled.div`
   min-height: 100dvh;
   margin: 0 80px;
   grid-template-areas:
-    "home"
-    "about"
-    "portfolio"
-    "contact";
-`;
-
-export const Section = styled.div`
-  grid-area: ${({ section }) => section};
-  min-height: 100vh; /* Make each section at least the height of the viewport*/
-  min-height: 100dvh;
-  display: grid;
-  place-items: center;
-  align-content: center;
+    "header"
+    "main"
+    "footer";
 `;
 
 export const HeaderSection = styled.div`
@@ -30,6 +20,15 @@ export const HeaderSection = styled.div`
   z-index: 999;
   display: grid;
   place-items: center;
+`;
+
+export const MainSection = styled.div`
+  grid-area: main;
+  min-height: 100vh; /* Make each section at least the height of the viewport*/
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  align-content: center;
 `;
 
 export const MemojiSection = styled.div`

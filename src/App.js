@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Styled Components
 import GlobalStyles from "./components/styles/Global";
@@ -6,8 +7,8 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./components/styles/Theme";
 import {
   Wrapper,
-  Section,
   HeaderSection,
+  MainSection,
   MemojiSection,
 } from "./components/styles/Layout.styled";
 
@@ -16,6 +17,7 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
+import NotFound from "./pages/NotFound/NotFound";
 import Memoji from "./components/ui/Memoji/Memoji";
 import ThemeButton from "./components/ui/Buttons/ThemeButton";
 
@@ -26,24 +28,23 @@ function App() {
     <ThemeProvider theme={darkThemeIsSet ? darkTheme : lightTheme}>
       <GlobalStyles />
       <Wrapper>
-        <HeaderSection>
-          <ThemeButton
-            darkThemeIsSet={darkThemeIsSet}
-            setDarkThemeIsSet={setDarkThemeIsSet}
-          />
-        </HeaderSection>
-        <Section section="home">
-          <Home />
-        </Section>
-        <Section section="about">
-          <About />
-        </Section>
-        <Section section="portfolio">
-          <Portfolio />
-        </Section>
-        <Section section="contact">
-          <Contact />
-        </Section>
+        <Router>
+          <HeaderSection>
+            <ThemeButton
+              darkThemeIsSet={darkThemeIsSet}
+              setDarkThemeIsSet={setDarkThemeIsSet}
+            />
+          </HeaderSection>
+          <MainSection>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </MainSection>
+        </Router>
       </Wrapper>
       <MemojiSection>
         <Memoji darkThemeIsSet={darkThemeIsSet} />
