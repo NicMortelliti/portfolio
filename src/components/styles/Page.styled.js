@@ -14,4 +14,8 @@ export const Wrapper = styled.div`
     border-bottom: 4px solid;
     padding-bottom: 4px;
   }
+
+  p {
+    font-size: 1.5rem;
+  }
 `;
