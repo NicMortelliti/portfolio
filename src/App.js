@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Styled Components
 import GlobalStyles from "./components/styles/Global";
@@ -31,26 +31,24 @@ function App() {
   return (
     <ThemeProvider theme={darkThemeIsSet ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Router>
-        <Wrapper>
-          <HeaderSection>
-            <Nav />
-          </HeaderSection>
-          <MainSection>
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route
-                path="*"
-                element={<NotFound setNotFound={setNotFoundIsSet} />}
-              />
-            </Routes>
-          </MainSection>
-          <FooterSection />
-        </Wrapper>
-      </Router>
+      <Wrapper>
+        <HeaderSection>
+          <Nav />
+        </HeaderSection>
+        <MainSection>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="*"
+              element={<NotFound setNotFound={setNotFoundIsSet} />}
+            />
+          </Routes>
+        </MainSection>
+        <FooterSection />
+      </Wrapper>
       <MemojiSection>
         <Memoji darkThemeIsSet={darkThemeIsSet} notFound={notFoundIsSet} />
       </MemojiSection>
