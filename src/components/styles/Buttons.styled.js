@@ -76,13 +76,14 @@ export const Link = styled.a`
   font-size: 1.5rem;
   line-height: 1.8;
 
-  &.active,
+  &.active, /* Set color on active buttons */
   &:hover {
+    /* Set color on hovered buttons */
     transition: color ${transTime};
     color: ${accent};
   }
 
-  &.active,
+  /* Create underline pseudo-element */
   ::after {
     content: "";
     display: block;
@@ -92,8 +93,9 @@ export const Link = styled.a`
     transition: width ${transTime};
   }
 
-  &.active,
+  &.active::after, /* Show underline on active buttons */
   :hover::after {
+    /* Show underline on hovered buttons */
     width: 100%;
   }
 `;
