@@ -6,15 +6,10 @@ import { Wrapper } from "../../components/styles/Page.styled";
 
 const About = () => {
   // For each item in the bio data array, render a paragraph element.
-  const RenderBio = () => {
-    return (
-      <>
-        {data.map((line, index) => {
-          return <p key={index}>{line}</p>;
-        })}
-      </>
-    );
-  };
+  const RenderBio = () =>
+    data.map((line, index) => {
+      return <p key={index}>{line}</p>;
+    });
 
   return (
     <Wrapper>
