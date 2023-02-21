@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.9038677a.js",
+    "main.js": "/static/js/main.8f8c972a.js",
     "static/media/memoji-wave-glasses.png": "/static/media/memoji-wave-glasses.165b3dc691b8c5e64005.png",
     "static/media/memoji-wave.png": "/static/media/memoji-wave.4410c2397d90aa5e6b16.png",
     "static/media/memoji-idk-glasses.png": "/static/media/memoji-idk-glasses.e3bf9fdac13ff26f021e.png",
     "static/media/memoji-idk.png": "/static/media/memoji-idk.bd4cccf4e2bfc5c6a767.png",
     "index.html": "/index.html",
-    "main.9038677a.js.map": "/static/js/main.9038677a.js.map"
+    "main.8f8c972a.js.map": "/static/js/main.8f8c972a.js.map"
   },
   "entrypoints": [
-    "static/js/main.9038677a.js"
+    "static/js/main.8f8c972a.js"
   ]
 }
