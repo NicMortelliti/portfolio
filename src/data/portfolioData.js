@@ -44,28 +44,28 @@ export const data = [
       <Postgres />
     ]
   },
-  {
-    to: "https://kanban.nicweb.dev",
-    text: "Kanban",
-    description: "A project tracking tool for agile teams.",
-    icon: <HiTrendingUp />,
-    techIcons: [
-      <React />,
-      <Ruby />,
-      <Sqlite />
-    ]
-  },
-  {
-    to: "https://checklist.nicweb.dev",
-    text: "Piloting Checklist",
-    description: "Finally, a simple checklist app for flying.",
-    icon: <HiBadgeCheck />,
-    techIcons: [
-      <React />,
-      <Json />,
-      <Material />
-    ]
-  },
+  // {
+  //   to: "https://kanban.nicweb.dev",
+  //   text: "Kanban",
+  //   description: "A project tracking tool for agile teams.",
+  //   icon: <HiTrendingUp />,
+  //   techIcons: [
+  //     <React />,
+  //     <Ruby />,
+  //     <Sqlite />
+  //   ]
+  // },
+  // {
+  //   to: "https://checklist.nicweb.dev",
+  //   text: "Piloting Checklist",
+  //   description: "Finally, a simple checklist app for flying.",
+  //   icon: <HiBadgeCheck />,
+  //   techIcons: [
+  //     <React />,
+  //     <Json />,
+  //     <Material />
+  //   ]
+  // },
   {
     to: "https://bored.nicweb.dev",
     text: "Bored?",
