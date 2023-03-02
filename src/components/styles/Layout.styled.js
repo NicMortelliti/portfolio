@@ -4,8 +4,7 @@ const headerFooterHeight = 80;
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: ${({ menuIsOpen }) =>
-    menuIsOpen ? "100vh" : "auto 1fr auto"};
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   min-height: 100vh; /* In case dvh isn't supported by browser */
   min-height: 100dvh;

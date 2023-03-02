@@ -7,22 +7,23 @@ export const Wrapper = styled.div`
   grid-template-columns: repeat(${internalLinks.length}, 1fr);
   gap: 3rem;
 
-  #hamburger {
-    display: none;
-  }
-
   @media (max-width: 650px) or (max-height: 650px) {
-    display: ${({ menuIsOpen }) => (menuIsOpen ? "block" : "flex")};
+    display: block;
     float: center;
     width: 100vw;
-    place-content: center;
-
     a {
       display: ${({ menuIsOpen }) => (menuIsOpen ? "block" : "none")};
     }
+  }
+`;
 
-    #hamburger {
-      display: block;
-    }
+export const MenuIconWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 650px) or (max-height: 650px) {
+    display: block;
+    place-content: center;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 `;

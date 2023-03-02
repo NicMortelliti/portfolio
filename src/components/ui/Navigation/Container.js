@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "../../styles/Navigation.styled";
+import { Wrapper, MenuIconWrapper } from "../../styles/Navigation.styled";
 import { internalLinks } from "../../../data/linkData";
 import { NavLink } from ".";
 import { HiMenu as MenuIcon, HiX as CloseIcon } from "react-icons/hi";
@@ -13,9 +13,9 @@ const Container = ({ menuIsOpen, setMenuIsOpen }) => {
 
   const Icon = () =>
     menuIsOpen ? (
-      <CloseIcon id="hamburger" onClick={(e) => handleMenuClick(e)} />
+      <CloseIcon onClick={(e) => handleMenuClick(e)} />
     ) : (
-      <MenuIcon id="hamburger" onClick={(e) => handleMenuClick(e)} />
+      <MenuIcon onClick={(e) => handleMenuClick(e)} />
     );
 
   const handleMenuClick = (e) => {
@@ -24,10 +24,14 @@ const Container = ({ menuIsOpen, setMenuIsOpen }) => {
   };
 
   return (
-    <Wrapper menuIsOpen={menuIsOpen}>
-      <Icon />
-      <RenderLinks />
-    </Wrapper>
+    <>
+      <MenuIconWrapper>
+        <Icon />
+      </MenuIconWrapper>
+      <Wrapper menuIsOpen={menuIsOpen}>
+        <RenderLinks />
+      </Wrapper>
+    </>
   );
 };
 

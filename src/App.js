@@ -9,7 +9,6 @@ import {
   Wrapper,
   HeaderSection,
   MainSection,
-  MemojiSection,
   ThemeSwitcherSection,
   FooterSection,
 } from "./components/styles/Layout.styled";
@@ -19,13 +18,11 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
-import NotFound from "./pages/NotFound/NotFound";
 import ThemeButton from "./components/ui/Buttons/ThemeButton";
 import { Nav } from "./components/ui/Navigation";
 
 function App() {
   const [darkThemeIsSet, setDarkThemeIsSet] = useState(true);
-  const [notFoundIsSet, setNotFoundIsSet] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
@@ -35,19 +32,17 @@ function App() {
         <HeaderSection>
           <Nav menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
         </HeaderSection>
-        <MainSection>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route
-              path="*"
-              element={<NotFound setNotFound={setNotFoundIsSet} />}
-            />
-          </Routes>
-        </MainSection>
-        <FooterSection/>
+        {!menuIsOpen ? (
+          <MainSection>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </MainSection>
+        ) : null}
+        <FooterSection />
       </Wrapper>
       {!menuIsOpen && (
         <>
