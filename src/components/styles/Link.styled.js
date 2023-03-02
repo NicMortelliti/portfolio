@@ -12,6 +12,10 @@ export const LinkCont = styled.div`
   gap: 1.5rem 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 650px) or (max-height: 650px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Link = styled.a`
