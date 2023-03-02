@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
     display: block;
     float: right;
 
+    a {
+      display: ${({ menuIsOpen }) => (menuIsOpen ? "block" : "none")};
+    }
+
     #hamburger {
       display: flex;
     }
