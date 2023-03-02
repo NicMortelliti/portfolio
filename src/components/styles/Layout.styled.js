@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
     "header"
     "main"
     "footer";
+
+  @media (max-width: 650px) or (max-height: 650px) {
+    margin: 0;
+  }
 `;
 
 export const HeaderSection = styled.div`
