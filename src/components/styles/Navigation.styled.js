@@ -12,15 +12,17 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: 650px) or (max-height: 650px) {
-    display: block;
-    float: right;
+    display: ${({ menuIsOpen }) => (menuIsOpen ? "block" : "flex")};
+    float: center;
+    width: 100vw;
+    place-content: center;
 
     a {
       display: ${({ menuIsOpen }) => (menuIsOpen ? "block" : "none")};
     }
 
     #hamburger {
-      display: flex;
+      display: block;
     }
   }
 `;
