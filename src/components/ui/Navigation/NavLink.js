@@ -5,9 +5,9 @@ import { NavLink as RouterLink } from "react-router-dom";
 // import { NavLink as Link } from "../../styles/Navigation.styled";
 import { Link } from "../../styles/Buttons.styled";
 
-const NavLink = ({ link }) => {
+const NavLink = ({ link, setMenuIsOpen }) => {
   return (
-    <Link as={RouterLink} to={link.to}>
+    <Link as={RouterLink} to={link.to} onClick={() => setMenuIsOpen(false)}>
       {link.text}
     </Link>
   );

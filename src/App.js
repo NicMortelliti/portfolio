@@ -20,20 +20,20 @@ import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
-import Memoji from "./components/ui/Memoji/Memoji";
 import ThemeButton from "./components/ui/Buttons/ThemeButton";
 import { Nav } from "./components/ui/Navigation";
 
 function App() {
   const [darkThemeIsSet, setDarkThemeIsSet] = useState(true);
   const [notFoundIsSet, setNotFoundIsSet] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
     <ThemeProvider theme={darkThemeIsSet ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Wrapper>
+      <Wrapper menuIsOpen={menuIsOpen}>
         <HeaderSection>
-          <Nav />
+          <Nav menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
         </HeaderSection>
         <MainSection>
           <Routes>
@@ -47,17 +47,18 @@ function App() {
             />
           </Routes>
         </MainSection>
-        <FooterSection />
+        <FooterSection/>
       </Wrapper>
-      <MemojiSection>
-        <Memoji darkThemeIsSet={darkThemeIsSet} notFound={notFoundIsSet} />
-      </MemojiSection>
-      <ThemeSwitcherSection>
-        <ThemeButton
-          darkThemeIsSet={darkThemeIsSet}
-          setDarkThemeIsSet={setDarkThemeIsSet}
-        />
-      </ThemeSwitcherSection>
+      {!menuIsOpen && (
+        <>
+          <ThemeSwitcherSection>
+            <ThemeButton
+              darkThemeIsSet={darkThemeIsSet}
+              setDarkThemeIsSet={setDarkThemeIsSet}
+            />
+          </ThemeSwitcherSection>
+        </>
+      )}
     </ThemeProvider>
   );
 }

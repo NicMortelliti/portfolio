@@ -1,11 +1,13 @@
 import React from "react";
 
 import { Socials } from "../../components/ui/Buttons/index";
+import Memoji from "../../components/ui/Memoji/Memoji";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Landing.styled";
+import { MemojiSection } from "../../components/styles/Layout.styled";
 
-const Home = () => {
+const Home = ({ darkThemeIsSet }) => {
   return (
     <Wrapper>
       <div>
@@ -14,6 +16,9 @@ const Home = () => {
       </div>
       <p>Web Developer | Systems Engineer | Pilot</p>
       <Socials />
+      <MemojiSection>
+        <Memoji darkThemeIsSet={darkThemeIsSet} />
+      </MemojiSection>
     </Wrapper>
   );
 };

@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Wrapper } from "../../styles/Navigation.styled";
 import { internalLinks } from "../../../data/linkData";
 import { NavLink } from ".";
 import { HiMenu as MenuIcon, HiX as CloseIcon } from "react-icons/hi";
 
-const Container = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-
+const Container = ({ menuIsOpen, setMenuIsOpen }) => {
   const RenderLinks = () => {
     return internalLinks.map((link, index) => (
-      <NavLink key={index} link={link} />
+      <NavLink key={index} link={link} setMenuIsOpen={setMenuIsOpen} />
     ));
   };
 
