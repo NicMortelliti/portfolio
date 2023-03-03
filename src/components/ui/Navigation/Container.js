@@ -38,7 +38,7 @@ const Container = () => {
         <NavbarLinkContainer>
           <RenderLinks />
           <OpenLinksButton onClick={() => extendNavbar()}>
-            {navMenuIsOpen ? <>&#10005;</> : <>&#8801;</>}
+            {navMenuIsOpen ? <h5>&#10005;</h5> : <h5>&#8801;</h5>}
           </OpenLinksButton>
         </NavbarLinkContainer>
       </NavbarMainContainer>
