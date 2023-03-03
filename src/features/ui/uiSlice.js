@@ -14,11 +14,13 @@ export const uiSlice = createSlice({
     },
     setNavMenuIsOpen: (state) => {
       return {
+        ...state,
         navMenuIsOpen: !state.navMenuIsOpen,
       };
     },
     setDarkThemeActive: (state) => {
       return {
+        ...state,
         darkThemeActive: !state.darkThemeActive,
       };
     },
