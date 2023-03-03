@@ -8,7 +8,8 @@ import { titles } from "../../data/bioData";
 import { Wrapper } from "../../components/styles/Landing.styled";
 import { MemojiSection, Titles } from "../../components/styles/Layout.styled";
 
-const Home = ({ darkThemeIsSet }) => {
+const Home = () => {
+  // Render each title to the page
   const DisplayTitles = () => {
     return titles.map((title, index) => <p key={index}>{title}</p>);
   };

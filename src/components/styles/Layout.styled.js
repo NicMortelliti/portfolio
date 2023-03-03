@@ -70,7 +70,7 @@ export const Titles = styled.div`
     content: "\\a\\2022\\a";
   }
 
-  @media (min-width: 651px) {
+  @media (min-width: ${mobileWidthLimit}) {
     white-space: nowrap;
     p {
       display: inline-block;
