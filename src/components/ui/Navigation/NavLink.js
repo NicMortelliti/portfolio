@@ -20,21 +20,15 @@ const NavLink = ({ link, extended }) => {
         <LinkExtended
           as={RouterLink}
           to={link.to}
-          onClick={() => dispatch(setNavMenuIsOpen())}>
+          onClick={() => dispatch(setNavMenuIsOpen(false))}
+        >
           {link.text}
         </LinkExtended>
       );
 
     default:
       return (
-        // The onClick action isn't totally necessary here, but in cases where
-        // a user might open a nav menu in phone portrait mode, rotate to landscape,
-        // navigate somewhere via the menu, then rotate back to portrait. If the onClick
-        // is not handled, the mobile nav menu doesn't get closed.
-        <Link
-          as={RouterLink}
-          to={link.to}
-          onClick={() => dispatch(setNavMenuIsOpen())}>
+        <Link as={RouterLink} to={link.to}>
           {link.text}
         </Link>
       );
