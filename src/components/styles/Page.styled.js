@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   gap: 1rem;
 
   h1 {
-    border-bottom: 4px solid;
+    border-bottom: 4px solid ${({ theme }) => theme.accent};
     padding-bottom: 4px;
   }
 
