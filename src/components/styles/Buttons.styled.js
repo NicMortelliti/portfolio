@@ -103,6 +103,7 @@ export const Link = styled.a`
 export const SocialButton = styled(Link)`
   font-size: 2.5rem;
   line-height: 3rem;
+  margin: 20px 0;
 
   :hover {
     transition: color ${transTime};
