@@ -10,7 +10,7 @@ import { MemojiSection, Titles } from "../../components/styles/Layout.styled";
 
 const Home = ({ darkThemeIsSet }) => {
   const DisplayTitles = () => {
-    return titles.map((title) => <p>{title}</p>);
+    return titles.map((title, index) => <p key={index}>{title}</p>);
   };
 
   return (
