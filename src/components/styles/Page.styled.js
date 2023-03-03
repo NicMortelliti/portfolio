@@ -16,8 +16,9 @@ export const Wrapper = styled.div`
   }
 
   p {
-    font-size: clamp(16px, 2.5vw, 2rem);
+    font-size: clamp(16px, 18px, 22px);
     text-align: left;
     margin: 10px 30px;
+    max-width: 600px;
   }
 `;
