@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const headerFooterHeight = 80;
 
+const accent = ({ theme }) => theme.accent;
+
 export const Wrapper = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -14,7 +16,7 @@ export const Wrapper = styled.div`
     "main"
     "footer";
 
-  @media (max-width: 650px) or (max-height: 650px) {
+  @media (max-width: 650px) {
     margin: 0;
   }
 `;
@@ -58,4 +60,24 @@ export const ThemeSwitcherSection = styled.div`
   right: 0;
   z-index: 999;
   place-items: start;
+`;
+
+export const Titles = styled.div`
+  p:not(:last-child)::after {
+    color: ${accent};
+    white-space: pre;
+    content: "\\a\\2022\\a";
+  }
+
+  @media (min-width: 651px) {
+    white-space: nowrap;
+    p {
+      display: inline-block;
+
+      /* Add space and pipe between titles */
+      &:not(:last-child)::after {
+        content: "\\a0\\2022\\a0";
+      }
+    }
+  }
 `;

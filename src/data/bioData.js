@@ -4,4 +4,10 @@ export const data = [
   "Additionally, I proudly hold a reputation for being able to swiftly change priorities and focus to meet business demands.",
 ];
 
+export const titles = [
+  "Full Stack Developer",
+  "Seasoned Engineer",
+  "Real-Life Pilot",
+];
+
 export const email = "nic@nicweb.dev";

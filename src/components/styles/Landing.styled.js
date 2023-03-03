@@ -19,7 +19,8 @@ export const Wrapper = styled.div`
   }
 
   p {
-    font-size: 2vw;
+    text-align: center;
+    font-size: 1rem;
   }
 
   @media (max-width: 650px) or (max-height: 650px) {
