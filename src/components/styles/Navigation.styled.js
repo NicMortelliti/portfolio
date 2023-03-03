@@ -1,29 +1,52 @@
 import styled from "styled-components";
-import { internalLinks } from "../../data/linkData";
 
-export const Wrapper = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(${internalLinks.length}, 1fr);
-  gap: 3rem;
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
-  @media (max-width: 650px) or (max-height: 650px) {
-    display: block;
-    float: center;
-    width: 100vw;
-    a {
-      display: ${({ menuIsOpen }) => (menuIsOpen ? "block" : "none")};
-    }
+export const NavbarContainer = styled.nav`
+  width: 100%;
+  height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: ${mobileWidthLimit}) {
+    height: 80px;
   }
 `;
 
-export const MenuIconWrapper = styled.div`
-  display: none;
+export const NavbarMainContainer = styled.div`
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-  @media (max-width: 650px) or (max-height: 650px) {
-    display: block;
-    place-content: center;
-    font-size: 2rem;
-    line-height: 3rem;
+export const NavbarLinkContainer = styled.div`
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+`;
+
+export const OpenLinksButton = styled.button`
+  width: 70px;
+  height: 80px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+
+  @media (min-width: ${mobileWidthLimit}) {
+    display: none;
+  }
+`;
+
+export const NavbarExtendedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${mobileWidthLimit}) {
+    display: none;
   }
 `;
