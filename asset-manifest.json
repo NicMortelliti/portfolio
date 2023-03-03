@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/static/js/main.42a6a847.js",
+    "main.js": "/static/js/main.6e997e81.js",
     "static/media/memoji-wave-glasses.png": "/static/media/memoji-wave-glasses.165b3dc691b8c5e64005.png",
     "static/media/memoji-wave.png": "/static/media/memoji-wave.4410c2397d90aa5e6b16.png",
     "index.html": "/index.html",
-    "main.42a6a847.js.map": "/static/js/main.42a6a847.js.map"
+    "main.6e997e81.js.map": "/static/js/main.6e997e81.js.map"
   },
   "entrypoints": [
-    "static/js/main.42a6a847.js"
+    "static/js/main.6e997e81.js"
   ]
 }
