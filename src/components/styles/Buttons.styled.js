@@ -134,4 +134,6 @@ export const NavLink = styled(Link)`
   } ;
 `;
 
-export const NavLinkExtended = styled(Link)``;
+export const NavLinkExtended = styled(Link)`
+  margin: 20px 0;
+`;
