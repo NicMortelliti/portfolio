@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Styled Components
@@ -21,18 +21,20 @@ import Contact from "./pages/Contact/Contact";
 import ThemeButton from "./components/ui/Buttons/ThemeButton";
 import { Nav } from "./components/ui/Navigation";
 
+// Redux
+import { useSelector } from "react-redux";
+
 function App() {
-  const [darkThemeIsSet, setDarkThemeIsSet] = useState(true);
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const { navMenuIsOpen, darkThemeActive } = useSelector((state) => state.ui);
 
   return (
-    <ThemeProvider theme={darkThemeIsSet ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkThemeActive ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Wrapper menuIsOpen={menuIsOpen}>
+      <Wrapper>
         <HeaderSection>
-          <Nav menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
+          <Nav />
         </HeaderSection>
-        {!menuIsOpen ? (
+        {!navMenuIsOpen ? (
           <MainSection>
             <Routes>
               <Route exact path="/" element={<Home />} />
@@ -44,15 +46,10 @@ function App() {
         ) : null}
         <FooterSection />
       </Wrapper>
-      {!menuIsOpen && (
-        <>
-          <ThemeSwitcherSection>
-            <ThemeButton
-              darkThemeIsSet={darkThemeIsSet}
-              setDarkThemeIsSet={setDarkThemeIsSet}
-            />
-          </ThemeSwitcherSection>
-        </>
+      {!navMenuIsOpen && (
+        <ThemeSwitcherSection>
+          <ThemeButton />
+        </ThemeSwitcherSection>
       )}
     </ThemeProvider>
   );

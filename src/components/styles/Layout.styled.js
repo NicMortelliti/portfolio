@@ -3,6 +3,7 @@ import styled from "styled-components";
 const headerFooterHeight = 80;
 
 const accent = ({ theme }) => theme.accent;
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
 export const Wrapper = styled.div`
   display: grid;
@@ -16,7 +17,7 @@ export const Wrapper = styled.div`
     "main"
     "footer";
 
-  @media (max-width: 650px) {
+  @media (max-width: ${mobileWidthLimit}) {
     margin: 0;
   }
 `;

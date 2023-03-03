@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   navMenuIsOpen: false,
+  darkThemeActive: false,
 };
 
 export const uiSlice = createSlice({
@@ -16,8 +17,13 @@ export const uiSlice = createSlice({
         navMenuIsOpen: !state.navMenuIsOpen,
       };
     },
+    setDarkThemeActive: (state) => {
+      return {
+        darkThemeActive: !state.darkThemeActive,
+      };
+    },
   },
 });
 
-export const { reset, setNavMenuIsOpen } = uiSlice.actions;
+export const { reset, setNavMenuIsOpen, setDarkThemeActive } = uiSlice.actions;
 export default uiSlice.reducer;
