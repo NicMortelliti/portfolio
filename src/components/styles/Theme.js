@@ -1,6 +1,6 @@
-const dark = "#383F51";
-const light = "#DDDBF1";
-const accent = "#EE6352";
+const dark = "#011627";
+const light = "#f1e8e4";
+const accent = "#13c7a8";
 
 export const lightTheme = {
   dark: dark,
