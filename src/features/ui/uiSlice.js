@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   navMenuIsOpen: false,
-  darkThemeActive: false,
+  darkThemeActive: true,
 };
 
 export const uiSlice = createSlice({
