@@ -24,7 +24,7 @@ const Home = ({ darkThemeIsSet }) => {
       </Titles>
       <Socials />
       <MemojiSection>
-        <Memoji darkThemeIsSet={darkThemeIsSet} />
+        <Memoji />
       </MemojiSection>
     </Wrapper>
   );
