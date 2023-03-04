@@ -27,6 +27,7 @@ export const data = [
     description: "A fictional space flight booking site.",
     icon: <HiSparkles />,
     techIcons: [<React />, <Ruby />, <Postgres />, <Css />],
+    professional: false,
   },
   {
     to: "https://scheduler.nicweb.dev",
@@ -34,6 +35,7 @@ export const data = [
     description: "An application for booking appointments.",
     icon: <HiClock />,
     techIcons: [<React />, <Ruby />, <Postgres />],
+    professional: false,
   },
   {
     to: "https://kanban.nicweb.dev",
@@ -41,6 +43,7 @@ export const data = [
     description: "A project tracking tool for agile teams.",
     icon: <HiTrendingUp />,
     techIcons: [<React />, <Ruby />, <Sqlite />],
+    professional: false,
   },
   {
     to: "https://checklist.nicweb.dev",
@@ -48,6 +51,7 @@ export const data = [
     description: "Finally, a simple checklist app for flying.",
     icon: <HiBadgeCheck />,
     techIcons: [<React />, <Json />, <Material />],
+    professional: false,
   },
   {
     to: "https://bored.nicweb.dev",
@@ -55,5 +59,14 @@ export const data = [
     description: "Looking for hobby or activity ideas? Try this app.",
     icon: <HiLightBulb />,
     techIcons: [<Html />, <Javascript />, <Material />],
+    professional: false,
   },
+  {
+    to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
+    text: "ProLine Fusion",
+    description: "Engine and System Instrumentation GUI development focal.",
+    icon: null,
+    techIcons: [null],
+    professional: true,
+  }
 ];
