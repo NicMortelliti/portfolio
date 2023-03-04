@@ -3,6 +3,7 @@ import styled from "styled-components";
 const headerFooterHeight = 80;
 
 const accent = ({ theme }) => theme.accent;
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
 export const Wrapper = styled.div`
   display: grid;
@@ -16,7 +17,7 @@ export const Wrapper = styled.div`
     "main"
     "footer";
 
-  @media (max-width: 650px) {
+  @media (max-width: ${mobileWidthLimit}) {
     margin: 0;
   }
 `;
@@ -69,7 +70,7 @@ export const Titles = styled.div`
     content: "\\a\\2022\\a";
   }
 
-  @media (min-width: 651px) {
+  @media (min-width: ${mobileWidthLimit}) {
     white-space: nowrap;
     p {
       display: inline-block;

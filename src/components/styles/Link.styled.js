@@ -4,8 +4,8 @@ const dark = ({ theme }) => theme.dark;
 const light = ({ theme }) => theme.light;
 const accent = ({ theme }) => theme.accent;
 
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const transTime = "0.3s";
-
 const borderThickness = "4px";
 
 export const LinkCont = styled.div`
@@ -13,7 +13,7 @@ export const LinkCont = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  @media (max-width: 650px) or (max-height: 650px) {
+  @media (max-width: ${mobileWidthLimit}) or (max-height: ${mobileWidthLimit}) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;

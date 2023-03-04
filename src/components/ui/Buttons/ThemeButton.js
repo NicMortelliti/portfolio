@@ -4,15 +4,15 @@ import { WiMoonAltFirstQuarter as Icon } from "react-icons/wi";
 // Styled components
 import { ThemeButton as Button } from "../../styles/Buttons.styled";
 
-const ThemeButton = ({ darkThemeIsSet, setDarkThemeIsSet }) => {
-  // Handle theme change when button clicked
-  const handleClick = (e) => {
-    e.preventDefault();
-    setDarkThemeIsSet(!darkThemeIsSet);
-  };
+// Redux
+import { useDispatch } from "react-redux";
+import { setDarkThemeActive } from "../../../features/ui/uiSlice";
+
+const ThemeButton = () => {
+  const dispatch = useDispatch();
 
   return (
-    <Button onClick={(e) => handleClick(e)}>
+    <Button onClick={(e) => dispatch(setDarkThemeActive())}>
       <p>
         <Icon />
       </p>

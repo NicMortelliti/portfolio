@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,11 +13,11 @@ export const Wrapper = styled.div`
     position: fixed;
     bottom: 0;
     left: 0;
-    max-width: 20rem;
+    width: 20rem;
   }
 
   h1 {
-    font-size: 8vw;
+    font-size: clamp(30px, 6vw, 10vw);
   }
 
   p {
@@ -23,7 +25,7 @@ export const Wrapper = styled.div`
     font-size: 1rem;
   }
 
-  @media (max-width: 650px) or (max-height: 650px) {
+  @media (max-width: ${mobileWidthLimit}) {
     img {
       display: none;
     }

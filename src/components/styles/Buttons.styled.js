@@ -3,6 +3,7 @@ import styled from "styled-components";
 const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const transTime = "0.3s";
 const borderThickness = "4px";
 
@@ -73,8 +74,7 @@ export const Link = styled.a`
   color: ${color};
   border-bottom: ${borderThickness} solid transparent;
   text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.8;
+  font-size: x-large;
 
   &.active, /* Set color on active buttons */
   &:hover {
@@ -103,6 +103,7 @@ export const Link = styled.a`
 export const SocialButton = styled(Link)`
   font-size: 2.5rem;
   line-height: 3rem;
+  margin: 20px 0;
 
   :hover {
     transition: color ${transTime};
@@ -125,4 +126,14 @@ export const SocialButton = styled(Link)`
   :active {
     transform: translateY(${borderThickness});
   }
+`;
+
+export const NavLink = styled(Link)`
+  @media (max-width: ${mobileWidthLimit}) {
+    display: none;
+  } ;
+`;
+
+export const NavLinkExtended = styled(Link)`
+  margin: 20px 0;
 `;
