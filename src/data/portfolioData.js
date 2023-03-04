@@ -20,6 +20,9 @@ import {
   SiJson as Json,
   SiMaterialui as Material,
 } from "react-icons/si";
+
+import { BsAirplane as Airplane, BsFiletypeXml as Xml } from "react-icons/bs";
+
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
@@ -65,8 +68,8 @@ export const data = [
     to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
     text: "ProLine Fusion",
     description: "Engine and System Instrumentation GUI development focal.",
-    icon: null,
-    techIcons: [null],
+    icon: <Airplane />,
+    techIcons: [<Xml />],
     professional: true,
-  }
+  },
 ];
