@@ -1,4 +1,5 @@
 import {
+  FaFileAlt as Resume,
   FaBlog as Blog,
   FaGithub as Github,
   FaLinkedin as Linkedin,
@@ -23,4 +24,5 @@ export const externalLinks = [
     icon: <Github />,
   },
   { to: "https://dev.to/nicm", text: "Blog", icon: <Blog /> },
+  { to: "https://drive.google.com/file/d/1ZO13CR-AHOCkQju_WGAi45meCaNX8liW/view?usp=sharing", text: "Resume", icon: <Resume />},
 ];

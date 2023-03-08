@@ -8,10 +8,11 @@ import { SocialButton as Button } from "../../styles/Buttons.styled";
 
 const Socials = () => {
   const RenderLinks = () =>
-    links.map(({ to, icon }, index) => {
+    links.map(({ to, icon, text }, index) => {
       return (
         <Button key={index} href={to} target="_blank">
           {icon}
+          <p>{text}</p>
         </Button>
       );
     });
