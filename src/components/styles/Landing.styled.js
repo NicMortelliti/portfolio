@@ -20,6 +20,12 @@ export const Wrapper = styled.div`
     font-size: clamp(30px, 6vw, 10vw);
   }
 
+  h2 {
+    text-align: center;
+    font-style: italic;
+    margin: 40px 0;
+  }
+
   p {
     text-align: center;
     font-size: 1rem;
