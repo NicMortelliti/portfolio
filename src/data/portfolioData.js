@@ -6,6 +6,8 @@ import {
   HiOutlineLightBulb as HiLightBulb,
 } from "react-icons/hi";
 
+import { SlPlane as Plane } from "react-icons/sl"
+
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
@@ -47,12 +49,12 @@ export const data = [
     techNames: ["HTML", "JavaScript"],
     professional: false,
   },
-  // {
-  //   to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
-  //   text: "ProLine Fusion",
-  //   description: "Engine and System Instrumentation GUI development focal.",
-  //   icon: <Airplane />,
-  //   techIcons: [<Xml />],
-  //   professional: true,
-  // },
+  {
+    to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
+    text: "ProLine Fusion",
+    description: "Engine and System Instrumentation GUI development focal.",
+    icon: <Plane />,
+    techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
+    professional: true,
+  },
 ];
