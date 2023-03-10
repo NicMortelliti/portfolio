@@ -23,6 +23,7 @@ const Home = () => {
       <Titles>
         <DisplayTitles />
       </Titles>
+        <h2>"The flying full stack developer"</h2>
       <Socials />
       <MemojiSection>
         <Memoji />

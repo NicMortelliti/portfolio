@@ -3,7 +3,7 @@ import { email } from "../../data/bioData";
 import { Socials } from "../../components/ui/Buttons/index";
 
 // Styled components
-import { Wrapper } from "../../components/styles/Page.styled";
+import { Wrapper } from "../../components/styles/Landing.styled";
 import { Link } from "../../components/styles/Buttons.styled";
 
 const Contact = () => {

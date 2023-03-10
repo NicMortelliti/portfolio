@@ -3,6 +3,7 @@ import styled from "styled-components";
 const headerFooterHeight = 80;
 
 const accent = ({ theme }) => theme.accent;
+const bgColor = ({ theme }) => theme.bgColor;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
 export const Wrapper = styled.div`
@@ -24,9 +25,12 @@ export const Wrapper = styled.div`
 
 export const HeaderSection = styled.div`
   grid-area: header;
+  position: sticky;
+  top: 0;
   display: grid;
   place-items: center;
   height: ${headerFooterHeight}px;
+  background-color: ${bgColor}
 `;
 
 export const MainSection = styled.div`

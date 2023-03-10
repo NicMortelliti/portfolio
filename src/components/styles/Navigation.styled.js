@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
+const color = ({ theme }) => theme.color;
 
 export const NavbarContainer = styled.nav`
   width: 100%;
@@ -32,7 +33,7 @@ export const OpenLinksButton = styled.button`
   height: 80px;
   background: none;
   border: none;
-  color: white;
+  color: ${color};
   font-size: 45px;
   cursor: pointer;
 

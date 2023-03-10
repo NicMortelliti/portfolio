@@ -7,6 +7,6 @@ const Template = styled.div`
 
 export const SocialWrapper = styled(Template)`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 3rem; */
 `;
