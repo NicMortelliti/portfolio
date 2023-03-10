@@ -52,7 +52,7 @@ export const data = [
   {
     to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
     text: "ProLine Fusion",
-    description: "Engine and System Instrumentation GUI development focal.",
+    description: "Engine Data and System Status GUI development focal.",
     icon: <Plane />,
     techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
     professional: true,
