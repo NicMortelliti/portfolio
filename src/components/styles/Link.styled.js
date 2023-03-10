@@ -27,7 +27,7 @@ export const Link = styled.a`
     "title"
     "desc"
     "tech";
-  grid-template-rows: 1fr auto auto auto;
+  grid-template-rows: auto auto auto 1fr;
   gap: 1rem;
   max-width: 500px;
   text-align: center;
@@ -63,6 +63,7 @@ export const Link = styled.a`
     grid-area: icon;
     font-size: xx-large;
     padding-top: 1rem;
+    
   }
 
   .title {
@@ -74,15 +75,16 @@ export const Link = styled.a`
   .desc {
     grid-area: desc;
     padding: 0 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid ${dark};
   }
 
-  .techIcons {
+  div {
     grid-area: tech;
-    font-size: x-large;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid ${dark};
+    align-items: center;
+    padding-top: 0.5rem;
   }
 `;

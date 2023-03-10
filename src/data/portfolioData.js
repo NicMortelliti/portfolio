@@ -6,30 +6,13 @@ import {
   HiOutlineLightBulb as HiLightBulb,
 } from "react-icons/hi";
 
-import {
-  DiReact as React,
-  DiRuby as Ruby,
-  DiPostgresql as Postgres,
-  DiJavascript as Javascript,
-  DiHtml5 as Html,
-  DiCss3 as Css,
-} from "react-icons/di";
-
-import {
-  SiSqlite as Sqlite,
-  SiJson as Json,
-  SiMaterialui as Material,
-} from "react-icons/si";
-
-// import { BsAirplane as Airplane, BsFiletypeXml as Xml } from "react-icons/bs";
-
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
     text: "Moonshot",
     description: "A fictional space flight booking site.",
     icon: <HiSparkles />,
-    techIcons: [<React />, <Ruby />, <Postgres />, <Css />],
+    techNames: ["React", "Ruby on Rails", "PostgreSQL", "Styled Components"],
     professional: false,
   },
   {
@@ -37,7 +20,7 @@ export const data = [
     text: "Appointment Scheduler",
     description: "An application for booking appointments.",
     icon: <HiClock />,
-    techIcons: [<React />, <Ruby />, <Postgres />],
+    techNames: ["React", "Ruby on Rails", "PostgreSQL"],
     professional: false,
   },
   {
@@ -45,7 +28,7 @@ export const data = [
     text: "Kanban",
     description: "A project tracking tool for agile teams.",
     icon: <HiTrendingUp />,
-    techIcons: [<React />, <Ruby />, <Sqlite />],
+    techNames: ["React", "Ruby", "Sqlite"],
     professional: false,
   },
   {
@@ -53,15 +36,15 @@ export const data = [
     text: "Piloting Checklist",
     description: "Finally, a simple checklist app for flying.",
     icon: <HiBadgeCheck />,
-    techIcons: [<React />, <Json />, <Material />],
+    techNames: ["React", "JSON"],
     professional: false,
   },
   {
     to: "https://bored.nicweb.dev",
     text: "Bored?",
-    description: "Looking for hobby or activity ideas? Try this app.",
+    description: "Looking for hobby or activity ideas?",
     icon: <HiLightBulb />,
-    techIcons: [<Html />, <Javascript />, <Material />],
+    techNames: ["HTML", "JavaScript"],
     professional: false,
   },
   // {

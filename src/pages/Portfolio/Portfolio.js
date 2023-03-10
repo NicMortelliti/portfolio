@@ -9,22 +9,22 @@ import { data } from "../../data/portfolioData";
 
 const Portfolio = () => {
   // Render each icon for the tech used to build project
-  const RenderIcons = ({ icons }) => (
-    <div className="techIcons">
-      {icons.map((icon, index) => {
-        return <h2 key={index}>{icon}</h2>;
+  const RenderTechNames = ({ techNames }) => (
+    <div>
+      {techNames.map((techNames, index) => {
+        return <p key={index}>{techNames}</p>;
       })}
     </div>
   );
 
   const RenderItems = () => (
     <LinkCont>
-      {data.map(({ to, icon, text, description, techIcons }, index) => (
+      {data.map(({ to, icon, text, description, techNames }, index) => (
         <Link key={index} href={to} target="_blank">
           <h1 className="icon">{icon}</h1>
           <h3 className="title">{text}</h3>
           <h4 className="desc">{description}</h4>
-          <RenderIcons icons={techIcons} />
+          <RenderTechNames techNames={techNames} />
         </Link>
       ))}
     </LinkCont>
