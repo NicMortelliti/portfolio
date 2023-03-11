@@ -12,46 +12,56 @@ export const CardContainer = styled.a`
   flex-basis: 100%;
   display: grid;
   grid-template-areas:
-    "professional icon"
-    "company company"
-    "title title"
-    "description description"
-    "tech tech";
+    "icon"
+    "professional"
+    "company"
+    "title"
+    "description"
+    "tech";
   gap: 1rem;
   max-width: 500px;
   text-decoration: none;
   background-color: white;
   border: 1px solid ${dark};
   box-shadow: 2px 2px 5px black;
+  color: ${dark};
+
+  /* Override the global paragraph setting */
+  p {
+    text-align: center;
+  }
 `;
 
-export const CardProf = styled.div`
-  grid-area: professional;
-  border: 1px dashed red;
-`;
-
-export const CardIcon = styled.svg`
+export const CardIcon = styled.div`
   grid-area: icon;
   font-size: xx-large;
   padding-top: 1rem;
 `;
 
+export const CardProf = styled.div`
+  grid-area: professional;
+  background-color: #ffe9e8;
+  color: #f26157;
+`;
+
 export const CardCompany = styled.div`
   grid-area: company;
-  color: red;
+  color: ${dark};
+  align-items: center;
+  justify-content: center;
 `;
 
 export const CardTitle = styled.div`
   grid-area: title;
-  color: orange;
+  color: ${dark};
 `;
 
 export const CardDescription = styled.div`
   grid-area: description;
-  color: blue;
+  color: ${dark};
 `;
 
 export const CardTechNames = styled.div`
   grid-area: tech;
-  color: magenta;
+  color: ${dark};
 `;

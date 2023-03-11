@@ -1,5 +1,4 @@
 import React from "react";
-import { ProfessionalTag } from "../../components/styles/Link.styled";
 
 // Styled components
 import {
@@ -16,34 +15,30 @@ const PortfolioCard = ({
   project: { to, icon, text, description, techNames, professional },
 }) => {
   // Render each tech name
-  const renderTechNames = ({ techNames }) => (
-    <div>
-      {techNames.map((techNames, index) => {
-        return <p key={index}>{techNames}</p>;
-      })}
-    </div>
-  );
-
-  // Conditionally display professional tag if data
-  // item is labeld as a professional project
-  const renderProfessionalTag = professional ? (
-    <ProfessionalTag>Professional</ProfessionalTag>
-  ) : null;
+  const renderTechNames = () =>
+    techNames.map((name, index) => <p key={index}>{name}</p>);
 
   return (
     <CardContainer href={to} target="_blank">
-      <CardProf>{renderProfessionalTag}</CardProf>
       <CardIcon>{icon}</CardIcon>
-      <CardCompany>
-        <p>{professional}</p>
-      </CardCompany>
+
+      {/* Conditionally render the professional section */}
+      {professional ? (
+        <>
+          <CardProf>Professional</CardProf>
+          <CardCompany>
+            <p>{professional}</p>
+          </CardCompany>
+        </>
+      ) : null}
+
       <CardTitle>
-        <h1>{text}</h1>
+        <h2>{text}</h2>
       </CardTitle>
       <CardDescription>
         <p>{description}</p>
       </CardDescription>
-      <CardTechNames>{() => renderTechNames(techNames)}</CardTechNames>
+      <CardTechNames>{renderTechNames()}</CardTechNames>
     </CardContainer>
   );
 };
