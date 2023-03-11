@@ -15,10 +15,4 @@ export const Wrapper = styled.div`
     padding-bottom: 4px;
   }
 
-  p {
-    font-size: clamp(16px, 18px, 22px);
-    text-align: left;
-    margin: 10px 30px;
-    max-width: 600px;
-  }
 `;
