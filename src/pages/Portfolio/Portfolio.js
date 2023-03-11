@@ -1,31 +1,22 @@
 import React from "react";
 
+// Components
+import PortfolioCard from "./PortfolioCard";
+
 // Styled components
-import { Link, LinkCont } from "../../components/styles/Link.styled";
+import { LinkCont } from "../../components/styles/Link.styled";
 import { Wrapper } from "../../components/styles/Page.styled";
 
 // Data
 import { data } from "../../data/portfolioData";
 
 const Portfolio = () => {
-  // Render each icon for the tech used to build project
-  const RenderTechNames = ({ techNames }) => (
-    <div>
-      {techNames.map((techNames, index) => {
-        return <p key={index}>{techNames}</p>;
-      })}
-    </div>
-  );
-
+  // Map through the data object
+  // - Render a card for each item in the data object
   const RenderItems = () => (
     <LinkCont>
-      {data.map(({ to, icon, text, description, techNames }, index) => (
-        <Link key={index} href={to} target="_blank">
-          <h1 className="icon">{icon}</h1>
-          <h3 className="title">{text}</h3>
-          <h4 className="desc">{description}</h4>
-          <RenderTechNames techNames={techNames} />
-        </Link>
+      {data.map((project, index) => (
+        <PortfolioCard key={index} project={project} />
       ))}
     </LinkCont>
   );

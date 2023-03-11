@@ -55,6 +55,6 @@ export const data = [
     description: "Engine Data and System Status GUI development focal.",
     icon: <Plane />,
     techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
-    professional: true,
+    professional: "Collins Aerospace",
   },
 ];

@@ -88,3 +88,12 @@ export const Link = styled.a`
     padding-top: 0.5rem;
   }
 `;
+
+export const ProfessionalTag = styled.div`
+  position: absolute;
+  margin: 5px;
+  background-color: #ffe9e8;
+  border: 2px solid #f26157;
+  color: #f26157;
+  padding: 10px;
+`
