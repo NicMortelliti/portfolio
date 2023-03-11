@@ -57,4 +57,12 @@ export const data = [
     techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
     professional: "Collins Aerospace",
   },
+  {
+    to: "http://www.collinsaerospace.com/what-we-do/industries/military-and-defense/displays-and-controls/airborne/head-up-guidance-system-enhanced-vision-system-hgs-evs",
+    text: "Collins HGS",
+    description: "Systems Verification Lead",
+    icon: <Plane />,
+    techNames: ["Flight Sim Config", "C-Programming", "Matlab/Simulink"],
+    professional: "Collins Aerospace",
+  }
 ];

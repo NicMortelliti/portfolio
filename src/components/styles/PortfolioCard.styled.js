@@ -47,21 +47,23 @@ export const CardProf = styled.div`
 export const CardCompany = styled.div`
   grid-area: company;
   color: ${dark};
-  align-items: center;
-  justify-content: center;
 `;
 
 export const CardTitle = styled.div`
   grid-area: title;
   color: ${dark};
+  align-items: start;
+  justify-content: start;
 `;
 
 export const CardDescription = styled.div`
   grid-area: description;
   color: ${dark};
+  border-top: 1px solid ${dark};
 `;
 
 export const CardTechNames = styled.div`
   grid-area: tech;
   color: ${dark};
+  border-top: 1px solid ${dark};
 `;
