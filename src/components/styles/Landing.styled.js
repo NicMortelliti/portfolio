@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
 
   h1 {
     font-size: clamp(30px, 6vw, 10vw);
+    border: none;
   }
 
   h2 {
