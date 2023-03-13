@@ -1,19 +1,15 @@
-import {
-  HiOutlineSparkles as HiSparkles,
-  HiOutlineTrendingUp as HiTrendingUp,
-  HiOutlineClock as HiClock,
-  HiOutlineBadgeCheck as HiBadgeCheck,
-  HiOutlineLightBulb as HiLightBulb,
-} from "react-icons/hi";
-
-import { SlPlane as Plane } from "react-icons/sl"
+import imageMoonshot from "../assets/images/app-moonshot.webp";
+import imageScheduler from "../assets/images/app-scheduler.webp";
+import imageKanban from "../assets/images/app-kanban.webp";
+import imageChecklist from "../assets/images/app-checklist.webp";
+import imageBored from "../assets/images/app-bored.webp";
 
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
     text: "Moonshot",
     description: "A fictional space flight booking site.",
-    icon: <HiSparkles />,
+    image: imageMoonshot,
     techNames: ["React", "Ruby on Rails", "PostgreSQL", "Styled Components"],
     professional: false,
   },
@@ -21,7 +17,7 @@ export const data = [
     to: "https://scheduler.nicweb.dev",
     text: "Appointment Scheduler",
     description: "An application for booking appointments.",
-    icon: <HiClock />,
+    image: imageScheduler,
     techNames: ["React", "Ruby on Rails", "PostgreSQL"],
     professional: false,
   },
@@ -29,7 +25,7 @@ export const data = [
     to: "https://kanban.nicweb.dev",
     text: "Kanban",
     description: "A project tracking tool for agile teams.",
-    icon: <HiTrendingUp />,
+    image: imageKanban,
     techNames: ["React", "Ruby", "Sqlite"],
     professional: false,
   },
@@ -37,7 +33,7 @@ export const data = [
     to: "https://checklist.nicweb.dev",
     text: "Piloting Checklist",
     description: "Finally, a simple checklist app for flying.",
-    icon: <HiBadgeCheck />,
+    image: imageChecklist,
     techNames: ["React", "JSON"],
     professional: false,
   },
@@ -45,7 +41,7 @@ export const data = [
     to: "https://bored.nicweb.dev",
     text: "Bored?",
     description: "Looking for hobby or activity ideas?",
-    icon: <HiLightBulb />,
+    image: imageBored,
     techNames: ["HTML", "JavaScript"],
     professional: false,
   },
@@ -53,7 +49,7 @@ export const data = [
     to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
     text: "ProLine Fusion",
     description: "Engine Data and System Status GUI development focal.",
-    icon: <Plane />,
+    image: imageBored,
     techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
     professional: "Collins Aerospace",
   },
@@ -61,8 +57,8 @@ export const data = [
     to: "http://www.collinsaerospace.com/what-we-do/industries/military-and-defense/displays-and-controls/airborne/head-up-guidance-system-enhanced-vision-system-hgs-evs",
     text: "Collins HGS",
     description: "Systems Verification Lead",
-    icon: <Plane />,
+    image: imageBored,
     techNames: ["Flight Sim Config", "C-Programming", "Matlab/Simulink"],
     professional: "Collins Aerospace",
-  }
+  },
 ];

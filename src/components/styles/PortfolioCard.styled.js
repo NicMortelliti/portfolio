@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const dark = ({ theme }) => theme.dark;
-const light = ({ theme }) => theme.light;
 const accent = ({ theme }) => theme.accent;
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
@@ -9,22 +8,27 @@ const transTime = "0.3s";
 const borderThickness = "4px";
 
 export const CardContainer = styled.a`
+  display: none;
+
+  :hover {
+    background-color: #ffffff99;
+    backdrop-filter: blur(15px);
+    grid-template-areas:
+      "title"
+      "professional"
+      "company"
+      "description"
+      "tech";
+  }
   flex-basis: 100%;
   display: grid;
-  grid-template-areas:
-    "icon"
-    "professional"
-    "company"
-    "title"
-    "description"
-    "tech";
-  gap: 1rem;
   max-width: 500px;
+  height: 300px;
   text-decoration: none;
-  background-color: white;
   border: 1px solid ${dark};
   box-shadow: 2px 2px 5px black;
   color: ${dark};
+  gap: 1rem;
 
   /* Override the global paragraph setting */
   p {
@@ -32,10 +36,18 @@ export const CardContainer = styled.a`
   }
 `;
 
-export const CardIcon = styled.div`
-  grid-area: icon;
-  font-size: xx-large;
-  padding-top: 1rem;
+export const CardImage = styled.div`
+  background-image: ${({ image }) => `url(${image})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+`;
+
+export const CardTitle = styled.div`
+  grid-area: title;
+  color: ${dark};
+  font-size: large;
+  text-align: left;
 `;
 
 export const CardProf = styled.div`
@@ -47,13 +59,6 @@ export const CardProf = styled.div`
 export const CardCompany = styled.div`
   grid-area: company;
   color: ${dark};
-`;
-
-export const CardTitle = styled.div`
-  grid-area: title;
-  color: ${dark};
-  align-items: start;
-  justify-content: start;
 `;
 
 export const CardDescription = styled.div`
