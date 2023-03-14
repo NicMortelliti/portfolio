@@ -2,13 +2,14 @@ import React from "react";
 
 // Styled components
 import {
-  CardCompany,
-  CardContainer,
-  CardDescription,
-  CardImage,
-  CardTitle,
-  CardTechNames,
+  Card,
+  Background,
+  BigTitle,
+  DisplayOver,
   CardProf,
+  Hover,
+  SubTitle,
+  Paragraph,
 } from "../../components/styles/PortfolioCard.styled";
 
 const PortfolioCard = ({
@@ -19,28 +20,24 @@ const PortfolioCard = ({
     techNames.map((name, index) => <p key={index}>{name}</p>);
 
   return (
-    <CardImage image={image}>
-      <CardContainer href={to} target="_blank" image={image}>
-
+    // <Card>
+      <Background image={image}>
+        <BigTitle>{text}</BigTitle>
         {/* Conditionally render the professional section */}
         {professional ? (
           <>
             <CardProf>Professional</CardProf>
-            <CardCompany>
-              <p>{professional}</p>
-            </CardCompany>
+            <SubTitle>{professional}</SubTitle>
           </>
         ) : null}
-
-        <CardTitle>
-          <h2>{text}</h2>
-        </CardTitle>
-        <CardDescription>
-          <p>{description}</p>
-        </CardDescription>
-        <CardTechNames>{renderTechNames()}</CardTechNames>
-      </CardContainer>
-    </CardImage>
+        <DisplayOver href={to} target="_blank" image={image}>
+          <Hover>
+            <Paragraph>{description}</Paragraph>
+            <Paragraph>{renderTechNames()}</Paragraph>
+          </Hover>
+        </DisplayOver>
+      </Background>
+    // </Card>
   );
 };
 
