@@ -1,13 +1,7 @@
 import styled from "styled-components";
 
 const dark = ({ theme }) => theme.dark;
-const light = ({ theme }) => theme.light;
-const accent = ({ theme }) => theme.accent;
 const color = ({ theme }) => theme.color;
-
-const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
-const transTime = "0.3s";
-const borderThickness = "4px";
 
 export const Card = styled.a`
   display: grid;
