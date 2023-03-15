@@ -9,18 +9,18 @@ const transTime = "0.3s";
 const borderThickness = "4px";
 
 export const Card = styled.a`
-  background-color: #ffffff99;
-  backdrop-filter: blur(15px);
+  display: grid;
   grid-template-areas:
     "background"
     "title";
-  flex-basis: 100%;
-  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: #ffffff99;
+  backdrop-filter: blur(15px);
+  /* flex-basis: 100%; */
   text-decoration: none;
   border: 1px solid ${dark};
   box-shadow: 2px 2px 5px black;
   color: ${dark};
-  gap: 1rem;
 
   /* Override the global paragraph setting */
   p {
@@ -69,13 +69,13 @@ export const CTA = styled.a`
 
 export const Background = styled.div`
   grid-area: background;
+  display: grid;
   grid-template-areas:
     "displayover"
-    "company"
+    /* "company" */
     "professionaltag";
-  flex-basis: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  /* flex-basis: 100%; */
+  /* grid-template-rows: 1fr auto; */
   background-size: cover;
   background-repeat: no-repeat;
   background-image: ${({ image }) => `url(${image})`};

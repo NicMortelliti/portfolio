@@ -21,7 +21,6 @@ const PortfolioCard = ({
   return (
     <Card>
       <Background image={image}>
-        <BigTitle>{text}</BigTitle>
         {/* Conditionally render the professional section */}
         {professional ? (
           <>
@@ -38,6 +37,7 @@ const PortfolioCard = ({
           </Hover>
         </DisplayOver>
       </Background>
+      <BigTitle>{text}</BigTitle>
     </Card>
   );
 };
