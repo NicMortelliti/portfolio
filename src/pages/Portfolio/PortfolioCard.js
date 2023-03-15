@@ -8,6 +8,7 @@ import {
   DisplayOver,
   CardProf,
   Hover,
+  Description,
   Paragraph,
 } from "../../components/styles/PortfolioCard.styled";
 
@@ -32,7 +33,7 @@ const PortfolioCard = ({
         ) : null}
         <DisplayOver href={to} target="_blank" image={image}>
           <Hover>
-            <Paragraph>{description}</Paragraph>
+            <Description>{description}</Description>
             <Paragraph>{renderTechNames()}</Paragraph>
           </Hover>
         </DisplayOver>

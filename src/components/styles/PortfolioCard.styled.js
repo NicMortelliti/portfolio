@@ -20,11 +20,6 @@ export const Card = styled.a`
   text-decoration: none;
   border: 1px solid ${dark};
   color: ${dark};
-
-  /* Override the global paragraph setting */
-  p {
-    text-align: center;
-  }
 `;
 
 export const DisplayOver = styled.a`
@@ -52,6 +47,13 @@ export const Paragraph = styled.p`
   transform: translate3d(0, 50px, 0);
   transition: transform 350ms ease;
 `;
+
+export const Description = styled.p`
+  transform: translate3d(0, 50px, 0);
+  transition: transform 350ms ease;
+  font-style: italic;
+  text-align: left;
+`
 
 export const CTA = styled.a`
   position: absolute;
@@ -88,7 +90,7 @@ export const Background = styled.div`
     backdrop-filter: blur(15px);
   }
 
-  &:hover ${Paragraph} {
+  &:hover ${Paragraph}, &:hover ${Description} {
     transform: translate3d(0, 0, 0);
   }
 
