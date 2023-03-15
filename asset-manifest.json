@@ -1,12 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.dea63a99.js",
+    "main.js": "/static/js/main.f86a0a53.js",
+    "static/media/app-fusion.webp": "/static/media/app-fusion.f533051dc10c4b3403f8.webp",
     "static/media/memoji-wave-glasses.png": "/static/media/memoji-wave-glasses.165b3dc691b8c5e64005.png",
     "static/media/memoji-wave.png": "/static/media/memoji-wave.4410c2397d90aa5e6b16.png",
+    "static/media/app-moonshot.webp": "/static/media/app-moonshot.57b2d4ab3c05888e1660.webp",
+    "static/media/app-kanban.webp": "/static/media/app-kanban.b8903d132681637f1520.webp",
+    "static/media/app-bored.webp": "/static/media/app-bored.ae5201f393e423070633.webp",
+    "static/media/app-scheduler.webp": "/static/media/app-scheduler.e01f54e39c3ab8bdc6c0.webp",
+    "static/media/app-checklist.webp": "/static/media/app-checklist.0e338f8893899e449c2f.webp",
+    "static/media/coming-soon.webp": "/static/media/coming-soon.353dabebb1a3058d46ff.webp",
     "index.html": "/index.html",
-    "main.dea63a99.js.map": "/static/js/main.dea63a99.js.map"
+    "main.f86a0a53.js.map": "/static/js/main.f86a0a53.js.map"
   },
   "entrypoints": [
-    "static/js/main.dea63a99.js"
+    "static/js/main.f86a0a53.js"
   ]
 }
