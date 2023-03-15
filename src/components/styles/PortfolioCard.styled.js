@@ -44,13 +44,6 @@ export const DisplayOver = styled.a`
   color: ${dark};
 `;
 
-export const BigTitle = styled.h2`
-  grid-area: title;
-  color: ${accent};
-  background-color: ${accent}55;
-  backdrop-filter: blur(15px);
-`;
-
 export const Hover = styled.div`
   opacity: 0;
   transition: opacity 350ms ease;
@@ -67,6 +60,13 @@ export const CTA = styled.a`
   left: 20px;
 `;
 
+export const BigTitle = styled.h2`
+  grid-area: title;
+  color: ${accent};
+  background-color: ${accent}55;
+  backdrop-filter: blur(15px);
+`;
+
 export const Background = styled.div`
   grid-area: background;
   display: grid;
@@ -75,7 +75,7 @@ export const Background = styled.div`
     /* "company" */
     "professionaltag";
   /* flex-basis: 100%; */
-  /* grid-template-rows: 1fr auto; */
+  grid-template-rows: 1fr auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: ${({ image }) => `url(${image})`};
