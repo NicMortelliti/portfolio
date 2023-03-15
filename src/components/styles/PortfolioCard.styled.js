@@ -3,6 +3,7 @@ import styled from "styled-components";
 const dark = ({ theme }) => theme.dark;
 const light = ({ theme }) => theme.light;
 const accent = ({ theme }) => theme.accent;
+const color = ({ theme }) => theme.color;
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const transTime = "0.3s";
@@ -16,10 +17,9 @@ export const Card = styled.a`
   grid-template-rows: 1fr auto;
   background-color: #ffffff99;
   backdrop-filter: blur(15px);
-  /* flex-basis: 100%; */
   text-decoration: none;
   border: 1px solid ${dark};
-  box-shadow: 2px 2px 5px black;
+  /* box-shadow: 4px 4px 0px ${color}; */
   color: ${dark};
 
   /* Override the global paragraph setting */
@@ -62,8 +62,8 @@ export const CTA = styled.a`
 
 export const BigTitle = styled.h2`
   grid-area: title;
-  color: ${accent};
-  background-color: ${accent}55;
+  color: ${color};
+  background-color: ${dark}55;
   backdrop-filter: blur(15px);
   padding: 0.5rem;
 `;
@@ -73,9 +73,7 @@ export const Background = styled.div`
   display: grid;
   grid-template-areas:
     "displayover"
-    /* "company" */
     "professionaltag";
-  /* flex-basis: 100%; */
   grid-template-rows: 1fr auto;
   background-size: cover;
   background-repeat: no-repeat;
