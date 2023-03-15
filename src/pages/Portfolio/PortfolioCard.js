@@ -8,7 +8,6 @@ import {
   DisplayOver,
   CardProf,
   Hover,
-  SubTitle,
   Paragraph,
 } from "../../components/styles/PortfolioCard.styled";
 
@@ -20,14 +19,16 @@ const PortfolioCard = ({
     techNames.map((name, index) => <p key={index}>{name}</p>);
 
   return (
-    // <Card>
+    <Card>
       <Background image={image}>
         <BigTitle>{text}</BigTitle>
         {/* Conditionally render the professional section */}
         {professional ? (
           <>
             <CardProf>Professional</CardProf>
-            <SubTitle>{professional}</SubTitle>
+            <Hover>
+              <Paragraph>{professional}</Paragraph>
+            </Hover>
           </>
         ) : null}
         <DisplayOver href={to} target="_blank" image={image}>
@@ -37,7 +38,7 @@ const PortfolioCard = ({
           </Hover>
         </DisplayOver>
       </Background>
-    // </Card>
+    </Card>
   );
 };
 

@@ -12,9 +12,7 @@ export const Card = styled.a`
   background-color: #ffffff99;
   backdrop-filter: blur(15px);
   grid-template-areas:
-    "displayover"
-    "company"
-    "professional"
+    "background"
     "title";
   flex-basis: 100%;
   display: grid;
@@ -48,21 +46,14 @@ export const DisplayOver = styled.a`
 
 export const BigTitle = styled.h2`
   grid-area: title;
-  text-transform: uppercase;
-  color: ${dark};
-  background-color: rgba(255, 255, 255, 0.8);
+  color: ${accent};
+  background-color: ${accent}55;
   backdrop-filter: blur(15px);
 `;
 
 export const Hover = styled.div`
   opacity: 0;
   transition: opacity 350ms ease;
-`;
-
-export const SubTitle = styled.h4`
-  grid-area: company;
-  transform: translate3d(0, 50px, 0);
-  transition: transform 350ms ease;
 `;
 
 export const Paragraph = styled.p`
@@ -77,29 +68,29 @@ export const CTA = styled.a`
 `;
 
 export const Background = styled.div`
+  grid-area: background;
   grid-template-areas:
     "displayover"
     "company"
-    "professional"
-    "title";
+    "professionaltag";
   flex-basis: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  background-image: ${({ image }) => `url(${image})`};
+  color: ${dark};
   position: relative;
   width: 300px;
   height: 400px;
   cursor: pointer;
-  background-image: ${({ image }) => `url(${image})`};
 
   &:hover ${DisplayOver} {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
   }
 
-  &:hover ${SubTitle}, &:hover ${Paragraph} {
+  &:hover ${Paragraph} {
     transform: translate3d(0, 0, 0);
   }
 
@@ -109,7 +100,7 @@ export const Background = styled.div`
 `;
 
 export const CardProf = styled.div`
-  grid-area: professional;
+  grid-area: professionaltag;
   background-color: #ffe9e8;
   color: #f26157;
 `;
