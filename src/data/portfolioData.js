@@ -3,6 +3,8 @@ import imageScheduler from "../assets/images/app-scheduler.webp";
 import imageKanban from "../assets/images/app-kanban.webp";
 import imageChecklist from "../assets/images/app-checklist.webp";
 import imageBored from "../assets/images/app-bored.webp";
+import imageFusion from "../assets/images/app-fusion.webp"
+import imageComingSoon from "../assets/images/coming-soon.webp"
 
 export const data = [
   {
@@ -49,15 +51,16 @@ export const data = [
     to: "https://www.collinsaerospace.com/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion",
     text: "ProLine Fusion",
     description: "Engine Data and System Status GUI development focal.",
-    image: imageBored,
+    image: imageFusion,
     techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
     professional: "Collins Aerospace",
+    attribution: {author: "airbus777", url: "https://flickr.com/photos/69502324@N00/50828322196", edits: "cropped"}
   },
   {
     to: "http://www.collinsaerospace.com/what-we-do/industries/military-and-defense/displays-and-controls/airborne/head-up-guidance-system-enhanced-vision-system-hgs-evs",
     text: "Collins HGS",
     description: "Systems Verification Lead",
-    image: imageBored,
+    image: imageComingSoon,
     techNames: ["Flight Sim Config", "C-Programming", "Matlab/Simulink"],
     professional: "Collins Aerospace",
   },
