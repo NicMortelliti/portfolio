@@ -65,6 +65,7 @@ export const BigTitle = styled.h2`
   color: ${accent};
   background-color: ${accent}55;
   backdrop-filter: blur(15px);
+  padding: 0.5rem;
 `;
 
 export const Background = styled.div`
@@ -103,4 +104,6 @@ export const CardProf = styled.div`
   grid-area: professionaltag;
   background-color: #ffe9e8;
   color: #f26157;
+  justify-content: start;
+  align-items: start;
 `;
