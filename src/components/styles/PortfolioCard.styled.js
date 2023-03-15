@@ -73,10 +73,11 @@ export const Background = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: ${({ image }) => `url(${image})`};
+  background-position: center;
   color: ${dark};
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   cursor: pointer;
 
   &:hover ${DisplayOver} {
