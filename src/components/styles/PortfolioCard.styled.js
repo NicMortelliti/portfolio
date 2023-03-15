@@ -19,7 +19,6 @@ export const Card = styled.a`
   backdrop-filter: blur(15px);
   text-decoration: none;
   border: 1px solid ${dark};
-  /* box-shadow: 4px 4px 0px ${color}; */
   color: ${dark};
 
   /* Override the global paragraph setting */
