@@ -30,6 +30,7 @@ export const HeaderSection = styled.div`
   place-items: center;
   height: ${headerFooterHeight}px;
   background-color: ${bgColor};
+  z-index: 999;
 `;
 
 export const MainSection = styled.div`
