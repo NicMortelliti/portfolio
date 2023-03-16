@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const headerFooterHeight = 80;
 
-const accent = ({ theme }) => theme.accent;
 const bgColor = ({ theme }) => theme.bgColor;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
@@ -65,26 +64,6 @@ export const ThemeSwitcherSection = styled.div`
   right: 0;
   z-index: 999;
   place-items: start;
-`;
-
-export const Titles = styled.div`
-  p:not(:last-child)::after {
-    color: ${accent};
-    white-space: pre;
-    content: "\\a\\2022\\a";
-  }
-
-  @media (min-width: ${mobileWidthLimit}) {
-    white-space: nowrap;
-    p {
-      display: inline-block;
-
-      /* Add space and pipe between titles */
-      &:not(:last-child)::after {
-        content: "\\a0\\2022\\a0";
-      }
-    }
-  }
 `;
 
 export const PageTitle = styled.h1`
