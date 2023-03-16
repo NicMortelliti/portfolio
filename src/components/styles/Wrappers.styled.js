@@ -1,12 +1,14 @@
 import styled from "styled-components";
+const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
-const Template = styled.div`
-  display: grid;
-  gap: 1.5rem;
-`;
+export const SocialWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 
-export const SocialWrapper = styled(Template)`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* gap: 3rem; */
+  @media (max-width: ${mobileWidthLimit}) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;
