@@ -10,11 +10,11 @@ const borderThickness = "4px";
 
 export const LinkCont = styled.div`
   gap: 1.5rem 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   @media (max-width: ${mobileWidthLimit}) {
-    grid-template-columns: repeat(1, 1fr);
     margin: 0 30px;
   }
 `;
@@ -63,7 +63,6 @@ export const Link = styled.a`
     grid-area: icon;
     font-size: xx-large;
     padding-top: 1rem;
-    
   }
 
   .title {
@@ -96,4 +95,4 @@ export const ProfessionalTag = styled.div`
   border: 2px solid #f26157;
   color: #f26157;
   padding: 10px;
-`
+`;
