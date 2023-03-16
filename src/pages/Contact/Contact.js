@@ -5,11 +5,12 @@ import { Socials } from "../../components/ui/Buttons/index";
 // Styled components
 import { Wrapper } from "../../components/styles/Landing.styled";
 import { Link } from "../../components/styles/Buttons.styled";
+import { PageTitle } from "../../components/styles/Layout.styled";
 
 const Contact = () => {
   return (
     <Wrapper>
-      <h1>Let's work together</h1>
+      <PageTitle>Contact Me</PageTitle>
       <Link href={`mailto:${email}`}>{email}</Link>
       <Socials />
     </Wrapper>
