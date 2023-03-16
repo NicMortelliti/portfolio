@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Socials } from "../../components/ui/Buttons/index";
 import Memoji from "../../components/ui/Memoji/Memoji";
 import { titles } from "../../data/bioData";
 
