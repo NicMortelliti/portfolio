@@ -6,6 +6,7 @@ import { titles } from "../../data/bioData";
 // Styled components
 import { Wrapper } from "../../components/styles/Landing.styled";
 import { MemojiSection, Titles } from "../../components/styles/Layout.styled";
+import { Tagline } from "../../components/styles/Home.styled";
 
 const Home = () => {
   // Render each title to the page
@@ -19,10 +20,10 @@ const Home = () => {
         <h1>Hey,</h1>
         <h1>I'm Nic Mortelliti</h1>
       </div>
+      <Tagline>"The flying full stack developer"</Tagline>
       <Titles>
         <DisplayTitles />
       </Titles>
-      <h2>"The flying full stack developer"</h2>
       <MemojiSection>
         <Memoji />
       </MemojiSection>
