@@ -30,7 +30,7 @@ export const HeaderSection = styled.div`
   display: grid;
   place-items: center;
   height: ${headerFooterHeight}px;
-  background-color: ${bgColor}
+  background-color: ${bgColor};
 `;
 
 export const MainSection = styled.div`
@@ -84,5 +84,11 @@ export const Titles = styled.div`
         content: "\\a0\\2022\\a0";
       }
     }
+  }
+`;
+
+export const PageTitle = styled.h1`
+  @media (min-width: ${mobileWidthLimit}) {
+    display: none;
   }
 `;

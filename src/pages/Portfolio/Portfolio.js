@@ -6,6 +6,7 @@ import PortfolioCard from "./PortfolioCard";
 // Styled components
 import { LinkCont } from "../../components/styles/Link.styled";
 import { Wrapper } from "../../components/styles/Page.styled";
+import { PageTitle } from "../../components/styles/Layout.styled";
 
 // Data
 import { data } from "../../data/portfolioData";
@@ -23,7 +24,7 @@ const Portfolio = () => {
 
   return (
     <Wrapper>
-      <h1>Portfolio</h1>
+      <PageTitle>Portfolio</PageTitle>
       <RenderItems />
     </Wrapper>
   );
