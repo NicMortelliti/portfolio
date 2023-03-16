@@ -4,6 +4,5 @@ const accent = ({ theme }) => theme.accent;
 
 export const Tagline = styled.h2`
   font-style: italic;
-  text-decoration: underline;
   color: ${accent};
 `;
