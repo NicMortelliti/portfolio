@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     width: 20rem;
   }
 
-  h1 {
+  div > h1 {
     font-size: clamp(30px, 6vw, 10vw);
     border: none;
   }
