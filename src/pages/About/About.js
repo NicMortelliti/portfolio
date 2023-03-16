@@ -3,6 +3,7 @@ import { data } from "../../data/bioData";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Page.styled";
+import { PageTitle } from "../../components/styles/Layout.styled";
 
 const About = () => {
   // For each item in the bio data array, render a paragraph element.
@@ -13,7 +14,7 @@ const About = () => {
 
   return (
     <Wrapper>
-      <h1>About Me</h1>
+      <PageTitle>About Me</PageTitle>
       <RenderBio />
     </Wrapper>
   );
