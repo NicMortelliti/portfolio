@@ -47,7 +47,7 @@ export const Description = styled.p`
   transition: transform 350ms ease;
   font-style: italic;
   text-align: left;
-`
+`;
 
 export const CTA = styled.a`
   position: absolute;
@@ -76,7 +76,7 @@ export const Background = styled.div`
   background-position: center;
   color: ${dark};
   position: relative;
-  width: 400px;
+  width: 300px;
   height: 300px;
   cursor: pointer;
 
