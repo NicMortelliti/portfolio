@@ -54,7 +54,7 @@ export const data = [
     image: imageFusion,
     techNames: ["VAPS XT", "SVN", "Eclipse IDE"],
     professional: "Collins Aerospace",
-    attribution: {author: "airbus777", url: "https://flickr.com/photos/69502324@N00/50828322196", edits: "cropped"}
+    attribution: {author: "airbus777", site: "flickr", url: "https://flickr.com/photos/69502324@N00/50828322196", edits: "cropped"}
   },
   {
     to: "http://www.collinsaerospace.com/what-we-do/industries/military-and-defense/displays-and-controls/airborne/head-up-guidance-system-enhanced-vision-system-hgs-evs",

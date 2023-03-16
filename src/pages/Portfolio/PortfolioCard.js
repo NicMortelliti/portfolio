@@ -2,43 +2,56 @@ import React from "react";
 
 // Styled components
 import {
+  Attribution,
   Card,
   Background,
   BigTitle,
   DisplayOver,
-  CardProf,
-  CardPersonal,
+  CardProfOrPersonal,
   Hover,
   Description,
-  Paragraph,
+  CompanyName,
+  Tech,
 } from "../../components/styles/PortfolioCard.styled";
 
 const PortfolioCard = ({
-  project: { to, image, text, description, techNames, professional },
+  project: {
+    to,
+    image,
+    text,
+    description,
+    techNames,
+    professional,
+    attribution,
+  },
 }) => {
   // Render each tech name
   const renderTechNames = () =>
     techNames.map((name, index) => <p key={index}>{name}</p>);
 
+  const RenderAttribution = () => {
+    if (attribution) {
+      return (
+        <Attribution href={attribution.url}>
+          Image Credit: {attribution.site}/{attribution.author}
+        </Attribution>
+      );
+    }
+  };
+
   return (
     <Card>
       <Background image={image}>
-        {/* Conditionally render the professional section */}
-        {professional ? (
-          <>
-            <CardProf>Professional</CardProf>
-            <Hover>
-              <Paragraph>{professional}</Paragraph>
-            </Hover>
-          </>
-        ) : (
-          <CardPersonal>Personal</CardPersonal>
-        )}
         <DisplayOver href={to} target="_blank" image={image}>
           <Hover>
+            <CompanyName>{professional}</CompanyName>
             <Description>{description}</Description>
-            <Paragraph>{renderTechNames()}</Paragraph>
+            <Tech>{renderTechNames()}</Tech>
+            <RenderAttribution />
           </Hover>
+          <CardProfOrPersonal isProfessional={professional}>
+            {professional ? "Professional" : "Personal"}
+          </CardProfOrPersonal>
         </DisplayOver>
       </Background>
       <BigTitle>{text}</BigTitle>
