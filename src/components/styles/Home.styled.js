@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const accent = ({ theme }) => theme.accent;
-const light = ({ theme }) => theme.light;
+const color = ({ theme }) => theme.color;
 
 export const Tagline = styled.h2`
   font-style: italic;
@@ -9,7 +9,7 @@ export const Tagline = styled.h2`
 `;
 
 export const Title = styled.h3`
-  color: ${light};
+  color: ${color};
   text-align: center;
 `;
 
