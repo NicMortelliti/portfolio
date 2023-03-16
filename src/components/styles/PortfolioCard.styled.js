@@ -101,3 +101,8 @@ export const CardProf = styled.div`
   justify-content: start;
   align-items: start;
 `;
+
+export const CardPersonal = styled(CardProf)`
+  background-color: #C2EFB3;
+  color: #005500;
+`;

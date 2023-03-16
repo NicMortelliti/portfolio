@@ -7,6 +7,7 @@ import {
   BigTitle,
   DisplayOver,
   CardProf,
+  CardPersonal,
   Hover,
   Description,
   Paragraph,
@@ -30,7 +31,9 @@ const PortfolioCard = ({
               <Paragraph>{professional}</Paragraph>
             </Hover>
           </>
-        ) : null}
+        ) : (
+          <CardPersonal>Personal</CardPersonal>
+        )}
         <DisplayOver href={to} target="_blank" image={image}>
           <Hover>
             <Description>{description}</Description>
