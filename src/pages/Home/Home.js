@@ -4,9 +4,13 @@ import Memoji from "../../components/ui/Memoji/Memoji";
 import { titles } from "../../data/bioData";
 
 // Styled components
-import { Wrapper } from "../../components/styles/Landing.styled";
 import { MemojiSection } from "../../components/styles/Layout.styled";
-import { Tagline, Title } from "../../components/styles/Home.styled";
+import {
+  Brief,
+  Tagline,
+  Title,
+  Wrapper,
+} from "../../components/styles/Home.styled";
 
 const Home = () => {
   // Render each title to the page
