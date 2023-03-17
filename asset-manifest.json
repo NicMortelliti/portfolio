@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.146c85be.js",
+    "main.js": "/static/js/main.086cbe94.js",
     "static/media/memoji-wave-glasses.png": "/static/media/memoji-wave-glasses.165b3dc691b8c5e64005.png",
     "static/media/memoji-wave.png": "/static/media/memoji-wave.4410c2397d90aa5e6b16.png",
     "static/media/app-moonshot.webp": "/static/media/app-moonshot.57b2d4ab3c05888e1660.webp",
@@ -11,9 +11,9 @@
     "static/media/app-checklist.webp": "/static/media/app-checklist.0e338f8893899e449c2f.webp",
     "static/media/coming-soon.webp": "/static/media/coming-soon.353dabebb1a3058d46ff.webp",
     "index.html": "/index.html",
-    "main.146c85be.js.map": "/static/js/main.146c85be.js.map"
+    "main.086cbe94.js.map": "/static/js/main.086cbe94.js.map"
   },
   "entrypoints": [
-    "static/js/main.146c85be.js"
+    "static/js/main.086cbe94.js"
   ]
 }
