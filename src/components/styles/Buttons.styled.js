@@ -45,8 +45,7 @@ export const Button = styled(ButtonTemplate)`
 export const ThemeButton = styled(ButtonTemplate)`
   border: none;
   padding: 0.35rem;
-  width: 80px;
-  height: 80px;
+  width: 100%;
   font-size: xx-large;
 
   :hover {
