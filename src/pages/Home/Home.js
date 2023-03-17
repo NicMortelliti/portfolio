@@ -6,23 +6,17 @@ import { titles } from "../../data/bioData";
 // Styled components
 import { Wrapper } from "../../components/styles/Landing.styled";
 import { MemojiSection } from "../../components/styles/Layout.styled";
-import { Tagline, Title, Symbol } from "../../components/styles/Home.styled";
+import { Tagline, Title } from "../../components/styles/Home.styled";
 
 const Home = () => {
   // Render each title to the page
-  const DisplayTitles = () => {
-    return titles.map((title, index) => {
-      return (
-        <>
-          <Title key={index}>{title}</Title>
-          {index < Object.keys(titles).length - 1 ? (
-            <Symbol>&#9679;</Symbol>
-          ) : null}
-        </>
-      );
-    });
-  };
-
+  const DisplayTitles = () => (
+    <Title>
+      {titles.map((title, index) => (
+        <h3 key={index}>{title}</h3>
+      ))}
+    </Title>
+  );
   return (
     <Wrapper>
       <div>
