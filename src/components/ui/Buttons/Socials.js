@@ -3,7 +3,7 @@ import React from "react";
 import { externalLinks as links } from "../../../data/linkData";
 
 // Styled components
-import { SocialWrapper as Wrapper } from "../../styles/Wrappers.styled";
+import { SocialWrapper as Wrapper } from "../../styles/Contact/Contact.styled";
 import { SocialButton as Button } from "../../styles/Buttons.styled";
 
 const Socials = () => {

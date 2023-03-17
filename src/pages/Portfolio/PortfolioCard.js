@@ -12,7 +12,7 @@ import {
   Description,
   CompanyName,
   Tech,
-} from "../../components/styles/PortfolioCard.styled";
+} from "../../components/styles/Portfolio/PortfolioCard.styled";
 
 const PortfolioCard = ({
   project: {

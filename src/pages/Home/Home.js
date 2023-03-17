@@ -5,7 +5,7 @@ import { titles } from "../../data/bioData";
 
 // Styled components
 import { MemojiSection } from "../../components/styles/Layout.styled";
-import { Tagline, Title, Wrapper } from "../../components/styles/Home.styled";
+import { Tagline, Title, Wrapper } from "../../components/styles/Home/Home.styled";
 
 const Home = () => {
   // Render each title to the page

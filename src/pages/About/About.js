@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "../../data/bioData";
 
 // Styled components
-import { Wrapper } from "../../components/styles/Page.styled";
+import { Wrapper } from "../../components/styles/About/About.styled";
 import { PageTitle } from "../../components/styles/Layout.styled";
 
 const About = () => {

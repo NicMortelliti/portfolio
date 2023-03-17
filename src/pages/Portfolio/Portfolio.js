@@ -5,7 +5,7 @@ import PortfolioCard from "./PortfolioCard";
 
 // Styled components
 import { LinkCont } from "../../components/styles/Link.styled";
-import { Wrapper } from "../../components/styles/Page.styled";
+import { Wrapper } from "../../components/styles/Portfolio/Portfolio.styled";
 import { PageTitle } from "../../components/styles/Layout.styled";
 
 // Data
