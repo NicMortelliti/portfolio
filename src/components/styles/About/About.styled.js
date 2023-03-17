@@ -8,4 +8,5 @@ export const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   gap: 1rem;
+  margin: 0 30px;
 `;
