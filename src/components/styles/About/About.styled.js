@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const accent = ({ theme }) => theme.accent;
+
 export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -12,17 +14,17 @@ export const Wrapper = styled.div`
 `;
 
 export const Picture = styled.div`
-  border-radius: 50%;
   display: inline-block;
   position: relative;
   width: 200px;
   height: 200px;
   overflow: hidden;
   border-radius: 50%;
+  border: 6px solid ${accent};
 
   & > img {
     width: auto;
-    height: 100%;
-    margin-left: -50px;
+    height: 150%;
+    margin-top: -20px;
   }
 `;
