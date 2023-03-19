@@ -12,6 +12,9 @@ import {
   Description,
   CompanyName,
   Tech,
+  Top,
+  Bottom,
+  Flex,
 } from "../../components/styles/Portfolio/PortfolioCard.styled";
 
 const PortfolioCard = ({
@@ -44,14 +47,20 @@ const PortfolioCard = ({
       <Background image={image}>
         <DisplayOver href={to} target="_blank" image={image}>
           <Hover>
-            <CompanyName>{professional}</CompanyName>
-            <Description>{description}</Description>
-            <Tech>{renderTechNames()}</Tech>
-            <RenderAttribution />
+            <Flex>
+              <Top>
+                <CompanyName>{professional}</CompanyName>
+                <Description>{description}</Description>
+                <Tech>{renderTechNames()}</Tech>
+              </Top>
+              <RenderAttribution />
+            </Flex>
           </Hover>
-          <CardProfOrPersonal isProfessional={professional}>
-            {professional ? "Professional" : "Personal"}
-          </CardProfOrPersonal>
+          <Bottom>
+            <CardProfOrPersonal isProfessional={professional}>
+              {professional ? "Professional" : "Personal"}
+            </CardProfOrPersonal>
+          </Bottom>
         </DisplayOver>
       </Background>
       <BigTitle>{text}</BigTitle>

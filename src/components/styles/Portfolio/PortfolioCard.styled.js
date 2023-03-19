@@ -18,14 +18,9 @@ export const Card = styled.a`
 
 export const DisplayOver = styled.a`
   grid-area: displayover;
-  display: grid;
-  grid-template-areas:
-    "companyName"
-    "description"
-    "tech"
-    "attribution"
-    "professionalTag";
-  grid-template-rows: 1fr 1fr 2fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   z-index: 2;
@@ -38,6 +33,7 @@ export const DisplayOver = styled.a`
 export const Hover = styled.div`
   opacity: 0;
   transition: opacity 250ms ease;
+  height: 100%;
 `;
 
 const Paragraph = styled.p`
@@ -46,25 +42,20 @@ const Paragraph = styled.p`
 `;
 
 export const CompanyName = styled(Paragraph)`
-  grid-area: companyName;
   padding: 20px 20px 10px;
   font-weight: bold;
 `;
 
 export const Description = styled(Paragraph)`
-  grid-area: description;
   padding: 0 20px 5px;
   font-style: italic;
 `;
 
 export const Tech = styled(Paragraph)`
-  grid-area: tech;
   padding: 0 40px;
-  border: 1px solid red;
 `;
 
 export const Attribution = styled.a`
-  grid-area: attribution;
   color: ${dark};
   width: 100%;
   background-color: #00000022;
@@ -72,7 +63,6 @@ export const Attribution = styled.a`
   display: flex;
   justify-content: center;
   z-index: 999;
-  border: 1px solid red;
 `;
 
 export const BigTitle = styled.h2`
@@ -114,10 +104,28 @@ export const Background = styled.div`
 `;
 
 export const CardProfOrPersonal = styled.p`
-  grid-area: professionalTag;
   background-color: ${({ isProfessional }) =>
     isProfessional ? `#ffe9e8` : `#c2efb3`};
   color: ${({ isProfessional }) => (isProfessional ? `#f26157` : `#005500`)};
   text-align: center;
   z-index: 10;
+`;
+
+export const Top = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+`;
+
+export const Bottom = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 `;
