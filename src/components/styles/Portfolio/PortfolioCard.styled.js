@@ -25,7 +25,7 @@ export const DisplayOver = styled.a`
     "tech"
     "attribution"
     "professionalTag";
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
   height: 100%;
   width: 100%;
   z-index: 2;
@@ -60,6 +60,7 @@ export const Description = styled(Paragraph)`
 export const Tech = styled(Paragraph)`
   grid-area: tech;
   padding: 0 40px;
+  border: 1px solid red;
 `;
 
 export const Attribution = styled.a`
@@ -67,10 +68,11 @@ export const Attribution = styled.a`
   color: ${dark};
   width: 100%;
   background-color: #00000022;
-  position: absolute;
   bottom: 0;
   display: flex;
   justify-content: center;
+  z-index: 999;
+  border: 1px solid red;
 `;
 
 export const BigTitle = styled.h2`
