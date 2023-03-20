@@ -64,7 +64,7 @@ export const ThemeSwitcherSection = styled.div`
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 999;
+  z-index: 50;
   place-items: start;
   animation: ${bounce} 10s ease infinite;
 `;

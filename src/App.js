@@ -45,12 +45,10 @@ function App() {
           </MainSection>
         ) : null}
         <FooterSection />
-      </Wrapper>
-      {!navMenuIsOpen && (
         <ThemeSwitcherSection>
           <ThemeButton />
         </ThemeSwitcherSection>
-      )}
+      </Wrapper>
     </ThemeProvider>
   );
 }

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const color = ({ theme }) => theme.color;
+const bgColor = ({ theme }) => theme.bgColor;
 
 export const NavbarContainer = styled.nav`
   width: 100%;
@@ -46,6 +47,8 @@ export const NavbarExtendedContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  background-color: ${bgColor};
 
   @media (min-width: ${mobileWidthLimit}) {
     display: none;
