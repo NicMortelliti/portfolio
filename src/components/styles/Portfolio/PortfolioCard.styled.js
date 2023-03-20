@@ -91,7 +91,7 @@ export const Background = styled.div`
 
   &:hover ${DisplayOver} {
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
   }
 
   &:hover ${Paragraph}, &:hover ${Description} {
