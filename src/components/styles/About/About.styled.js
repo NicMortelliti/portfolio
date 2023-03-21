@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   gap: 1rem;
-  margin: 0 30px;
+  margin: 0 80px;
 `;
 
 export const Picture = styled.div`
