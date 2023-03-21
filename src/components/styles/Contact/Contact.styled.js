@@ -46,7 +46,6 @@ export const SocialWrapper = styled.div`
   gap: 2rem;
 
   @media (max-width: ${mobileWidthLimit}) {
-    flex-direction: column;
-    gap: 0;
+    gap: 1rem;
   }
 `;
