@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   navMenuIsOpen: false,
   darkThemeActive: true,
+  themeSwitcherHasBeenClicked: false,
 };
 
 export const uiSlice = createSlice({
@@ -24,8 +25,19 @@ export const uiSlice = createSlice({
         darkThemeActive: !state.darkThemeActive,
       };
     },
+    setThemeSwitcherHasBeenClicked: (state) => {
+      return {
+        ...state,
+        themeSwitcherHasBeenClicked: true,
+      };
+    },
   },
 });
 
-export const { reset, setNavMenuIsOpen, setDarkThemeActive } = uiSlice.actions;
+export const {
+  reset,
+  setNavMenuIsOpen,
+  setDarkThemeActive,
+  setThemeSwitcherHasBeenClicked,
+} = uiSlice.actions;
 export default uiSlice.reducer;
