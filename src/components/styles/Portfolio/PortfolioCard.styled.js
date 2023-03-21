@@ -9,7 +9,6 @@ export const CardCont = styled.div`
 
 export const DescriptionCont = styled.div`
   display: flex;
-
   flex-direction: column;
 `;
 

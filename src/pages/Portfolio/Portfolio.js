@@ -1,13 +1,11 @@
 import React from "react";
 
-// Components
-import PortfolioCard from "./PortfolioCard";
-
 // Styled components
-import { LinkCont } from "../../components/styles/Link.styled";
 import {
   Wrapper,
   ProjectTitle,
+  ProjectTitleList,
+  Section,
 } from "../../components/styles/Portfolio/Portfolio.styled";
 import { PageTitle } from "../../components/styles/Layout.styled";
 
@@ -18,18 +16,26 @@ const Portfolio = () => {
   // Map through the data object
   // - Render a card for each item in the data object
   const RenderItems = () =>
-    data.map((project, index) => {
+    data.map(({ title }, index) => {
       return (
-        <ProjectTitle key={index} project={project}>
-          {project.title}
+        <ProjectTitle key={index}>
+          <p>
+            {title}
+            <span text={title} />
+            <span text={title} />
+          </p>
         </ProjectTitle>
       );
     });
 
   return (
     <Wrapper>
-      <PageTitle>Portfolio</PageTitle>
-      <RenderItems />
+      <Section>
+        <PageTitle>Portfolio</PageTitle>
+        <ProjectTitleList>
+          <RenderItems />
+        </ProjectTitleList>
+      </Section>
     </Wrapper>
   );
 };

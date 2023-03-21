@@ -5,7 +5,7 @@ const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const transTime = "0.3s";
-const borderThickness = "4px";
+export const borderThickness = "4px";
 
 // Button template
 const ButtonTemplate = styled.button`
