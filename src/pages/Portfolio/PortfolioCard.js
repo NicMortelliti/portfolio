@@ -35,7 +35,7 @@ const PortfolioCard = ({
   const RenderAttribution = () => {
     if (attribution) {
       return (
-        <Attribution href={attribution.url}>
+        <Attribution href={attribution.url} target="_blank">
           Image Credit: {attribution.site}/{attribution.author}
         </Attribution>
       );
@@ -53,15 +53,15 @@ const PortfolioCard = ({
                 <Description>{description}</Description>
                 <RenderTechNames />
               </Top>
-              <RenderAttribution />
             </Flex>
           </Hover>
-          <Bottom>
-            <CardProfOrPersonal isProfessional={professional}>
-              {professional ? "Professional" : "Personal"}
-            </CardProfOrPersonal>
-          </Bottom>
         </DisplayOver>
+        <Bottom>
+          <RenderAttribution />
+          <CardProfOrPersonal isProfessional={professional}>
+            {professional ? "Professional" : "Personal"}
+          </CardProfOrPersonal>
+        </Bottom>
       </Background>
       <BigTitle>{text}</BigTitle>
     </Card>

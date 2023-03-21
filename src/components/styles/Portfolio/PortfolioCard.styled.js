@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const dark = ({ theme }) => theme.dark;
+const light = ({ theme }) => theme.light;
 const color = ({ theme }) => theme.color;
 
-export const Card = styled.a`
+export const Card = styled.div`
   display: grid;
   grid-template-areas:
     "background"
@@ -56,9 +57,9 @@ export const Tech = styled(Paragraph)`
 `;
 
 export const Attribution = styled.a`
-  color: ${dark};
+  color: ${light};
   width: 100%;
-  background-color: #00000022;
+  background-color: #555555;
   bottom: 0;
   display: flex;
   justify-content: center;
