@@ -29,8 +29,8 @@ const PortfolioCard = ({
   },
 }) => {
   // Render each tech name
-  const renderTechNames = () =>
-    techNames.map((name, index) => <p key={index}>{name}</p>);
+  const RenderTechNames = () =>
+    techNames.map((name, index) => <Tech key={index}>{name}</Tech>);
 
   const RenderAttribution = () => {
     if (attribution) {
@@ -49,9 +49,9 @@ const PortfolioCard = ({
           <Hover>
             <Flex>
               <Top>
-                <CompanyName>{professional}</CompanyName>
+                <CompanyName>{professional ? professional : null}</CompanyName>
                 <Description>{description}</Description>
-                <Tech>{renderTechNames()}</Tech>
+                <RenderTechNames />
               </Top>
               <RenderAttribution />
             </Flex>
