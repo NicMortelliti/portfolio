@@ -25,7 +25,8 @@ import { Nav } from "./components/ui/Navigation";
 import { useSelector } from "react-redux";
 
 function App() {
-  const { navMenuIsOpen, darkThemeActive } = useSelector((state) => state.ui);
+  const { navMenuIsOpen, darkThemeActive, themeSwitcherHasBeenClicked } =
+    useSelector((state) => state.ui);
 
   return (
     <ThemeProvider theme={darkThemeActive ? darkTheme : lightTheme}>
@@ -45,7 +46,7 @@ function App() {
           </MainSection>
         ) : null}
         <FooterSection />
-        <ThemeSwitcherSection>
+        <ThemeSwitcherSection animate={themeSwitcherHasBeenClicked}>
           <ThemeButton />
         </ThemeSwitcherSection>
       </Wrapper>

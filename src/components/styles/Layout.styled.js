@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Bounce as bounce } from "./Animations/Bounce.styled";
 
@@ -66,7 +66,12 @@ export const ThemeSwitcherSection = styled.div`
   right: 0;
   z-index: 50;
   place-items: start;
-  animation: ${bounce} 10s ease infinite;
+  animation: ${({ animate }) =>
+    animate
+      ? "none"
+      : css`
+          ${bounce} 10s ease infinite
+        `};
 `;
 
 export const PageTitle = styled.h1`
