@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const dark = ({ theme }) => theme.dark;
-const light = ({ theme }) => theme.light;
 const color = ({ theme }) => theme.color;
 
 export const Card = styled.div`
@@ -42,11 +41,6 @@ const Paragraph = styled.p`
   transition: transform 250ms ease;
 `;
 
-export const CompanyName = styled(Paragraph)`
-  padding: 20px 20px 10px;
-  font-weight: bold;
-`;
-
 export const Description = styled(Paragraph)`
   padding: 0 20px 5px;
   font-style: italic;
@@ -54,16 +48,6 @@ export const Description = styled(Paragraph)`
 
 export const Tech = styled(Paragraph)`
   padding: 0 40px;
-`;
-
-export const Attribution = styled.a`
-  color: ${light};
-  width: 100%;
-  background-color: #555555;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  z-index: 999;
 `;
 
 export const BigTitle = styled.h2`
@@ -102,26 +86,6 @@ export const Background = styled.div`
   &:hover ${Hover} {
     opacity: 1;
   }
-`;
-
-export const CardProfOrPersonal = styled.p`
-  background-color: ${({ isProfessional }) =>
-    isProfessional ? `#ffe9e8` : `#c2efb3`};
-  color: ${({ isProfessional }) => (isProfessional ? `#f26157` : `#005500`)};
-  text-align: center;
-  z-index: 10;
-`;
-
-export const Top = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-`;
-
-export const Bottom = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
 `;
 
 export const Flex = styled.div`
