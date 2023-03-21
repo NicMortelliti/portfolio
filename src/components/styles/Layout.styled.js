@@ -75,6 +75,7 @@ export const ThemeSwitcherSection = styled.div`
 `;
 
 export const PageTitle = styled.h1`
+  text-align: center;
   @media (min-width: ${mobileWidthLimit}) {
     display: none;
   }
