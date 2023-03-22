@@ -5,13 +5,10 @@ const accent = ({ theme }) => theme.accent;
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  align-items: center;
   width: 100%;
 `;
 
 export const Section = styled.section`
-  padding: 2rem;
   box-sizing: border-box;
   position: relative;
 `;
@@ -19,33 +16,32 @@ export const Section = styled.section`
 export const ProjectTitleList = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: start;
 `;
 
 export const ProjectTitle = styled.article`
   display: flex;
-  background: #fda9a9;
-
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  width: 100%;
 
   p {
     transition: all ease-out 0.5s;
     color: transparent;
     text-shadow: 0 0 0px #e78383;
-    font-size: 3rem;
-    padding: 0 1rem;
+    font-size: 8.5vw;
+    /* padding: 0 2rem; */
     overflow: hidden;
     display: block;
     position: relative;
     cursor: pointer;
   }
 
+  /* Laser beam */
   p:before {
     content: "";
     width: 50%;
     position: absolute;
-    border-bottom: solid 8px #fff;
+    border-bottom: solid 8px ${accent};
     left: -50%;
     top: 35px;
     transition: transform 0.5s cubic-bezier(1, 0.04, 0, 1.16);
@@ -62,25 +58,27 @@ export const ProjectTitle = styled.article`
   p span:first-child:before,
   p span:last-child:before {
     content: ${({ text }) => `"${text}"`};
-    color: #fff;
+    color: ${accent};
     display: block;
     transition: ease-out all 0.3s -0.1s;
   }
 
+  /* Top span */
   p span:first-child {
     top: 0;
   }
 
+  /* Bottom span */
   p span:last-child {
     bottom: 0;
   }
 
   p span:first-child:before {
-    transform: translateY(41px);
+    transform: translateY(8.5vw);
   }
 
   p span:last-child:before {
-    transform: translateY(-95px);
+    transform: translateY(-12vw);
   }
 
   p:hover {
@@ -89,7 +87,7 @@ export const ProjectTitle = styled.article`
   }
 
   p:hover:before {
-    transform: translateX(42rem);
+    transform: translateX(100vw);
   }
 
   p:hover span:first-child:before,
@@ -98,11 +96,13 @@ export const ProjectTitle = styled.article`
     transition-delay: 0.3s;
   }
 
+  /* Top span hover */
   p:hover span:first-child:before {
     transform: translateY(0);
   }
 
+  /* Bottom span hover */
   p:hover span:last-child:before {
-    transform: translateY(-28px);
+    transform: translateY(-5.6vw);
   }
 `;
