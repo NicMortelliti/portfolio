@@ -4,7 +4,6 @@ import React from "react";
 import {
   Wrapper,
   ProjectTitle,
-  ProjectTitleList,
   Section,
 } from "../../components/styles/Portfolio/Portfolio.styled";
 import { PageTitle } from "../../components/styles/Layout.styled";
@@ -32,9 +31,7 @@ const Portfolio = () => {
     <Wrapper>
       <Section>
         <PageTitle>Portfolio</PageTitle>
-        <ProjectTitleList>
-          <RenderItems />
-        </ProjectTitleList>
+        <RenderItems />
       </Section>
     </Wrapper>
   );

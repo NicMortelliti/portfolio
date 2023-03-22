@@ -1,10 +1,7 @@
 import styled from "styled-components";
-import { borderThickness } from "../Buttons.styled";
 const accent = ({ theme }) => theme.accent;
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
 `;
 
@@ -13,27 +10,18 @@ export const Section = styled.section`
   position: relative;
 `;
 
-export const ProjectTitleList = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-`;
-
-export const ProjectTitle = styled.article`
-  display: flex;
-  width: 100%;
-
+export const ProjectTitle = styled.div`
   p {
     transition: all ease-out 0.5s;
     color: transparent;
     text-shadow: 0 0 0px #e78383;
-    font-size: 8.5vw;
-    /* padding: 0 2rem; */
+    font-size: 50px;
     overflow: hidden;
-    display: block;
     position: relative;
     cursor: pointer;
+    width: 100%;
+    display: flex;
+    margin: 0 0 3rem;
   }
 
   /* Laser beam */
@@ -48,11 +36,12 @@ export const ProjectTitle = styled.article`
   }
 
   p span {
-    display: block;
+    display: flex;
     position: absolute;
     height: 50%;
     width: 100%;
     overflow: hidden;
+    flex: 0 0 auto;
   }
 
   p span:first-child:before,
@@ -74,11 +63,11 @@ export const ProjectTitle = styled.article`
   }
 
   p span:first-child:before {
-    transform: translateY(8.5vw);
+    transform: translateY(30px);
   }
 
   p span:last-child:before {
-    transform: translateY(-12vw);
+    transform: translateY(-70px);
   }
 
   p:hover {
@@ -103,6 +92,6 @@ export const ProjectTitle = styled.article`
 
   /* Bottom span hover */
   p:hover span:last-child:before {
-    transform: translateY(-5.6vw);
+    transform: translateY(-33px);
   }
 `;
