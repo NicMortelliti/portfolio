@@ -10,6 +10,8 @@ export const Section = styled.section`
   position: relative;
 `;
 
+export const ProjectCell = styled.div``;
+
 export const ProjectTitle = styled.div`
   p {
     transition: all ease-out 0.5s;
@@ -21,7 +23,7 @@ export const ProjectTitle = styled.div`
     cursor: pointer;
     width: 100%;
     display: flex;
-    margin: 0 0 3rem;
+    margin: 5vh 0 0;
   }
 
   /* Laser beam */
@@ -93,5 +95,11 @@ export const ProjectTitle = styled.div`
   /* Bottom span hover */
   p:hover span:last-child:before {
     transform: translateY(-33px);
+  }
+
+  p:hover + div > div {
+    transition: ease-out all 0.3s;
+    transform: translateY(40px);
+    color: purple;
   }
 `;
