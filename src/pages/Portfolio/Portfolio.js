@@ -18,11 +18,11 @@ const Portfolio = () => {
   const RenderItems = () =>
     data.map(({ title }, index) => {
       return (
-        <ProjectTitle key={index}>
+        <ProjectTitle key={index} text={title}>
           <p>
             {title}
-            <span text={title} />
-            <span text={title} />
+            <span />
+            <span />
           </p>
         </ProjectTitle>
       );
