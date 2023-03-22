@@ -99,7 +99,6 @@ export const ProjectTitle = styled.div`
 
   p:hover + div > div {
     transition: ease-out all 0.3s;
-    transform: translateY(40px);
-    color: purple;
+    transform: translateY(500px);
   }
 `;

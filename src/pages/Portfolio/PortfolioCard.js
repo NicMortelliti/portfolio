@@ -13,6 +13,7 @@ const PortfolioCard = ({
     <ProjectCard>
       <ProjectContent>
         <p>{description}</p>
+        <img src={image} alt="landing page" />
       </ProjectContent>
     </ProjectCard>
   );
