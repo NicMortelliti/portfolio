@@ -7,6 +7,7 @@ import imageBored from "../assets/images/app-bored.webp";
 export const data = [
   {
     to: "https://moonshot.nicweb.dev",
+    github: "https://github.com/NicMortelliti/moonshot",
     text: "Moonshot",
     description: "A fictional space flight booking site.",
     image: imageMoonshot,
@@ -14,6 +15,7 @@ export const data = [
   },
   {
     to: "https://scheduler.nicweb.dev",
+    github: "https://github.com/NicMortelliti/appointment-scheduler",
     text: "Appointment Scheduler",
     description: "An application for booking appointments.",
     image: imageScheduler,
@@ -21,6 +23,7 @@ export const data = [
   },
   {
     to: "https://kanban.nicweb.dev",
+    github: "https://github.com/NicMortelliti/scrumban-client",
     text: "Kanban",
     description: "A project tracking tool for agile teams.",
     image: imageKanban,
@@ -28,6 +31,7 @@ export const data = [
   },
   {
     to: "https://checklist.nicweb.dev",
+    github: "https://github.com/NicMortelliti/checklist-frontend",
     text: "Piloting Checklist",
     description: "Finally, a simple checklist app for flying.",
     image: imageChecklist,
@@ -35,6 +39,7 @@ export const data = [
   },
   {
     to: "https://bored.nicweb.dev",
+    github: "https://github.com/NicMortelliti/Bored",
     text: "Bored?",
     description: "Looking for hobby or activity ideas?",
     image: imageBored,

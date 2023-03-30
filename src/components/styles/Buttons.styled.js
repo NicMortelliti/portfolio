@@ -79,7 +79,8 @@ export const Link = styled.a`
   &:hover {
     /* Set color on hovered buttons */
     transition: color ${transTime};
-    color: ${accent};
+    color: ${(props) => (props.altColor ? props.altColor : accent)};
+    /* color: ${accent}; */
   }
 
   /* Create underline pseudo-element */
@@ -88,7 +89,7 @@ export const Link = styled.a`
     display: block;
     width: 0;
     height: ${borderThickness};
-    background-color: ${accent};
+    background-color: ${(props) => (props.altColor ? props.altColor : accent)};
     transition: width ${transTime};
   }
 

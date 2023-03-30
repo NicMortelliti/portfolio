@@ -3,17 +3,16 @@ import React from "react";
 // Styled components
 import {
   Card,
-  Background,
-  BigTitle,
-  DisplayOver,
-  Hover,
-  Description,
+  CardInner,
+  CardFront,
+  CardBack,
+  CardLinkContainer,
   Tech,
-  Flex,
 } from "../../components/styles/Portfolio/PortfolioCard.styled";
+import { Link } from "../../components/styles/Buttons.styled";
 
 const PortfolioCard = ({
-  project: { to, image, text, description, techNames },
+  project: { github, to, image, text, description, techNames },
 }) => {
   // Render each tech name
   const RenderTechNames = () =>
@@ -21,17 +20,29 @@ const PortfolioCard = ({
 
   return (
     <Card>
-      <Background image={image}>
-        <DisplayOver href={to} target="_blank" image={image}>
-          <Hover>
-            <Flex>
-              <Description>{description}</Description>
-              <RenderTechNames />
-            </Flex>
-          </Hover>
-        </DisplayOver>
-      </Background>
-      <BigTitle>{text}</BigTitle>
+      <CardInner>
+        <CardFront>
+          <img src={image} alt="screenshot" />
+          <h1>{text}</h1>
+        </CardFront>
+        <CardBack>
+          <h1>{text}</h1>
+          <p>{description}</p>
+          <CardLinkContainer>
+            <Link
+              altColor="black"
+              href={github}
+              target="_blank"
+              rel="noreferrer">
+              Github
+            </Link>
+            <Link altColor="black" href={to} target="_blank" rel="noreferrer">
+              Demo
+            </Link>
+          </CardLinkContainer>
+          <RenderTechNames />
+        </CardBack>
+      </CardInner>
     </Card>
   );
 };
