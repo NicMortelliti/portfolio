@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.js": "/static/js/main.083382ac.js",
+    "main.js": "/static/js/main.315705bd.js",
     "static/media/memoji-wave-glasses.png": "/static/media/memoji-wave-glasses.165b3dc691b8c5e64005.png",
     "static/media/memoji-wave.png": "/static/media/memoji-wave.4410c2397d90aa5e6b16.png",
     "static/media/app-moonshot.webp": "/static/media/app-moonshot.57b2d4ab3c05888e1660.webp",
     "static/media/nic - sm.webp": "/static/media/nic - sm.847ceb207e5c91dccb49.webp",
-    "static/media/app-fusion.webp": "/static/media/app-fusion.4a091830ca89e939e445.webp",
     "static/media/app-kanban.webp": "/static/media/app-kanban.b8903d132681637f1520.webp",
     "static/media/app-bored.webp": "/static/media/app-bored.ae5201f393e423070633.webp",
     "static/media/app-scheduler.webp": "/static/media/app-scheduler.e01f54e39c3ab8bdc6c0.webp",
     "static/media/app-checklist.webp": "/static/media/app-checklist.0e338f8893899e449c2f.webp",
-    "static/media/coming-soon.webp": "/static/media/coming-soon.353dabebb1a3058d46ff.webp",
     "index.html": "/index.html",
-    "main.083382ac.js.map": "/static/js/main.083382ac.js.map"
+    "main.315705bd.js.map": "/static/js/main.315705bd.js.map"
   },
   "entrypoints": [
-    "static/js/main.083382ac.js"
+    "static/js/main.315705bd.js"
   ]
 }
