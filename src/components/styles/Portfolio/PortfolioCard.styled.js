@@ -64,6 +64,7 @@ export const CardBack = styled(CardFront)`
   background-color: ${accent};
   color: ${dark};
   transform: rotateY(180deg);
+  padding: 20px;
 
   h1 {
     position: initial;
