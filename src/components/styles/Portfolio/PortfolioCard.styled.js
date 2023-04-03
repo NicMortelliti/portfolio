@@ -69,6 +69,9 @@ export const CardBack = styled(CardFront)`
     position: initial;
     background-color: transparent;
     box-shadow: none;
+    @media (max-width: ${mobileWidthLimit}) {
+      font-size: 20px;
+    }
   }
 `;
 
