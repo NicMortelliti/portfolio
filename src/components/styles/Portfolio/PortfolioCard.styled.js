@@ -54,6 +54,9 @@ export const CardFront = styled.div`
     padding: 10px;
     background-color: ${accent};
     box-shadow: 0 0 10px black;
+    @media (max-width: ${mobileWidthLimit}) {
+      font-size: 20px;
+    }
   }
 `;
 
