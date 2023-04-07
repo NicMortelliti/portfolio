@@ -8,8 +8,8 @@ import { Button } from "../../components/styles/Buttons.styled";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
+    userName: "",
+    userEmail: "",
     message: "",
   });
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -65,30 +65,30 @@ const ContactForm = () => {
         <ContactConfirmation />
       ) : (
         <Form ref={form} onSubmit={(e) => sendEmail(e)}>
-          <label htmlFor="user_name">Name</label>
+          <label htmlFor="userName">Name*</label>
           <input
             type="text"
-            name="user_name"
+            name="userName"
             placeholder="Name"
-            value={user_name}
+            value={formData.userName}
             onChange={updateFormData}
           />
-          <label htmlFor="user_email">Email</label>
+          <label htmlFor="userEmail">Email*</label>
           <input
             type="email"
-            name="user_email"
+            name="userEmail"
             placeholder="Email"
-            value={user_email}
+            value={formData.userEmail}
             onChange={(e) => updateFormData(e)}
           />
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Message*</label>
           <textarea
             name="message"
             placeholder="Message"
             id=""
             cols="25"
             rows="5"
-            value={message}
+            value={formData.message}
             onChange={(e) => updateFormData(e)}
           />
           <Button disabled={sendBtnIsDisabled} type="submit">
