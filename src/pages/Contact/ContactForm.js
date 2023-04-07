@@ -28,6 +28,7 @@ const ContactForm = () => {
     }
   }, [formData]);
 
+  // Function to update the form data state with user input
   const updateFormData = (e) => {
     setFormData((prevState) => ({
       ...prevState,
