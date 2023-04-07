@@ -40,6 +40,12 @@ export const Button = styled(ButtonTemplate)`
     box-shadow: none;
     transform: translate(2px, 2px);
   }
+
+  &:disabled {
+    background-color: darkgray;
+    color: gray;
+    pointer-events: none;
+  }
 `;
 
 export const ThemeButton = styled(ButtonTemplate)`

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ContactConfirmation from "./ContactConfirmation";
 
@@ -13,11 +13,21 @@ const ContactForm = () => {
     message: "",
   });
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [sendBtnIsDisabled, setSendBtnIsDisabled] = useState(true);
 
   // Destructure state parameters
   const { user_name, user_email, message } = formData;
 
-  // Funtion to update the form data state with user input
+  // Set send button to enabled if all form fields
+  // are populated.
+  useEffect(() => {
+    if (formData.userName && formData.userEmail && formData.message) {
+      setSendBtnIsDisabled(false);
+    } else {
+      setSendBtnIsDisabled(true);
+    }
+  }, [formData]);
+
   const updateFormData = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -81,7 +91,9 @@ const ContactForm = () => {
             value={message}
             onChange={(e) => updateFormData(e)}
           />
-          <Button type="submit">Send</Button>
+          <Button disabled={sendBtnIsDisabled} type="submit">
+            Send
+          </Button>
         </Form>
       )}
     </div>
