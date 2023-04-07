@@ -7,7 +7,8 @@ const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 export const Card = styled.div`
   background-color: transparent;
   width: 80vw;
-  height: 50vw;
+  max-width: 750px;
+  aspect-ratio: 16 /9;
   overflow: hidden;
 `;
 
