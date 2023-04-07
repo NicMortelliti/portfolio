@@ -9,5 +9,3 @@ export const titles = [
   "Seasoned Engineer",
   "Real-Life Pilot",
 ];
-
-export const email = "nic@nicweb.dev";
