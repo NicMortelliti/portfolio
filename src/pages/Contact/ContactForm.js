@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ContactConfirmation from "./ContactConfirmation";
 
@@ -15,8 +15,8 @@ const ContactForm = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [sendBtnIsDisabled, setSendBtnIsDisabled] = useState(true);
 
-  // Destructure state parameters
-  const { user_name, user_email, message } = formData;
+  // emailJS uses useRef to send current form state.
+  const form = useRef();
 
   // Set send button to enabled if all form fields
   // are populated.
@@ -43,7 +43,7 @@ const ContactForm = () => {
       .sendForm(
         "service_5a8wqtr",
         "template_8iy1omo",
-        formData,
+        form.current,
         "PLVv2FFJV86IooiJ1"
       )
       .then(
@@ -64,7 +64,7 @@ const ContactForm = () => {
       {showConfirmation ? (
         <ContactConfirmation />
       ) : (
-        <Form onSubmit={(e) => sendEmail(e)}>
+        <Form ref={form} onSubmit={(e) => sendEmail(e)}>
           <label htmlFor="user_name">Name</label>
           <input
             type="text"
