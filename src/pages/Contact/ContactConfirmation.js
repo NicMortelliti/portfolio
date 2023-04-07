@@ -1,11 +1,12 @@
 import React from "react";
+import { ContactConfirmationCont } from "../../components/styles/Contact/Contact.styled";
 
 const ContactConfirmation = () => {
   return (
-    <div>
+    <ContactConfirmationCont>
       <h1>Thank you!</h1>
       <h3>I'll be in touch with you shortly!</h3>
-    </div>
+    </ContactConfirmationCont>
   );
 };
 

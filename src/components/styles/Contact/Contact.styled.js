@@ -78,3 +78,12 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const ContactConfirmationCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid ${accent};
+  padding: 3rem;
+  gap: 1rem;
+`;
