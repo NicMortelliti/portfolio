@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const bgColor = ({ theme }) => theme.bgColor;
+const dark = ({ theme }) => theme.dark;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
@@ -28,12 +28,12 @@ const ButtonTemplate = styled.button`
 
 // Primary button style
 export const Button = styled(ButtonTemplate)`
-  background: ${bgColor};
-  border: 2px solid ${color};
-  border-radius: 5px;
+  background: ${accent};
+  color: ${dark};
+  border: none;
   box-shadow: 2px 2px 2px black;
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 1.5rem;
 
   &:active {

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
+const accent = ({ theme }) => theme.accent;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -47,5 +48,33 @@ export const SocialWrapper = styled.div`
 
   @media (max-width: ${mobileWidthLimit}) {
     gap: 1rem;
+  }
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: large;
+  }
+
+  input {
+    height: 50px;
+  }
+
+  input,
+  textArea {
+    margin: 0.2rem 0 1.2rem;
+    padding: 10px;
+    font-size: large;
+    font-weight: 400;
+    background-color: #ffffffaa;
+    backdrop-filter: blur(3px);
+    border: none;
+
+    &:focus {
+      outline: 3px solid ${accent};
+    }
   }
 `;
