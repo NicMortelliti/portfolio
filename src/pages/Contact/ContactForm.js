@@ -56,6 +56,9 @@ const ContactForm = () => {
         },
         (error) => {
           console.log(error.text);
+          alert(
+            "Something went wrong. Please contact me through my social media links instead."
+          );
         }
       );
   };
