@@ -13,7 +13,6 @@ const Contact = () => {
     <Wrapper>
       <PageTitle>Contact Me</PageTitle>
       <ContactForm />
-      <Link href={`mailto:${email}`}>{email}</Link>
       <Socials />
     </Wrapper>
   );
