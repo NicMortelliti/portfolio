@@ -1,6 +1,7 @@
 import React from "react";
 import { email } from "../../data/bioData";
 import { Socials } from "../../components/ui/Buttons/index";
+import ContactForm from "./ContactForm";
 
 // Styled components
 import { Wrapper } from "../../components/styles/Contact/Contact.styled";
@@ -11,6 +12,7 @@ const Contact = () => {
   return (
     <Wrapper>
       <PageTitle>Contact Me</PageTitle>
+      <ContactForm />
       <Link href={`mailto:${email}`}>{email}</Link>
       <Socials />
     </Wrapper>
