@@ -4,7 +4,7 @@ import { ContactConfirmationCont } from "../../components/styles/Contact/Contact
 const ContactConfirmation = () => {
   return (
     <ContactConfirmationCont>
-      <h1>Thank you!</h1>
+      <h1>Thanks!</h1>
       <h3>I'll be in touch with you shortly!</h3>
     </ContactConfirmationCont>
   );
