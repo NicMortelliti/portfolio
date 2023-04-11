@@ -4,10 +4,11 @@ import React from "react";
 import {
   Card,
   CardTop,
+  Description,
   CardLinkContainer,
   Tech,
+  TechCont,
 } from "../../components/styles/Portfolio/PortfolioCard.styled";
-import { Link } from "../../components/styles/Buttons.styled";
 
 const PortfolioCard = ({
   project: { github, to, image, text, description, techNames },
@@ -19,9 +20,13 @@ const PortfolioCard = ({
   return (
     <Card>
       <CardTop>
-        <h1>{text}</h1>
-        <p>{description}</p>
-        <RenderTechNames />
+        <div>
+          <h1>{text}</h1>
+          <Description>{description}</Description>
+          <TechCont>
+            <RenderTechNames />
+          </TechCont>
+        </div>
         <CardLinkContainer>
           <a altColor="black" href={github} target="_blank" rel="noreferrer">
             Github
