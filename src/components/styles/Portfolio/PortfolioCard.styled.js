@@ -5,7 +5,7 @@ const accent = ({ theme }) => theme.accent;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
 export const Card = styled.div`
-  background-color: white;
+  background-color: #FFFFFFEE;
   width: 80vw;
   max-width: 750px;
   aspect-ratio: 16 /9;
