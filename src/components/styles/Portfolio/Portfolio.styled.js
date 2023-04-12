@@ -8,4 +8,8 @@ export const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   gap: 1rem;
+
+  :first-child {
+    margin-top: 10px;
+  }
 `;
