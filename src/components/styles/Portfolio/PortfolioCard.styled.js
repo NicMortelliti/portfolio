@@ -26,6 +26,11 @@ export const Card = styled.div`
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 10px rgb(0 0 0 / 1);
   }
+
+  transition: transform 0.2s ease;
+  :hover {
+    transform: scale(1.01);
+  }
 `;
 
 export const TechCont = styled.div`
@@ -39,6 +44,7 @@ export const Tech = styled.p`
   color: darkgray;
   ::after {
     content: " |";
+    color: ${accent};
   }
   :last-child::after {
     content: "";
