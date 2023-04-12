@@ -27,7 +27,7 @@ export const data = [
     text: "Kanban",
     description: "A project tracking tool for agile teams.",
     image: imageKanban,
-    techNames: ["React", "Ruby", "Sqlite"],
+    techNames: ["React", "Ruby", "SQLite"],
   },
   {
     to: "https://checklist.nicweb.dev",
