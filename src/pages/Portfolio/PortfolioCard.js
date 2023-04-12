@@ -4,8 +4,9 @@ import React from "react";
 import {
   Card,
   CardTop,
+  CardFlex,
+  CardLink,
   Description,
-  CardLinkContainer,
   Tech,
   TechCont,
 } from "../../components/styles/Portfolio/PortfolioCard.styled";
@@ -20,21 +21,37 @@ const PortfolioCard = ({
   return (
     <Card>
       <CardTop>
-        <div>
-          <h1>{text}</h1>
-          <Description>{description}</Description>
-          <TechCont>
-            <RenderTechNames />
-          </TechCont>
-        </div>
-        <CardLinkContainer>
-          <a altColor="black" href={github} target="_blank" rel="noreferrer">
-            Github
-          </a>
-          <a altColor="black" href={to} target="_blank" rel="noreferrer">
-            Demo
-          </a>
-        </CardLinkContainer>
+        <CardFlex borderColor="purple" flex="1" direction="column">
+          <CardFlex>
+            <CardFlex align="center">
+              <h1>{text}</h1>
+            </CardFlex>
+            <CardFlex align="center" justify="end">
+              <CardLink
+                altColor="black"
+                href={github}
+                target="_blank"
+                rel="noreferrer">
+                Github
+              </CardLink>
+              <CardLink
+                altColor="black"
+                href={to}
+                target="_blank"
+                rel="noreferrer">
+                Demo
+              </CardLink>
+            </CardFlex>
+          </CardFlex>
+          <CardFlex>
+            <CardFlex align="center">
+              <Description>{description}</Description>
+            </CardFlex>
+            <TechCont>
+              <RenderTechNames />
+            </TechCont>
+          </CardFlex>
+        </CardFlex>
       </CardTop>
       <img src={image} alt="screenshot" />
     </Card>

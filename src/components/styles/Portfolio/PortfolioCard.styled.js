@@ -34,27 +34,35 @@ export const TechCont = styled.div`
 export const Tech = styled.p`
   font-size: medium;
   padding: 5px;
-  color: ${dark};
+  color: darkgray;
+  ::after {
+    content: " |";
+  }
+  :last-child::after {
+    content: "";
+  }
   @media (max-width: ${mobileWidthLimit}) {
     display: none;
   }
 `;
 
-export const CardLinkContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin: 10px;
-`;
-
 export const CardTop = styled.div`
   display: flex;
-  border: 1px solid red;
   width: 100%;
-  div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
+`;
+
+export const CardFlex = styled.div`
+  display: flex;
+  flex-direction: ${({ direction }) => direction || "row"};
+  flex: ${({ flex }) => flex || "none"};
+  justify-content: ${({ justify }) => justify || "space-between"};
+  align-items: ${({ align }) => align || "initial"};
+  padding: 0 5px;
+`;
+
+export const CardLink = styled.a`
+  padding-left: 20px;
+  color: darkgray;
 `;
 
 export const Description = styled.p`
