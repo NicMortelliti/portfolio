@@ -15,14 +15,16 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-between;
   color: ${accent};
+  border-radius: 5px;
 
   img {
     width: 70%;
     aspect-ratio: 16/9;
     bottom: 0;
-    border: 2px solid lightgray;
+    border: 0 solid transparent;
     border-bottom: none;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgb(0 0 0 / 1);
   }
 `;
 
