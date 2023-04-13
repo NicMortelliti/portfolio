@@ -81,7 +81,7 @@ export const CardDescription = styled.p`
   font-style: italic;
   color: ${dark};
   @media (max-width: ${mobileWidthLimit}) {
-    font-size: medium;
+    font-size: small;
     flex-wrap: wrap;
     margin-top: 10px;
   }
