@@ -32,7 +32,7 @@ export const data = [
   {
     to: "https://checklist.nicweb.dev",
     github: "https://github.com/NicMortelliti/checklist-frontend",
-    text: "Piloting Checklist",
+    text: "Checklist",
     description: "Finally, a simple checklist app for flying.",
     image: imageChecklist,
     techNames: ["React", "JSON"],
