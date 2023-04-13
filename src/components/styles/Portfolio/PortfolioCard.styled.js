@@ -5,7 +5,7 @@ const accent = ({ theme }) => theme.accent;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
 export const Card = styled.div`
-  background-color: #FFFFFFEE;
+  background-color: #ffffffee;
   width: 80vw;
   max-width: 750px;
   aspect-ratio: 16 /9;
@@ -25,6 +25,10 @@ export const Card = styled.div`
     border-bottom: none;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 10px rgb(0 0 0 / 1);
+
+    @media (max-width: ${mobileWidthLimit}) {
+      margin-top: 20px;
+    }
   }
 
   transition: transform 0.2s ease;
@@ -73,7 +77,21 @@ export const CardLink = styled.a`
   color: darkgray;
 `;
 
-export const Description = styled.p`
+export const CardDescription = styled.p`
   font-style: italic;
   color: ${dark};
+  @media (max-width: ${mobileWidthLimit}) {
+    font-size: medium;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+`;
+
+export const CardTitle = styled.h1`
+  @media (max-width: ${mobileWidthLimit}) {
+    font-size: large;
+    border-bottom-width: 2px;
+    margin-top: 8px;
+    padding-bottom: 1px;
+  }
 `;

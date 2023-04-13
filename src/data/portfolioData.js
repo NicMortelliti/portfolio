@@ -16,7 +16,7 @@ export const data = [
   {
     to: "https://scheduler.nicweb.dev",
     github: "https://github.com/NicMortelliti/appointment-scheduler",
-    text: "Appointment Scheduler",
+    text: "Scheduler",
     description: "An application for booking appointments.",
     image: imageScheduler,
     techNames: ["React", "Ruby on Rails", "PostgreSQL"],

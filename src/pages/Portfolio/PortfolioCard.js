@@ -6,7 +6,8 @@ import {
   CardTop,
   CardFlex,
   CardLink,
-  Description,
+  CardTitle,
+  CardDescription,
   Tech,
   TechCont,
 } from "../../components/styles/Portfolio/PortfolioCard.styled";
@@ -24,7 +25,7 @@ const PortfolioCard = ({
         <CardFlex borderColor="purple" flex="1" direction="column">
           <CardFlex>
             <CardFlex align="center">
-              <h1>{text}</h1>
+              <CardTitle>{text}</CardTitle>
             </CardFlex>
             <CardFlex align="center" justify="end">
               <CardLink
@@ -45,7 +46,7 @@ const PortfolioCard = ({
           </CardFlex>
           <CardFlex>
             <CardFlex align="center">
-              <Description>{description}</Description>
+              <CardDescription>{description}</CardDescription>
             </CardFlex>
             <TechCont>
               <RenderTechNames />
