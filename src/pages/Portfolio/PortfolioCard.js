@@ -28,18 +28,10 @@ const PortfolioCard = ({
               <CardTitle>{text}</CardTitle>
             </CardFlex>
             <CardFlex align="center" justify="end">
-              <CardLink
-                altColor="black"
-                href={github}
-                target="_blank"
-                rel="noreferrer">
+              <CardLink href={github} target="_blank" rel="noreferrer">
                 Github
               </CardLink>
-              <CardLink
-                altColor="black"
-                href={to}
-                target="_blank"
-                rel="noreferrer">
+              <CardLink href={to} target="_blank" rel="noreferrer">
                 Demo
               </CardLink>
             </CardFlex>
