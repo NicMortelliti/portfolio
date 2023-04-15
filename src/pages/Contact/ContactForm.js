@@ -98,6 +98,7 @@ const ContactForm = () => {
           <Button disabled={sendBtnIsDisabled} type="submit">
             Send
           </Button>
+          <div />
         </Form>
       )}
     </div>

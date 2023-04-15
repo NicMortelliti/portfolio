@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const accent = ({ theme }) => theme.accent;
+const color = ({ theme }) => theme.color;
+const light = ({ theme }) => theme.light;
+const dark = ({ theme }) => theme.dark;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -57,6 +60,7 @@ export const Form = styled.form`
 
   label {
     font-size: large;
+    color: ${color};
   }
 
   input {
@@ -69,13 +73,17 @@ export const Form = styled.form`
     padding: 10px;
     font-size: large;
     font-weight: 400;
-    background-color: #ffffffaa;
+    background-color: ${light};
     backdrop-filter: blur(3px);
-    border: none;
+    border: 1px solid ${dark};
 
     &:focus {
       outline: 3px solid ${accent};
     }
+  }
+
+  div {
+    border-bottom: 2px solid ${accent};
   }
 `;
 
