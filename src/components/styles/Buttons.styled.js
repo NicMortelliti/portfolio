@@ -45,6 +45,7 @@ export const Button = styled(ButtonTemplate)`
     background-color: darkgray;
     color: gray;
     pointer-events: none;
+    box-shadow: none;
   }
 `;
 
