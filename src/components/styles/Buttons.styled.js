@@ -47,6 +47,11 @@ export const Button = styled(ButtonTemplate)`
     pointer-events: none;
     box-shadow: none;
   }
+
+  transition: transform 0.2s ease;
+  :hover {
+    transform: translateY(-2px);
+  }
 `;
 
 export const ThemeButton = styled(ButtonTemplate)`
