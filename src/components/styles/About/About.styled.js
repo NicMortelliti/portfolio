@@ -27,5 +27,6 @@ export const Picture = styled.div`
     width: auto;
     height: 150%;
     margin-top: -20px;
+    filter: saturate(100%) contrast(110%);
   }
 `;
