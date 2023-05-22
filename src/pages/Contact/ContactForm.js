@@ -49,7 +49,6 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           if (result.text === 'OK') {
             setShowConfirmation(true);
           }
