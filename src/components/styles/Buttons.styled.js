@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const dark = ({ theme }) => theme.dark;
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
-const transTime = "0.3s";
-const borderThickness = "4px";
+const transTime = '0.3s';
+const borderThickness = '4px';
 
 // Button template
 const ButtonTemplate = styled.button`
@@ -97,7 +97,7 @@ export const Link = styled.a`
 
   /* Create underline pseudo-element */
   ::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: ${borderThickness};
@@ -112,6 +112,10 @@ export const Link = styled.a`
   }
 `;
 
+export const MdLink = styled(Link)`
+  font-size: medium;
+`;
+
 export const SocialButton = styled(Link)`
   font-size: 2.5rem;
   line-height: 3rem;
@@ -123,7 +127,7 @@ export const SocialButton = styled(Link)`
   }
 
   ::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: ${borderThickness};
@@ -143,7 +147,7 @@ export const SocialButton = styled(Link)`
 export const NavLink = styled(Link)`
   @media (max-width: ${mobileWidthLimit}) {
     display: none;
-  } ;
+  }
 `;
 
 export const NavLinkExtended = styled(Link)`
