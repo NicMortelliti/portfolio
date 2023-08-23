@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+const switchWidth = 263;
+const sliderWidth = 26;
+const sliderHeight = 26;
+const paddingX = 4;
+const paddingY = 4;
+
 const Switch = styled.label`
   position: relative;
-  display: inline-block;
-  width: 60px;
+  display: flex;
+  width: ${switchWidth}px;
   height: 34px;
 `;
 
@@ -21,10 +27,10 @@ const Slider = styled.span`
   &:before {
     position: absolute;
     content: '';
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: ${sliderWidth}px;
+    width: ${sliderHeight}px;
+    left: ${paddingX}px;
+    bottom: ${paddingY}px;
     background-color: white;
     transition: 0.4s;
   }
@@ -44,7 +50,7 @@ const Input = styled.input`
   }
 
   &:checked + ${Slider}:before {
-    transform: translateX(26px);
+    transform: translateX(${switchWidth - sliderWidth - paddingX * 2}px);
   }
 `;
 
