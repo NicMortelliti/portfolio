@@ -54,6 +54,34 @@ const Input = styled.input`
   }
 `;
 
+export const Labels = styled.span`
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  transition: all 0.4s ease-in-out;
+
+  &:before {
+    content: '${(props) => props.opt1}';
+    position: absolute;
+    left: 5px;
+    color: #ffffff;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:after {
+    content: '${(props) => props.opt2}';
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+  }
+`;
+
 export const Toggle = ({ opt1, opt2 }) => {
   const [isChecked, setIsChecked] = useState(false);
   const handleChange = (e) => setIsChecked(e.target.checked);
@@ -62,6 +90,7 @@ export const Toggle = ({ opt1, opt2 }) => {
     <Switch>
       <Input type='checkbox' checked={isChecked} onChange={handleChange} />
       <Slider />
+      <Labels opt1={opt1} opt2={opt2} />
     </Switch>
   );
 };
