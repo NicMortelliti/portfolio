@@ -22,16 +22,13 @@ const Label = styled.label`
   display: inline-block;
   position: relative;
   background: #ddddff;
-  /* text-align: left; */
   line-height: ${sliderHeight}px;
   box-sizing: border-box;
-  /* perspective: 300px; */
 
   &:before {
     width: ${sliderWidth}px;
     height: ${sliderHeight}px;
     position: absolute;
-    left: 0;
     top: 0;
     display: inline-block;
     text-align: center;
@@ -40,21 +37,16 @@ const Label = styled.label`
     color: ${color};
     transition: all ${duration}s ease-in-out;
     transform-origin: 0% 50%;
+    animation: ${left} ${duration}s ease-in-out forwards;
   }
 `;
 
 const Input = styled.input`
-  // False --> left
-  & + ${Label} {
-    &:before {
-      animation: ${left} ${duration}s ease-in-out forwards;
-    }
-  }
-
-  // True --> right
+  // Checked: True --> right
   &:checked + ${Label} {
     &:before {
       animation: ${right} ${duration}s ease-in-out forwards;
+      right: 0;
     }
   }
 `;
