@@ -1,53 +1,91 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { left, right } from '../../styles/Animations/Elastic.styled';
 
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 
-const switchWidth = 263;
-const switchHeight = 40;
-const sliderWidth = (switchWidth / 2) * 0.9;
-const sliderHeight = switchHeight;
-const paddingX = 4;
-const paddingY = 4;
-const side = 40;
-const duration = 1;
-
-const Label = styled.label`
-  cursor: pointer;
-  font-size: 1.5em;
-  width: ${switchWidth}px;
-  height: ${switchHeight}px;
-  display: inline-block;
-  position: relative;
-  background: #ddddff;
-  line-height: ${sliderHeight}px;
-  box-sizing: border-box;
-
-  &:before {
-    width: ${sliderWidth}px;
-    height: ${sliderHeight}px;
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    text-align: center;
-    content: '${(props) => props.label}';
-    background-color: ${accent};
-    color: ${color};
-    transition: all ${duration}s ease-in-out;
-    transform-origin: 0% 50%;
-    animation: ${left} ${duration}s ease-in-out forwards;
-  }
-`;
+const Label = styled.label``;
 
 const Input = styled.input`
-  // Checked: True --> right
-  &:checked + ${Label} {
+  display: none;
+
+  + ${Label} {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    /* Skew */
+    overflow: hidden;
+    transform: skew(-10deg);
+    backface-visibility: hidden;
+    transition: all 0.2s ease;
+    background: ${accent};
+
+    &:after,
     &:before {
-      animation: ${right} ${duration}s ease-in-out forwards;
-      right: 0;
+      position: relative;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+
+      /* Skew */
+      transform: skew(10deg);
+      display: inline-block;
+      transition: all 0.2s ease;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      line-height: 2em;
+      font-weight: bold;
+      color: ${color};
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
     }
+
+    &:after {
+      left: 100%;
+      content: ${(props) => props.label};
+    }
+
+    &:before {
+      display: none;
+
+      /* Skew */
+      left: 0;
+      content: ${(props) => props.label};
+    }
+
+    /* Skew */
+    &:active {
+      background: #888;
+      &:before {
+        left: 10%;
+      }
+    }
+
+    /* Skew */
+    &:checked + ${Label} {
+      background: red;
+      &:before {
+        left: 100%;
+      }
+
+      &:after {
+        left: 0;
+      }
+
+      &:active:after {
+        left: 10%;
+      }
+    }
+  }
+
+  &:checked + ${Label}:after {
+    left: 50%;
   }
 `;
 

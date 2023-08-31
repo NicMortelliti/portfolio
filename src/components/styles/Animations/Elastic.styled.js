@@ -8,14 +8,17 @@ export const left = keyframes`
     right: 0;
     width: ${side}px;
   }
-  25% {
+  20% {
     right: 0;
     width: 100%;
   }
   50% {
-    left: 0;
     width: 100%;
     right: auto;
+  }
+  80% {
+    left: 0;
+    width: 100%;
   }
   100% {
     left: 0;
@@ -28,17 +31,19 @@ export const right = keyframes`
       left: 0;
       width: ${side}px;
     }
-    25% {
+     20% {
       left: 0;
       width: 100%;
     }
     50% {
-      right: 0;
       width: 100%;
-      left: auto;
     }
+    80% {
+      width: 100%;
+      right: 0;
+    } 
     100% {
-      right: 0px;
+      right: 0;
       width: ${side}px;
     }
 `;
