@@ -6,7 +6,7 @@ const accent = ({ theme }) => theme.accent;
 
 const Label = styled.label``;
 
-const Input = styled.input`
+const Input = styled.input.attrs((props) => ({ $label1: props.label1, $label2: props.label2 }))`
   display: none;
 
   + ${Label} {
@@ -19,7 +19,7 @@ const Input = styled.input`
     user-select: none;
 
     /* Skew */
-    overflow: hidden;
+    overflow: visible;
     transform: skew(-10deg);
     backface-visibility: hidden;
     transition: all 0.2s ease;
@@ -43,49 +43,35 @@ const Input = styled.input`
       line-height: 2em;
       font-weight: bold;
       color: ${color};
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
     }
 
     &:after {
       left: 100%;
-      content: ${(props) => props.label};
+      content: ${(props) => props.$label2};
+      content: 'after';
     }
 
     &:before {
-      display: none;
-
-      /* Skew */
       left: 0;
-      content: ${(props) => props.label};
+      content: ${(props) => props.$label1};
+      content: 'before';
     }
 
-    /* Skew */
     &:active {
       background: #888;
-      &:before {
-        left: 10%;
-      }
     }
+  }
 
-    /* Skew */
-    &:checked + ${Label} {
-      background: red;
+  &:checked {
+    + ${Label} {
       &:before {
-        left: 100%;
+        left: -100%;
       }
 
       &:after {
         left: 0;
       }
-
-      &:active:after {
-        left: 10%;
-      }
     }
-  }
-
-  &:checked + ${Label}:after {
-    left: 50%;
   }
 `;
 
@@ -95,9 +81,17 @@ export const Toggle = ({ opt1, opt2 }) => {
 
   return (
     <>
-      <p>{`Checked: ${isChecked}`}</p>
-      <Input type='checkbox' id='input' hidden checked={isChecked} onChange={handleChange} />
-      <Label for='input' label={isChecked ? opt2 : opt1} />
+      <p>{`Checked: ${isChecked} (${opt1} / ${opt2})`}</p>
+      <Input
+        type='checkbox'
+        id='input'
+        label1={opt1}
+        label2={opt2}
+        hidden
+        checked={isChecked}
+        onChange={handleChange}
+      />
+      <Label for='input' />
     </>
   );
 };
