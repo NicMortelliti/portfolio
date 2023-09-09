@@ -4,6 +4,11 @@ import styled from 'styled-components';
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 
+const longestString = (label1, label2) => {
+  console.log(label1.length, label2.length);
+  return `${4 + (label1.length >= label2.length ? label1.length : label2.length)}ch`;
+};
+
 const Label = styled.label``;
 
 const Input = styled.input`
@@ -12,7 +17,7 @@ const Input = styled.input`
   + ${Label} {
     outline: 0;
     display: block;
-    width: 4em;
+    width: ${(props) => longestString(props.label1, props.label2)};
     height: 2em;
     position: relative;
     cursor: pointer;
@@ -41,12 +46,12 @@ const Input = styled.input`
 
     &:after {
       left: 100%;
-      content: ${(props) => (props.label2 ? `'${props.label2}'` : `'before'`)};
+      content: ${(props) => (props.label2 ? `'${props.label2}'` : `''`)};
     }
 
     &:before {
       left: 0;
-      content: ${(props) => (props.label1 ? `'${props.label1}'` : `'before'`)};
+      content: ${(props) => (props.label1 ? `'${props.label1}'` : `''`)};
     }
 
     &:active {
@@ -73,7 +78,6 @@ export const Toggle = ({ opt1, opt2 }) => {
 
   return (
     <>
-      <p>{`Checked: ${isChecked} (${opt1} / ${opt2})`}</p>
       <Input
         type='checkbox'
         id='input'
@@ -83,7 +87,7 @@ export const Toggle = ({ opt1, opt2 }) => {
         checked={isChecked}
         onChange={handleChange}
       />
-      <Label for='input' />
+      <Label htmlFor='input' />
     </>
   );
 };
