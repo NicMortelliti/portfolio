@@ -6,7 +6,7 @@ const accent = ({ theme }) => theme.accent;
 
 const Label = styled.label``;
 
-const Input = styled.input.attrs((props) => ({ $label1: props.label1, $label2: props.label2 }))`
+const Input = styled.input`
   display: none;
 
   + ${Label} {
@@ -17,8 +17,6 @@ const Input = styled.input.attrs((props) => ({ $label1: props.label1, $label2: p
     position: relative;
     cursor: pointer;
     user-select: none;
-
-    /* Skew */
     overflow: visible;
     transform: skew(-10deg);
     backface-visibility: hidden;
@@ -27,17 +25,13 @@ const Input = styled.input.attrs((props) => ({ $label1: props.label1, $label2: p
 
     &:after,
     &:before {
-      position: relative;
-      display: block;
       content: '';
-      width: 50%;
-      height: 100%;
-
-      /* Skew */
-      transform: skew(10deg);
       display: inline-block;
-      transition: all 0.2s ease;
+      position: relative;
       width: 100%;
+      height: 100%;
+      transform: skew(10deg);
+      transition: all 0.2s ease;
       text-align: center;
       position: absolute;
       line-height: 2em;
@@ -47,14 +41,12 @@ const Input = styled.input.attrs((props) => ({ $label1: props.label1, $label2: p
 
     &:after {
       left: 100%;
-      content: ${(props) => props.$label2};
-      content: 'after';
+      content: ${(props) => (props.label2 ? `'${props.label2}'` : `'before'`)};
     }
 
     &:before {
       left: 0;
-      content: ${(props) => props.$label1};
-      content: 'before';
+      content: ${(props) => (props.label1 ? `'${props.label1}'` : `'before'`)};
     }
 
     &:active {
