@@ -6,7 +6,7 @@ const Calendly = () => {
   return (
     <>
       <MdLink href={calendlyLink} target='_blank'>
-        Setup a meeting with me on Calendly!
+        Calendly!
       </MdLink>
     </>
   );

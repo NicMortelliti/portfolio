@@ -4,10 +4,8 @@ import styled from 'styled-components';
 const color = ({ theme }) => theme.color;
 const accent = ({ theme }) => theme.accent;
 
-const longestString = (label1, label2) => {
-  console.log(label1.length, label2.length);
-  return `${4 + (label1.length >= label2.length ? label1.length : label2.length)}ch`;
-};
+// Calculate the longest label and add a buffer of 2 characters on either side (total of 4)
+const longestString = (label1, label2) => `${4 + Math.max(label1.length, label2.length)}ch`;
 
 const Label = styled.label``;
 
@@ -75,7 +73,22 @@ const Input = styled.input`
   }
 `;
 
-export const Toggle = ({ opt1, opt2 }) => {
+const ContentContainer = styled.div`
+  display: flex;
+  height: auto;
+  align-items: stretch;
+  flex: 1;
+  & > div:first-of-type {
+    display: ${(props) => props.checked && 'none'};
+    flex: 1;
+  }
+  & > div:last-of-type {
+    display: ${(props) => !props.checked && 'none'};
+    flex: 1;
+  }
+`;
+
+export const Toggle = ({ options }) => {
   const [isChecked, setIsChecked] = useState(false);
   const handleChange = (e) => setIsChecked(e.target.checked);
 
@@ -84,13 +97,17 @@ export const Toggle = ({ opt1, opt2 }) => {
       <Input
         type='checkbox'
         id='input'
-        label1={opt1}
-        label2={opt2}
+        label1={options.opt1.title}
+        label2={options.opt2.title}
         hidden
         checked={isChecked}
         onChange={handleChange}
       />
       <Label htmlFor='input' />
+      <ContentContainer checked={isChecked}>
+        <div>{options.opt1.component}</div>
+        <div>{options.opt2.component}</div>
+      </ContentContainer>
     </>
   );
 };
