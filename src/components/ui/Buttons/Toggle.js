@@ -25,13 +25,15 @@ const Input = styled.input`
     overflow: visible;
     transform: skew(-10deg);
     backface-visibility: hidden;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
     background: ${accent};
 
     &:after,
     &:before {
       content: '';
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       width: 100%;
       height: 100%;
@@ -46,6 +48,7 @@ const Input = styled.input`
 
     &:after {
       left: 100%;
+      font-size: 70%;
       content: ${(props) => (props.label2 ? `'${props.label2}'` : `''`)};
     }
 
@@ -59,21 +62,21 @@ const Input = styled.input`
     }
   }
 
-  &:checked {
-    + ${Label} {
-      &:before {
-        left: -100%;
-      }
+  &:checked + ${Label} {
+    &:before {
+      left: -100%;
+      font-size: 70%;
+    }
 
-      &:after {
-        left: 0;
-      }
+    &:after {
+      left: 0;
+      font-size: 100%;
     }
   }
 `;
 
 export const Toggle = ({ opt1, opt2 }) => {
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const handleChange = (e) => setIsChecked(e.target.checked);
 
   return (
