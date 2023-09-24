@@ -75,13 +75,9 @@ const Input = styled.input`
 
 const ContentContainer = styled.div`
   display: flex;
-  height: auto;
-  align-items: stretch;
-  flex: 1;
   & > div:first-of-type {
     visibility: ${(props) => props.checked && 'hidden'};
     width: ${(props) => (props.checked ? 0 : '100%')};
-    flex: 1;
   }
   & > div:last-of-type {
     visibility: ${(props) => !props.checked && 'hidden'};
