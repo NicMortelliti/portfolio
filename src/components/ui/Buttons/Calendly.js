@@ -3,7 +3,11 @@ import { InlineWidget } from 'react-calendly';
 import { calendlyLink } from '../../../data/linkData';
 
 const Calendly = () => {
-  return <InlineWidget url={calendlyLink} />;
+  return (
+    <div style={{ border: '1px solid black' }}>
+      <InlineWidget url={calendlyLink} />
+    </div>
+  );
 };
 
 export default Calendly;
