@@ -79,12 +79,10 @@ const ContentContainer = styled.div`
   align-items: stretch;
   flex: 1;
   & > div:first-of-type {
-    display: ${(props) => props.checked && 'none'};
-    flex: 1;
+    visibility: ${(props) => props.checked && 'hidden'};
   }
   & > div:last-of-type {
-    display: ${(props) => !props.checked && 'none'};
-    flex: 1;
+    visibility: ${(props) => !props.checked && 'hidden'};
   }
 `;
 
