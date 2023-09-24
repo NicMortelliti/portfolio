@@ -1,15 +1,9 @@
 import React from 'react';
-import { MdLink } from '../../styles/Buttons.styled';
+import { InlineWidget } from 'react-calendly';
 import { calendlyLink } from '../../../data/linkData';
 
 const Calendly = () => {
-  return (
-    <>
-      <MdLink href={calendlyLink} target='_blank'>
-        Calendly!
-      </MdLink>
-    </>
-  );
+  return <InlineWidget url={calendlyLink} />;
 };
 
 export default Calendly;

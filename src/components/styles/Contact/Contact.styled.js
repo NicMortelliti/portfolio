@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const accent = ({ theme }) => theme.accent;
@@ -13,6 +13,11 @@ export const Wrapper = styled.div`
   margin: 2rem;
   padding: 1rem;
   gap: 1rem;
+  width: 50%;
+  @media (max-width: ${mobileWidthLimit}) {
+    width: auto;
+  }
+
   img {
     position: fixed;
     bottom: 0;

@@ -75,6 +75,7 @@ const Input = styled.input`
 
 const ContentContainer = styled.div`
   display: flex;
+  width: 100%;
   & > div:first-of-type {
     visibility: ${(props) => props.checked && 'hidden'};
     width: ${(props) => (props.checked ? 0 : '100%')};
