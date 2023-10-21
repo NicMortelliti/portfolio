@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { Bounce as bounce } from "./Animations/Bounce.styled";
+import { Bounce as bounce } from './Animations/Bounce.styled';
 
 const headerFooterHeight = 80;
 const bgColor = ({ theme }) => theme.bgColor;
@@ -14,22 +14,26 @@ export const Wrapper = styled.div`
   min-height: 100dvh;
   margin: 0 80px;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
 
   @media (max-width: ${mobileWidthLimit}) {
     margin: 0;
   }
 `;
 
+// TODO: Make header background transparent when at top of screen. Then,
+// on scroll, transition background to a solid light/dark color (depending on current theme)
+// See the script involving adding/removing "stuck" class at https://parrylabs.com
 export const HeaderSection = styled.div`
   grid-area: header;
-  position: sticky;
+  position: fixed;
   top: 0;
   display: grid;
   place-items: center;
   height: ${headerFooterHeight}px;
+  width: 100%;
   background-color: ${bgColor};
   z-index: 999;
 `;
@@ -68,7 +72,7 @@ export const ThemeSwitcherSection = styled.div`
   place-items: start;
   animation: ${({ animate }) =>
     animate
-      ? "none"
+      ? 'none'
       : css`
           ${bounce} 10s ease infinite
         `};
