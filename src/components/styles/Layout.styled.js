@@ -23,9 +23,6 @@ export const Wrapper = styled.div`
   }
 `;
 
-// TODO: Make header background transparent when at top of screen. Then,
-// on scroll, transition background to a solid light/dark color (depending on current theme)
-// See the script involving adding/removing "stuck" class at https://parrylabs.com
 export const HeaderSection = styled.div`
   grid-area: header;
   position: fixed;
@@ -34,13 +31,15 @@ export const HeaderSection = styled.div`
   place-items: center;
   height: ${headerFooterHeight}px;
   width: 100%;
-  background-color: ${bgColor};
+  background-color: ${(props) => (props.stuck ? 'white' : bgColor)};
+  transition: 0.3s;
   z-index: 999;
 `;
 
 export const MainSection = styled.div`
   grid-area: main;
   display: grid;
+  padding-top: ${headerFooterHeight}px;
   place-items: center;
   align-content: center;
 `;
