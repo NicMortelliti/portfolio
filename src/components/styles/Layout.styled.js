@@ -4,6 +4,7 @@ import { Bounce as bounce } from './Animations/Bounce.styled';
 
 const headerFooterHeight = 80;
 const bgColor = ({ theme }) => theme.bgColor;
+const color = ({ theme }) => theme.color;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
 export const Wrapper = styled.div`
@@ -31,7 +32,7 @@ export const HeaderSection = styled.div`
   place-items: center;
   height: ${headerFooterHeight}px;
   width: 100%;
-  background-color: ${(props) => (props.stuck ? 'white' : bgColor)};
+  background-color: ${(props) => (props.stuck ? color : bgColor)};
   transition: 0.3s;
   z-index: 999;
 `;
