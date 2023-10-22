@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   grid-template-columns: 1fr;
   min-height: 100vh; /* In case dvh isn't supported by browser */
   min-height: 100dvh;
-  margin: 0 80px;
+  margin: 0;
   grid-template-areas:
     'header'
     'main'
