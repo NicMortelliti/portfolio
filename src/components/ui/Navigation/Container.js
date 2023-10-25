@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 import {
   NavbarContainer,
   NavbarMainContainer,
   NavbarLinkContainer,
   OpenLinksButton,
   NavbarExtendedContainer,
-} from "../../styles/Navigation.styled";
-import { internalLinks } from "../../../data/linkData";
-import { NavLink } from ".";
+} from '../../styles/Navigation.styled';
+import { internalLinks } from '../../../data/linkData';
+import { NavLink } from '.';
 
 // Redux
-import { useDispatch, useSelector } from "react-redux";
-import { setNavMenuIsOpen } from "../../../features/ui/uiSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { setNavMenuIsOpen } from '../../../features/ui/uiSlice';
 
-const Container = () => {
+const Container = ({ stuck }) => {
   const dispatch = useDispatch();
   const { navMenuIsOpen } = useSelector((state) => state.ui);
 
@@ -23,12 +23,7 @@ const Container = () => {
 
   const RenderLinks = ({ extended = false }) => {
     return internalLinks.map((link, index) => (
-      <NavLink
-        key={index}
-        link={link}
-        extended={extended}
-        onClick={() => extendNavbar()}
-      />
+      <NavLink key={index} link={link} extended={extended} menu='true' stuck={stuck} onClick={() => extendNavbar()} />
     ));
   };
 

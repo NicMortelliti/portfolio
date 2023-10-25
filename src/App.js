@@ -43,7 +43,7 @@ function App() {
       <GlobalStyles />
       <Wrapper>
         <HeaderSection stuck={appIsScrolled}>
-          <Nav />
+          <Nav stuck={appIsScrolled} />
         </HeaderSection>
         {!navMenuIsOpen ? (
           <MainSection>

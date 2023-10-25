@@ -82,7 +82,7 @@ export const ThemeButton = styled(ButtonTemplate)`
 export const Link = styled.a`
   cursor: pointer;
   text-decoration: none;
-  color: ${color};
+  color: ${(props) => (props.menu ? (props.stuck ? dark : color) : color)};
   border-bottom: ${borderThickness} solid transparent;
   text-align: center;
   font-size: x-large;
@@ -92,7 +92,6 @@ export const Link = styled.a`
     /* Set color on hovered buttons */
     transition: color ${transTime};
     color: ${(props) => (props.altColor ? props.altColor : accent)};
-    /* color: ${accent}; */
   }
 
   /* Create underline pseudo-element */
