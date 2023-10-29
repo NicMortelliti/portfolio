@@ -7,6 +7,8 @@ const bgColor = ({ theme }) => theme.bgColor;
 const color = ({ theme }) => theme.color;
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 
+const boxShadow = '0.32rem 0.38rem rgba(0, 0, 0, 0.1)';
+
 export const Wrapper = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -33,6 +35,7 @@ export const HeaderSection = styled.div`
   height: ${headerFooterHeight}px;
   width: 100%;
   background-color: ${(props) => (props.stuck ? color : bgColor)};
+  box-shadow: ${(props) => (props.stuck ? boxShadow : 'none')};
   transition: 0.3s;
   z-index: 999;
 `;
