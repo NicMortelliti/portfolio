@@ -16,18 +16,34 @@ The site is built with the following technologies.
 
 ## Installation
 
-This project utilizes Docker to create a consistent development environment. If you don't have Docker, you can still run the application, but you'll need to make sure you node installed.
+This project utilizes Docker to create a consistent development environment. If you don't have Docker, you can still run the application, but you'll need to make sure you have node installed.
 
-- Theses instructions assume you are using VS Code with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed.
+_Theses instructions assume you are using VS Code with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed._
 
 1. Clone this git repo
+
    `git clone https://github.com/NicMortelliti/portfolio.git`
 
-1. Change directory into the `portfolio` directory
+1. Change directory into the `portfolio` directory.
+
    `cd portfolio`
 
-1. Open project in VS Code `code .`
+1. Open project in VS Code.
+
+   `code .`
 
 1. VS Code will see the `/.devcontainer` directory and prompt you to "Reopen in Container", click "Reopen in Container"
 
-1. With the development container now running, open a Terminal in VS Code and install npm packages `npm install`
+1. With the development container now running, open a Terminal in VS Code and install npm packages.
+
+   `npm install`
+
+## Running Locally
+
+To run the development build of this project, follow these instructions.
+
+1. Open the project in a dev container (see [Installation step 4](#installation))
+
+1. In a terminal session, run the development build.
+
+   `npm run start`
