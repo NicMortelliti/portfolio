@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Styled components
 import {
@@ -10,34 +10,34 @@ import {
   CardDescription,
   Tech,
   TechCont,
-} from "../../components/styles/Portfolio/PortfolioCard.styled";
+} from '../../components/styles/Portfolio/PortfolioCard.styled';
+import { useFeature } from '../../hooks/useFeature';
 
-const PortfolioCard = ({
-  project: { github, to, image, text, description, techNames },
-}) => {
+const PortfolioCard = ({ project: { github, to, image, text, description, techNames } }) => {
   // Render each tech name
-  const RenderTechNames = () =>
-    techNames.map((name, index) => <Tech key={index}>{name}</Tech>);
+  const RenderTechNames = () => techNames.map((name, index) => <Tech key={index}>{name}</Tech>);
 
   return (
     <Card>
       <CardTop>
-        <CardFlex borderColor="purple" flex="1" direction="column">
+        <CardFlex borderColor='purple' flex='1' direction='column'>
           <CardFlex>
-            <CardFlex align="center">
+            <CardFlex align='center'>
               <CardTitle>{text}</CardTitle>
             </CardFlex>
-            <CardFlex align="center" justify="end">
-              <CardLink href={github} target="_blank" rel="noreferrer">
+            <CardFlex align='center' justify='end'>
+              <CardLink href={github} target='_blank' rel='noreferrer'>
                 Github
               </CardLink>
-              <CardLink href={to} target="_blank" rel="noreferrer">
-                Demo
-              </CardLink>
+              {useFeature('linksToProjects') && (
+                <CardLink href={to} target='_blank' rel='noreferrer'>
+                  Demo
+                </CardLink>
+              )}
             </CardFlex>
           </CardFlex>
           <CardFlex>
-            <CardFlex align="center">
+            <CardFlex align='center'>
               <CardDescription>{description}</CardDescription>
             </CardFlex>
             <TechCont>
@@ -46,7 +46,7 @@ const PortfolioCard = ({
           </CardFlex>
         </CardFlex>
       </CardTop>
-      <img src={image} alt="screenshot" />
+      <img src={image} alt='screenshot' />
     </Card>
   );
 };

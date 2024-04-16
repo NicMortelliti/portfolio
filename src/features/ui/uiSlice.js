@@ -1,13 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   navMenuIsOpen: false,
   darkThemeActive: true,
   themeSwitcherHasBeenClicked: false,
+  featureFlags: {
+    linksToProjects: { enabled: false },
+  },
 };
 
 export const uiSlice = createSlice({
-  name: "ui",
+  name: 'ui',
   initialState,
   reducers: {
     reset: () => {
@@ -34,10 +37,5 @@ export const uiSlice = createSlice({
   },
 });
 
-export const {
-  reset,
-  setNavMenuIsOpen,
-  setDarkThemeActive,
-  setThemeSwitcherHasBeenClicked,
-} = uiSlice.actions;
+export const { reset, setNavMenuIsOpen, setDarkThemeActive, setThemeSwitcherHasBeenClicked } = uiSlice.actions;
 export default uiSlice.reducer;
