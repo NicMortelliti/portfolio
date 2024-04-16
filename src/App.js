@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Styled Components
-import GlobalStyles from './components/styles/Global';
 import { ThemeProvider } from 'styled-components';
+import { useSelector } from 'react-redux';
+import GlobalStyles from './components/styles/Global';
 import { lightTheme, darkTheme } from './components/styles/Theme';
 import {
   Wrapper,
@@ -22,14 +23,13 @@ import ThemeButton from './components/ui/Buttons/ThemeButton';
 import { Nav } from './components/ui/Navigation';
 
 // Redux
-import { useSelector } from 'react-redux';
 
 function App() {
   const [appIsScrolled, setAppIsScrolled] = useState(false);
   const { navMenuIsOpen, darkThemeActive, themeSwitcherHasBeenClicked } = useSelector((state) => state.ui);
 
   useEffect(() => {
-    const handleScroll = () => setAppIsScrolled(window.scrollY > 15 ? "true" : "false");
+    const handleScroll = () => setAppIsScrolled(window.scrollY > 15 ? 'true' : 'false');
 
     window.addEventListener('scroll', handleScroll);
 
@@ -48,10 +48,10 @@ function App() {
         {!navMenuIsOpen ? (
           <MainSection>
             <Routes>
-              <Route exact path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/portfolio' element={<PortfolioPage />} />
-              <Route path='/contact' element={<Contact />} />
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </MainSection>
         ) : null}

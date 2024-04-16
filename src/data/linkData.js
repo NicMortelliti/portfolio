@@ -1,4 +1,6 @@
-import { FaFileAlt as Resume, FaBlog as Blog, FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
+import {
+  FaFileAlt as Resume, FaBlog as Blog, FaGithub as Github, FaLinkedin as Linkedin,
+} from 'react-icons/fa';
 
 export const internalLinks = [
   { to: '/', text: 'Home' },

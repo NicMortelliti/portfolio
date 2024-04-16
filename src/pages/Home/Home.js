@@ -1,21 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import Memoji from "../../components/ui/Memoji/Memoji";
-import { titles } from "../../data/bioData";
+import Memoji from '../../components/ui/Memoji/Memoji';
+import { titles } from '../../data/bioData';
 
 // Styled components
-import { MemojiSection } from "../../components/styles/Layout.styled";
-import { Tagline, Title, Wrapper } from "../../components/styles/Home/Home.styled";
+import { MemojiSection } from '../../components/styles/Layout.styled';
+import { Tagline, Title, Wrapper } from '../../components/styles/Home/Home.styled';
 
-const Home = () => {
+function Home() {
   // Render each title to the page
-  const DisplayTitles = () => (
-    <Title>
-      {titles.map((title, index) => (
-        <h3 key={index}>{title}</h3>
-      ))}
-    </Title>
-  );
+  function DisplayTitles() {
+    return (
+      <Title>
+        {titles.map((title, index) => (
+          <h3 key={index}>{title}</h3>
+        ))}
+      </Title>
+    );
+  }
   return (
     <Wrapper>
       <div>
@@ -29,6 +31,6 @@ const Home = () => {
       </MemojiSection>
     </Wrapper>
   );
-};
+}
 
 export default Home;

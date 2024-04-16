@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const dark = ({ theme }) => theme.dark;
 const light = ({ theme }) => theme.light;
 const accent = ({ theme }) => theme.accent;
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
-const transTime = "0.3s";
-const borderThickness = "4px";
+const transTime = '0.3s';
+const borderThickness = '4px';
 
 export const LinkCont = styled.div`
   gap: 1.5rem 1rem;

@@ -73,12 +73,11 @@ export const ThemeSwitcherSection = styled.div`
   right: 0;
   z-index: 50;
   place-items: start;
-  animation: ${({ animate }) =>
-    animate
-      ? 'none'
-      : css`
+  animation: ${({ animate }) => (animate
+    ? 'none'
+    : css`
           ${bounce} 10s ease infinite
-        `};
+        `)};
 `;
 
 export const PageTitle = styled.h1`

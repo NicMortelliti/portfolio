@@ -2,13 +2,15 @@ import React from 'react';
 import { NavLink as RouterLink } from 'react-router-dom';
 
 // Styled components
+import { useDispatch } from 'react-redux';
 import { NavLink as Link, NavLinkExtended as LinkExtended } from '../../styles/Buttons.styled';
 
 // Redux
-import { useDispatch } from 'react-redux';
 import { setNavMenuIsOpen } from '../../../features/ui/uiSlice';
 
-const NavLink = ({ link, extended, menu = false, stuck }) => {
+function NavLink({
+  link, extended, menu = false, stuck,
+}) {
   const dispatch = useDispatch();
 
   switch (extended) {
@@ -26,6 +28,6 @@ const NavLink = ({ link, extended, menu = false, stuck }) => {
         </Link>
       );
   }
-};
+}
 
 export default NavLink;

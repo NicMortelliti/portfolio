@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   NavbarContainer,
   NavbarMainContainer,
@@ -10,10 +11,9 @@ import { internalLinks } from '../../../data/linkData';
 import { NavLink } from '.';
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
 import { setNavMenuIsOpen } from '../../../features/ui/uiSlice';
 
-const Container = ({ stuck }) => {
+function Container({ stuck }) {
   const dispatch = useDispatch();
   const { navMenuIsOpen } = useSelector((state) => state.ui);
 
@@ -21,11 +21,9 @@ const Container = ({ stuck }) => {
   // so a function was created in case a change needs to be made
   const extendNavbar = () => dispatch(setNavMenuIsOpen());
 
-  const RenderLinks = ({ extended = false }) => {
-    return internalLinks.map((link, index) => (
-      <NavLink key={index} link={link} extended={extended} menu='true' stuck={stuck} onClick={() => extendNavbar()} />
-    ));
-  };
+  const RenderLinks = ({ extended = false }) => internalLinks.map((link, index) => (
+    <NavLink key={index} link={link} extended={extended} menu="true" stuck={stuck} onClick={() => extendNavbar()} />
+  ));
 
   return (
     <NavbarContainer extendNavbar={navMenuIsOpen}>
@@ -39,11 +37,11 @@ const Container = ({ stuck }) => {
       </NavbarMainContainer>
       {navMenuIsOpen ? (
         <NavbarExtendedContainer>
-          <RenderLinks extended={true} />
+          <RenderLinks extended />
         </NavbarExtendedContainer>
       ) : null}
     </NavbarContainer>
   );
-};
+}
 
 export default Container;

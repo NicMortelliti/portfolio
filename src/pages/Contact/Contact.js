@@ -18,7 +18,7 @@ const options = {
   },
 };
 
-const Contact = () => {
+function Contact() {
   return (
     <Wrapper>
       <PageTitle>Contact Me</PageTitle>
@@ -26,6 +26,6 @@ const Contact = () => {
       <Socials />
     </Wrapper>
   );
-};
+}
 
 export default Contact;

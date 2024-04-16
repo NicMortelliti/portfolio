@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const mobileWidthLimit = ({ theme }) => theme.mobileWidthLimit;
 const color = ({ theme }) => theme.color;
@@ -6,7 +6,7 @@ const bgColor = ({ theme }) => theme.bgColor;
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
+  height: ${(props) => (props.extendNavbar ? '100vh' : '80px')};
   background-color: none;
   display: flex;
   flex-direction: column;

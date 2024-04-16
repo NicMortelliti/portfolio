@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const dark = ({ theme }) => theme.dark;
 const accent = ({ theme }) => theme.accent;
@@ -65,10 +65,10 @@ export const CardTop = styled.div`
 
 export const CardFlex = styled.div`
   display: flex;
-  flex-direction: ${({ direction }) => direction || "row"};
-  flex: ${({ flex }) => flex || "none"};
-  justify-content: ${({ justify }) => justify || "space-between"};
-  align-items: ${({ align }) => align || "initial"};
+  flex-direction: ${({ direction }) => direction || 'row'};
+  flex: ${({ flex }) => flex || 'none'};
+  justify-content: ${({ justify }) => justify || 'space-between'};
+  align-items: ${({ align }) => align || 'initial'};
   padding: 0 5px;
 `;
 

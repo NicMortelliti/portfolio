@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 
 // Animation movement duration will be 20% of the total
 // animation duration. Total animation duration is:

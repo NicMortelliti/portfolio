@@ -1,26 +1,28 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import PortfolioCard from "./PortfolioCard";
+import PortfolioCard from './PortfolioCard';
 
 // Styled components
-import { LinkCont } from "../../components/styles/Link.styled";
-import { Wrapper } from "../../components/styles/Portfolio/Portfolio.styled";
-import { PageTitle } from "../../components/styles/Layout.styled";
+import { LinkCont } from '../../components/styles/Link.styled';
+import { Wrapper } from '../../components/styles/Portfolio/Portfolio.styled';
+import { PageTitle } from '../../components/styles/Layout.styled';
 
 // Data
-import { data } from "../../data/portfolioData";
+import { data } from '../../data/portfolioData';
 
-const Portfolio = () => {
+function Portfolio() {
   // Map through the data object
   // - Render a card for each item in the data object
-  const RenderItems = () => (
-    <LinkCont>
-      {data.map((project, index) => (
-        <PortfolioCard key={index} project={project} />
-      ))}
-    </LinkCont>
-  );
+  function RenderItems() {
+    return (
+      <LinkCont>
+        {data.map((project, index) => (
+          <PortfolioCard key={index} project={project} />
+        ))}
+      </LinkCont>
+    );
+  }
 
   return (
     <Wrapper>
@@ -28,6 +30,6 @@ const Portfolio = () => {
       <RenderItems />
     </Wrapper>
   );
-};
+}
 
 export default Portfolio;

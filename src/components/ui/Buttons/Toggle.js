@@ -47,12 +47,12 @@ const Input = styled.input`
     &:after {
       left: 100%;
       font-size: 70%;
-      content: ${(props) => (props.label2 ? `'${props.label2}'` : `''`)};
+      content: ${(props) => (props.label2 ? `'${props.label2}'` : '\'\'')};
     }
 
     &:before {
       left: 0;
-      content: ${(props) => (props.label1 ? `'${props.label1}'` : `''`)};
+      content: ${(props) => (props.label1 ? `'${props.label1}'` : '\'\'')};
     }
 
     &:active {
@@ -86,26 +86,26 @@ const ContentContainer = styled.div`
   }
 `;
 
-export const Toggle = ({ options }) => {
+export function Toggle({ options }) {
   const [isChecked, setIsChecked] = useState(false);
   const handleChange = (e) => setIsChecked(e.target.checked);
 
   return (
     <>
       <Input
-        type='checkbox'
-        id='input'
+        type="checkbox"
+        id="input"
         label1={options.opt1.title}
         label2={options.opt2.title}
         hidden
         checked={isChecked}
         onChange={handleChange}
       />
-      <Label htmlFor='input' />
+      <Label htmlFor="input" />
       <ContentContainer checked={isChecked}>
         <div>{options.opt1.component}</div>
         <div>{options.opt2.component}</div>
       </ContentContainer>
     </>
   );
-};
+}

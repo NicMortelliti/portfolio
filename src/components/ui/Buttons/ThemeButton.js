@@ -1,17 +1,17 @@
-import React from "react";
-import { WiMoonAltFirstQuarter as Icon } from "react-icons/wi";
+import React from 'react';
+import { WiMoonAltFirstQuarter as Icon } from 'react-icons/wi';
 
 // Styled components
-import { ThemeButton as Button } from "../../styles/Buttons.styled";
+import { useDispatch, useSelector } from 'react-redux';
+import { ThemeButton as Button } from '../../styles/Buttons.styled';
 
 // Redux
-import { useDispatch, useSelector } from "react-redux";
 import {
   setDarkThemeActive,
   setThemeSwitcherHasBeenClicked,
-} from "../../../features/ui/uiSlice";
+} from '../../../features/ui/uiSlice';
 
-const ThemeButton = () => {
+function ThemeButton() {
   const dispatch = useDispatch();
   const { themeSwitcherHasBeenClicked } = useSelector((state) => state.ui);
 
@@ -28,6 +28,6 @@ const ThemeButton = () => {
       <Icon />
     </Button>
   );
-};
+}
 
 export default ThemeButton;

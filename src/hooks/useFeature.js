@@ -6,7 +6,7 @@ export const useFeature = (feature) => {
   const selector = (state) => state.ui;
 
   try {
-    const featureFlags = useSelector(selector).featureFlags;
+    const { featureFlags } = useSelector(selector);
     return Object.hasOwn(featureFlags, feature) ? featureFlags[feature].enabled : false;
   } catch (error) {
     console.error(`Feature flag "${feature}" not found in state.`, error);
