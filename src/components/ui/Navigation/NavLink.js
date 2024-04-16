@@ -21,7 +21,7 @@ const NavLink = ({ link, extended, menu = false, stuck }) => {
 
     default:
       return (
-        <Link as={RouterLink} to={link.to} menu={menu} stuck={stuck}>
+        <Link as={RouterLink} to={link.to} menu={menu} stuck={stuck.toString()}>
           {link.text}
         </Link>
       );
