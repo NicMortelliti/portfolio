@@ -82,7 +82,7 @@ export const ThemeButton = styled(ButtonTemplate)`
 export const Link = styled.a`
   cursor: pointer;
   text-decoration: none;
-  color: ${(props) => (props.menu ? (props.stuck ? dark : color) : color)};
+  color: ${(props) => (props.menu ? (props.stuck === 'true' ? dark : color) : color)};
   border-bottom: ${borderThickness} solid transparent;
   text-align: center;
   font-size: x-large;

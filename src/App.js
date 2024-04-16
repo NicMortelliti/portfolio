@@ -29,7 +29,7 @@ function App() {
   const { navMenuIsOpen, darkThemeActive, themeSwitcherHasBeenClicked } = useSelector((state) => state.ui);
 
   useEffect(() => {
-    const handleScroll = () => setAppIsScrolled(window.scrollY > 15 ? true : false);
+    const handleScroll = () => setAppIsScrolled(window.scrollY > 15 ? "true" : "false");
 
     window.addEventListener('scroll', handleScroll);
 
