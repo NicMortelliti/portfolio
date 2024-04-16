@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Styled components
 import {
@@ -54,5 +55,16 @@ function PortfolioCard({
     </Card>
   );
 }
+
+PortfolioCard.propTypes = {
+  project: PropTypes.shape({
+    github: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    techNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
 
 export default PortfolioCard;
