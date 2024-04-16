@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "/",
+  "homepage": "http://nicmortelliti.github.io/portfolio",
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
