@@ -5,11 +5,11 @@ import PortfolioCard from './PortfolioCard';
 
 // Styled components
 import { LinkCont } from '../../components/styles/Link.styled';
-import { Wrapper } from '../../components/styles/Portfolio/Portfolio.styled';
+import Wrapper from '../../components/styles/Portfolio/Portfolio.styled';
 import { PageTitle } from '../../components/styles/Layout.styled';
 
 // Data
-import { data } from '../../data/portfolioData';
+import data from '../../data/portfolioData';
 
 function Portfolio() {
   // Map through the data object

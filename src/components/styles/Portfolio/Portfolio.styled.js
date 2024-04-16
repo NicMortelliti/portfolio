@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -13,3 +13,5 @@ export const Wrapper = styled.div`
     margin-top: 10px;
   }
 `;
+
+export default Wrapper;

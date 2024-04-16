@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Bounce as bounce } from './Animations/Bounce.styled';
+import bounce from './Animations/Bounce.styled';
 
 const headerFooterHeight = 80;
 const bgColor = ({ theme }) => theme.bgColor;
@@ -73,11 +73,12 @@ export const ThemeSwitcherSection = styled.div`
   right: 0;
   z-index: 50;
   place-items: start;
-  animation: ${({ animate }) => (animate
-    ? 'none'
-    : css`
+  animation: ${({ animate }) =>
+    animate
+      ? 'none'
+      : css`
           ${bounce} 10s ease infinite
-        `)};
+        `};
 `;
 
 export const PageTitle = styled.h1`

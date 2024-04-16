@@ -3,7 +3,7 @@ import { keyframes } from 'styled-components';
 // Animation movement duration will be 20% of the total
 // animation duration. Total animation duration is:
 // Animation Movement Duration + Animation Static Duration
-export const Bounce = keyframes`
+const Bounce = keyframes`
   0%, /* Start animation ΔY=0 */
   4%, /* Object now begins animation (see 7%)*/
   10%,
@@ -18,3 +18,5 @@ export const Bounce = keyframes`
     transform: translateY(-15px);
   }
 `;
+
+export default Bounce;

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
-export const Toggle = styled.p`
+const Toggle = styled.p`
   font-size: medium;
 `;
+
+export default Toggle;

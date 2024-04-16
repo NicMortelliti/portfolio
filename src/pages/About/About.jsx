@@ -14,7 +14,7 @@ function About() {
   return (
     <Wrapper>
       <Picture>
-        <img src={image} alt="Profile" />
+        <img src={image} alt='Profile' />
       </Picture>
       <PageTitle>About Me</PageTitle>
       <RenderBio />

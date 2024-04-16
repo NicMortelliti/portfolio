@@ -4,7 +4,7 @@ import imageKanban from '../assets/images/app-kanban.webp';
 import imageChecklist from '../assets/images/app-checklist.webp';
 import imageBored from '../assets/images/app-bored.webp';
 
-export const data = [
+const data = [
   {
     to: 'https://moonshot.nicweb.dev',
     github: 'https://github.com/NicMortelliti/moonshot',
@@ -46,3 +46,5 @@ export const data = [
     techNames: ['HTML', 'JavaScript'],
   },
 ];
+
+export default data;
