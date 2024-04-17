@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "http://nicmortelliti.github.io/portfolio",
+  "homepage": "http://nicmortelliti.github.io",
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run predeploy && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint .",
@@ -59,7 +59,7 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^6.1.1",
     "globals": "^15.0.0"
   }
 }
