@@ -8,9 +8,7 @@ import { NavLink as Link, NavLinkExtended as LinkExtended } from '../../styles/B
 // Redux
 import { setNavMenuIsOpen } from '../../../features/ui/uiSlice';
 
-function NavLink({
-  link, extended, menu = false, stuck,
-}) {
+function NavLink({ link, extended, menu = false, stuck }) {
   const dispatch = useDispatch();
 
   switch (extended) {
@@ -23,7 +21,7 @@ function NavLink({
 
     default:
       return (
-        <Link as={RouterLink} to={link.to} menu={menu} stuck={stuck.toString()}>
+        <Link as={RouterLink} to={link.to} menu={menu} stuck={stuck}>
           {link.text}
         </Link>
       );

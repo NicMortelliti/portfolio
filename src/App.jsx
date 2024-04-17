@@ -25,7 +25,7 @@ import { Nav } from './components/ui/Navigation';
 // Redux
 
 function App() {
-  const [appIsScrolled, setAppIsScrolled] = useState(false);
+  const [appIsScrolled, setAppIsScrolled] = useState('false');
   const { navMenuIsOpen, darkThemeActive, themeSwitcherHasBeenClicked } = useSelector((state) => state.ui);
 
   useEffect(() => {
@@ -48,10 +48,10 @@ function App() {
         {!navMenuIsOpen ? (
           <MainSection>
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route exact path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/portfolio' element={<PortfolioPage />} />
+              <Route path='/contact' element={<Contact />} />
             </Routes>
           </MainSection>
         ) : null}

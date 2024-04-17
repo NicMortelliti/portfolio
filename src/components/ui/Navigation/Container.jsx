@@ -21,9 +21,10 @@ function Container({ stuck }) {
   // so a function was created in case a change needs to be made
   const extendNavbar = () => dispatch(setNavMenuIsOpen());
 
-  const RenderLinks = ({ extended = false }) => internalLinks.map((link, index) => (
-    <NavLink key={index} link={link} extended={extended} menu="true" stuck={stuck} onClick={() => extendNavbar()} />
-  ));
+  const RenderLinks = ({ extended = false }) =>
+    internalLinks.map((link, index) => (
+      <NavLink key={index} link={link} extended={extended} menu='true' stuck={stuck} onClick={() => extendNavbar()} />
+    ));
 
   return (
     <NavbarContainer extendNavbar={navMenuIsOpen}>
