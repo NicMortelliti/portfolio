@@ -1,5 +1,5 @@
-const dark = '#000';
-const light = '#fff';
+const dark = '#3E5058';
+const light = '#EFEDE4';
 const accent = '#13c7a8';
 
 const appSettings = {
