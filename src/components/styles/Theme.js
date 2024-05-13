@@ -1,6 +1,6 @@
-const dark = '#3E5058';
-const light = '#EFEDE4';
-const accent = '#13c7a8';
+const dark = process.env.THEME_DARK || '#000';
+const light = process.env.THEME_LIGHT || '#fff';
+const accent = process.env.THEME_ACCENT || '#13c7a8';
 
 const appSettings = {
   mobileWidthLimit: '700px',
