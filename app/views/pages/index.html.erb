@@ -1,2 +1,9 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>Profile</h1>
+<h1><%= @profile.name %></h1>
+<p>
+<%= @profile.titles.map { |title| title }.join(', ') %>
+</p>
+
+<%= image_tag @profile.image, alt: @profile.name if @profile.image.present? %>
+
+<%= render partial: 'pages/about_me' %>

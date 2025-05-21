@@ -1,0 +1,12 @@
+   <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class='<%= "is-active" if current_page?(root_path) %>'>
+            <%= link_to 'Home', root_path, class: 'nav-link' %>
+          </li>
+          <li class='<%= "is-active" if current_page?(projects_path) %>'>
+            <%= link_to 'Projects', projects_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </nav>

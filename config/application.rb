@@ -16,12 +16,8 @@ module Portfolio
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    # We want to be able to use any feature of our database,
+    # and the SQL format makes that possible
+    config.active_record.schema_format = :sql
   end
 end
