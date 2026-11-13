@@ -1,0 +1,67 @@
+
+---
+const principles = [
+  {
+    number: "01",
+    title: "Take ownership",
+    description:
+      "I like understanding the whole problem, not just my assigned piece. I'll dig in, ask questions, and see things through.",
+  },
+  {
+    number: "02",
+    title: "Keep it practical",
+    description:
+      "I value simple, maintainable solutions over clever abstractions. The best technology is the one that solves the problem well.",
+  },
+  {
+    number: "03",
+    title: "Stay curious",
+    description:
+      "I enjoy learning new things and exploring different approaches. But I'm equally comfortable sticking with what already works.",
+  },
+  {
+    number: "04",
+    title: "Be a good teammate",
+    description:
+      "Good software is a team effort. I value open communication, mutual respect, and people who are willing to challenge ideas constructively.",
+  },
+];
+---
+
+<section class="border-b border-border bg-background text-foreground">
+  <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+    <div class="mb-12 max-w-2xl">
+      <p class="mb-3 text-sm font-semibold tracking-wide text-accent uppercase">
+        A little about how I work
+      </p>
+
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+        Good engineering is about more than writing code.
+      </h2>
+
+      <p class="mt-4 text-lg leading-relaxed text-muted">
+        How I approach problems, work with people, and make decisions
+        matters just as much as the code I write.
+      </p>
+    </div>
+
+    <div class="grid gap-x-12 sm:grid-cols-2">
+      {principles.map((principle) => (
+        <article class="border-t border-border py-7">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="font-mono text-sm text-accent">
+              {principle.number}
+            </span>
+            <h3 class="text-xl font-semibold tracking-tight">
+              {principle.title}
+            </h3>
+          </div>
+
+          <p class="max-w-lg leading-relaxed text-muted">
+            {principle.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
