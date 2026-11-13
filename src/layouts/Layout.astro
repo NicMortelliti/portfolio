@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css' 
+import SiteHeader from '../components/SiteHeader.astro';
 ---
 
 <!doctype html>
@@ -12,7 +13,9 @@ import '../styles/global.css'
 		<meta name="generator" content={Astro.generator} />
 		<title>Nic Mortelliti</title>
 	</head>
-	<body class="bg-background text-foreground m-0 w-full h-full">
+	<body class="bg-background text-foreground min-h-screen">
+    <SiteHeader />
+
 		<slot />
 	</body>
 </html>
