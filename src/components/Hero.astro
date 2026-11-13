@@ -1,0 +1,149 @@
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__content">
+    <p class="hero__eyebrow">Hello, I'm Nic.</p>
+
+    <h1 id="hero-heading">
+      I like building things, solving problems,
+      and working with good people.
+    </h1>
+
+    <p class="hero__description">
+      Software engineer with a background in systems
+      engineering and aviation. I enjoy taking complicated
+      problems, making sense of them, and turning them into
+      useful software.
+    </p>
+
+    <nav class="hero__actions" aria-label="Introduction">
+      <a class="button button--primary" href="/work/">
+        What I've worked on <span aria-hidden="true">↗</span>
+      </a>
+
+      <a class="button button--secondary" href="/about/">
+        A little about me
+      </a>
+    </nav>
+  </div>
+
+  <div class="hero__divider"></div>
+</section>
+
+<style>
+  .hero {
+    padding: 2.5rem 1.5rem 0;
+    background: #141716;
+    color: #e7eae5;
+    border-left: 1px solid #303632;
+    border-right: 1px solid #303632;
+  }
+
+  .hero__content {
+    max-width: 1440px;
+  }
+
+  .hero__eyebrow {
+    margin: 0 0 1.75rem;
+    color: #a3d977;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  h1 {
+    max-width: 1400px;
+    margin: 0 0 1.5rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.35;
+    font-weight: 650;
+    letter-spacing: -0.035em;
+  }
+
+  .hero__description {
+    max-width: 1200px;
+    margin: 0 0 1.5rem;
+    color: #aab3ac;
+    font-size: clamp(1.125rem, 1.8vw, 1.75rem);
+    line-height: 1.5;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 3.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.875rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease,
+      transform 150ms ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button--primary {
+    background: #a3d977;
+    color: #141716;
+  }
+
+  .button--primary:hover {
+    background: #b4e68e;
+  }
+
+  .button--secondary {
+    border-color: #49534b;
+    color: #e7eae5;
+  }
+
+  .button--secondary:hover {
+    background: #202622;
+    border-color: #a3d977;
+  }
+
+  .hero__divider {
+    margin-top: 5rem;
+    border-bottom: 1px solid #333a35;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 2rem 1.25rem 0;
+    }
+
+    .hero__eyebrow {
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .hero__actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .button {
+      justify-content: center;
+    }
+
+    .hero__divider {
+      margin-top: 3rem;
+    }
+  }
+</style>
