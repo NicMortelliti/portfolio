@@ -1,5 +1,6 @@
 ---
 import githubLogo from '../assets/github.svg';
+import linkedinLogo from '../assets/linkedin.svg';
 ---
 
 <footer class="border-t border-border bg-surface text-foreground">
@@ -16,6 +17,15 @@ import githubLogo from '../assets/github.svg';
 		>
 			<img src={githubLogo.src} alt="" class="size-5" width="20" height="20" />
 			GitHub
+			<span aria-hidden="true">↗</span>
+		</a>
+
+    <a
+			href="https://www.linkedin.com/in/nicolas-mortelliti"
+			class="inline-flex w-fit items-center gap-2 font-medium text-accent transition-colors hover:text-accent/75"
+		>
+			<img src={linkedinLogo.src} alt="" class="size-5" width="20" height="20" />
+			LinkedIn
 			<span aria-hidden="true">↗</span>
 		</a>
 	</div>
