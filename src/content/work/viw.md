@@ -1,11 +1,11 @@
-⸻
-
+---
 title: Virtual Integration Workspace (VIW)
 description: Architected and developed the web application behind a platform for configuring, integrating, and testing virtual mission systems.
 category: Professional project
 featured: true
 order: 2
 url: https://parrylabs.com/viw-virtual-integration-workspace/
+---
 
 At Parry Labs, I was the sole architect and developer responsible for the VIW web application, a cloud-based workspace that enables teams to configure and work with digital twins of mission systems before deployment.
 
