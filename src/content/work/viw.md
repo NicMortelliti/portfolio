@@ -1,6 +1,6 @@
 ---
 title: Virtual Integration Workspace (VIW)
-description: Architected and developed the web application behind a platform for configuring, integrating, and testing virtual mission systems.
+description: Architected and developed the web application behind a platform for configuring, integrating, and testing digital twins.
 category: Professional project
 featured: true
 order: 2
