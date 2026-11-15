@@ -60,6 +60,11 @@ jobs:
             echo "Unable to determine package manager or locate lockfile"
             exit 1
           fi
+      - name: Setup pnpm
+        if: steps.detect-package-manager.outputs.manager == 'pnpm'
+        uses: pnpm/action-setup@v4
+        with:
+        run_install: false
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
