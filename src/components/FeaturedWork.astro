@@ -6,7 +6,7 @@ const projects = (await getCollection("work", ({ data }) => data.featured))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<section class="border-b border-border bg-surface text-foreground">
+<section id="featured-work" class="border-b border-border bg-surface text-foreground">
   <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
     <div class="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
       <div>
