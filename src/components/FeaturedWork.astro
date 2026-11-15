@@ -26,23 +26,45 @@ const projects = (await getCollection("work", ({ data }) => data.featured))
 
     <div class="grid gap-5 sm:grid-cols-2">
       {projects.map((project) => (
-        <article class="rounded-xl border border-border bg-background p-6 transition-colors hover:border-accent/60">
-          {project.data.heroImage && (
-            <Image width={720} height={360} src={project.data.heroImage} alt="" />
-          )}
+        project.data.url ? (
+          <a href={project.data.url} class="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+            <article class="rounded-xl border border-border bg-background p-6 transition-colors hover:border-accent/60">
+              {project.data.heroImage && (
+                <Image width={720} height={360} src={project.data.heroImage} alt="" />
+              )}
 
-          <p class="mb-4 font-mono text-xs tracking-wide text-accent uppercase">
-            {project.data.category}
-          </p>
+              <p class="mb-4 font-mono text-xs tracking-wide text-accent uppercase">
+                {project.data.category}
+              </p>
 
-          <h3 class="mb-3 text-xl font-semibold tracking-tight">
-            {project.data.title}
-          </h3>
+              <h3 class="mb-3 text-xl font-semibold tracking-tight">
+                {project.data.title}
+              </h3>
 
-          <p class="leading-relaxed text-muted">
-            {project.data.description}
-          </p>
-        </article>
+              <p class="leading-relaxed text-muted">
+                {project.data.description}
+              </p>
+            </article>
+          </a>
+        ) : (
+          <article class="rounded-xl border border-border bg-background p-6 transition-colors hover:border-accent/60">
+            {project.data.heroImage && (
+              <Image width={720} height={360} src={project.data.heroImage} alt="" />
+            )}
+
+            <p class="mb-4 font-mono text-xs tracking-wide text-accent uppercase">
+              {project.data.category}
+            </p>
+
+            <h3 class="mb-3 text-xl font-semibold tracking-tight">
+              {project.data.title}
+            </h3>
+
+            <p class="leading-relaxed text-muted">
+              {project.data.description}
+            </p>
+          </article>
+        )
       ))}
     </div>
   </div>
