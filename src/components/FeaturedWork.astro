@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from 'astro:assets';
+
+const projects = (await getCollection("work", ({ data }) => data.featured))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="featured-work" class="border-b border-border bg-surface text-foreground">
+  <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+    <div class="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+        <p class="mb-3 text-sm font-semibold tracking-wide text-accent uppercase">
+          Selected work
+        </p>
+        <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+          Things I've built and worked on.
+        </h2>
+      </div>
+
+      <p class="max-w-md leading-relaxed text-muted">
+        A mix of professional experience, personal projects, and things I've
+        explored out of curiosity.
+      </p>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      {projects.map((project) => (
+        <article class="rounded-xl border border-border bg-background p-6 transition-colors hover:border-accent/60">
+          {project.data.heroImage && (
+            <Image width={720} height={360} src={project.data.heroImage} alt="" />
+          )}
+
+          <p class="mb-4 font-mono text-xs tracking-wide text-accent uppercase">
+            {project.data.category}
+          </p>
+
+          <h3 class="mb-3 text-xl font-semibold tracking-tight">
+            {project.data.title}
+          </h3>
+
+          <p class="leading-relaxed text-muted">
+            {project.data.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

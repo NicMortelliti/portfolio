@@ -1,0 +1,52 @@
+---
+import githubLogo from '../assets/github.svg';
+import linkedinLogo from '../assets/linkedin.svg';
+
+const links = [
+  {
+    label: 'GitHub',
+    href: 'https://github.com/NicMortelliti',
+    icon: githubLogo,
+    detail: 'Code and side projects',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/nicolas-mortelliti',
+    icon: linkedinLogo,
+    detail: 'Professional profile',
+  },
+];
+
+const email = 'hello@nicweb.dev';
+---
+
+<section id="contact" class="border-b border-border bg-background text-foreground" aria-labelledby="contact-heading">
+  <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.75fr)] lg:items-end">
+      <div>
+        <p class="mb-3 text-sm font-semibold tracking-wide text-accent uppercase">Get in touch</p>
+        <h2 id="contact-heading" class="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+          Have something interesting to work on?
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
+          I’m always glad to hear from thoughtful people. Feel free to reach out or find me elsewhere.
+        </p>
+      </div>
+
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+        {links.map(({ label, href, icon, detail }) => (
+          <a href={href} target="_blank" rel="noreferrer" class="group flex min-h-16 items-center justify-between gap-4 rounded-xl border border-border bg-surface px-5 py-4 transition-colors hover:border-accent/60">
+            <span class="flex items-center gap-3">
+              <img src={icon.src} alt="" class="size-5" width="20" height="20" />
+              <span>
+                <span class="block font-medium text-foreground">{label}</span>
+                <span class="mt-1 block text-sm text-muted">{detail}</span>
+              </span>
+            </span>
+            <span aria-hidden="true" class="text-muted transition-colors group-hover:text-accent">↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

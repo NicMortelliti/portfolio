@@ -1,0 +1,41 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const entry = await getEntry('about', 'about');
+
+if (!entry) {
+  throw new Error('About content entry not found');
+}
+
+const { Content } = await render(entry);
+---
+
+<Layout>
+  <main>
+    <section class="border-b border-border bg-background text-foreground" aria-labelledby="about-heading">
+      <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+        <div class="max-w-3xl">
+          <p class="mb-3 text-sm font-semibold tracking-wide text-accent uppercase">A little about me</p>
+          <h1 id="about-heading" class="text-3xl leading-tight font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            {entry.data.headline}
+          </h1>
+
+          <p class="mt-5 text-lg leading-relaxed text-muted">{entry.data.description}</p>
+
+          <div class="mt-8 space-y-5 text-lg leading-relaxed text-muted">
+            <Content />
+          </div>
+
+          <a
+            href="/#contact"
+            class="mt-9 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 font-medium text-background transition-colors hover:bg-accent/85"
+          >
+            Get in touch
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
