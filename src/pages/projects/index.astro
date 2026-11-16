@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const projects = (await getCollection('work')).sort(
+  (a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title),
+);
+---
+
+<Layout
+  title="Projects | Nic Mortelliti"
+  description="Professional work and personal projects by Nic Mortelliti."
+>
+  <main class="border-b border-border bg-background text-foreground">
+    <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+      <div class="mb-12 max-w-3xl">
+        <p class="mb-3 text-sm font-semibold tracking-wide text-accent uppercase">
+          Projects
+        </p>
+        <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">
+          A closer look at my work.
+        </h1>
+        <p class="mt-5 text-lg leading-relaxed text-muted">
+          Professional experience, personal projects, and experiments built out of curiosity.
+        </p>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <a
+            href={`/projects/${project.id}/`}
+            class="group block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            <article class="h-full overflow-hidden rounded-xl border border-border bg-surface p-6 transition-colors group-hover:border-accent/60">
+              {project.data.heroImage && (
+                <Image
+                  width={720}
+                  height={360}
+                  src={project.data.heroImage}
+                  alt=""
+                  class="mb-6 aspect-video w-full rounded-lg object-cover"
+                />
+              )}
+
+              <p class="mb-4 font-mono text-xs tracking-wide text-accent uppercase">
+                {project.data.category}
+              </p>
+              <h2 class="mb-3 text-xl font-semibold tracking-tight">
+                {project.data.title}
+              </h2>
+              <p class="leading-relaxed text-muted">{project.data.description}</p>
+              <span class="mt-6 inline-block text-sm font-medium text-accent">
+                Read project <span aria-hidden="true">→</span>
+              </span>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
