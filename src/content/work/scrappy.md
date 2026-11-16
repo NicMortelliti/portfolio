@@ -2,7 +2,7 @@
 title: Scrappy
 description: A personal scrapbook and travel journal for capturing life's moments and turning them into lasting memories.
 category: Personal project
-featured: true
+featured: false
 order: 5
 ---
 

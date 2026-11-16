@@ -3,7 +3,7 @@ title: Virtual Integration Workspace (VIW)
 description: Architected and developed the web application behind a platform for configuring, integrating, and testing digital twins.
 category: Professional project
 featured: true
-order: 2
+order: 1
 url: https://parrylabs.com/viw-virtual-integration-workspace/
 ---
 

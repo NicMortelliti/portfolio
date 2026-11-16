@@ -3,7 +3,7 @@ title: The Computer
 description: A playful recreation of The Computer from The LEGO Movie, bringing the character to life with simple animations and interactive visual details.
 category: Personal project
 featured: true
-order: 6
+order: 4
 url: https://nicmortelliti.github.io/computer/
 ---
 

@@ -3,7 +3,7 @@ title: Head-up Guidance System (HGS)
 description: Led system verification for the Gulfstream HGS program and contributed simulation and human factors engineering for Gulfstream and Boeing 737 programs.
 category: Professional project
 featured: true
-order: 3
+order: 2
 url: https://www.rtx.com/collinsaerospace/what-we-do/industries/business-aviation/flight-deck/head-up-display
 ---
 

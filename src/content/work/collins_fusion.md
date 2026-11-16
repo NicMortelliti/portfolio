@@ -3,7 +3,7 @@ title: Pro Line Fusion
 description: Contributed to the development of multiple ARINC 661 cockpit interfaces, applying systems engineering and human factors principles.
 category: Professional project
 featured: true
-order: 4
+order: 3
 url: https://www.rtx.com/collinsaerospace/what-we-do/industries/business-aviation/flight-deck/pro-line-fusion
 ---
 
