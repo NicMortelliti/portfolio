@@ -38,9 +38,12 @@ const projects = (await getCollection("work", ({ data }) => data.featured))
                 {project.data.category}
               </p>
 
-              <h3 class="mb-3 text-xl font-semibold tracking-tight">
-                {project.data.title}
-              </h3>
+              <span class="gap-2">
+                <h3 class="mb-3 text-xl font-semibold tracking-tight">
+                  {project.data.title}
+                </h3>
+                <span aria-hidden="true" class="text-muted transition-colors group-hover:text-accent">↗</span>
+              </span>
 
               <p class="leading-relaxed text-muted">
                 {project.data.description}
